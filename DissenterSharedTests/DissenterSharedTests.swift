@@ -3,9 +3,9 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 import XCTest
-@testable import BraveShared
+@testable import DissenterShared
 
-class BraveSharedTests: XCTestCase {
+class DissenterSharedTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

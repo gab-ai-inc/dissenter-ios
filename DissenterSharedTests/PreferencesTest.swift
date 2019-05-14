@@ -3,7 +3,7 @@
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 import XCTest
-import BraveShared
+import DissenterShared
 
 private let optionalStringDefault: String? = nil
 private let intDefault: Int = 1
