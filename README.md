@@ -86,7 +86,7 @@ Building the code
 1. After running the *bootstrap.sh* script in the setup instructions navigate to:
 <br>`Client/Configuration/Local/DevTeam.xcconfig`
 1. Add your *Apple Team ID* in this file:
-<br>`LOCAL_DEVELOPMENT_TEAM = KL8N8XSYF4`
+<br>`LOCAL_DEVELOPMENT_TEAM = DK8L429XVH`
 
 >Team IDs look identical to provisioning profile UUIDs, so make sure this is the correct one.
 
