@@ -9,7 +9,7 @@ import SwiftKeychainWrapper
 import SwiftyJSON
 import JavaScriptCore
 
-private let log = Logger.braveSyncLogger
+private let log = Logger.dissenterSyncLogger
 
 /*
  module.exports.categories = {
@@ -107,7 +107,7 @@ public class Sync: JSInjector {
     fileprivate lazy var isDebug: Bool = { return AppConstants.BuildChannel == .developer }()
     
     fileprivate lazy var serverUrl: String = {
-        return isDebug ? "https://sync-staging.brave.com" : "https://sync.brave.com"
+        return isDebug ? "https://sync-staging.dissenter.com" : "https://sync.dissenter.com"
     }()
     
     fileprivate let apiVersion = 0
