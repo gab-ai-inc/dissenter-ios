@@ -1,7 +1,7 @@
 {
-  "name": "brave-ios",
-  "version": "2.0.0",
-  "description": "Brave for iOS",
+  "name": "dissenter-ios",
+  "version": "1.0.0",
+  "description": "Dissenter for iOS",
   "scripts": {
     "build": "webpack --config webpack.config.js",
     "build:sync": "cd node_modules/brave-sync; npm install && npm run build; cd node_modules/brave-crypto; npm run build",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/brave/brave-ios.git"
+    "url": "git+https://github.com/gab-ai-inc/dissenter-ios.git"
   },
   "license": "MPL-2.0",
   "dependencies": {
