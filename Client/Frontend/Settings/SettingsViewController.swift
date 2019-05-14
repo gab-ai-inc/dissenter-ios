@@ -319,17 +319,10 @@ class SettingsViewController: TableViewController {
         return Section(
             header: .title(Strings.Support),
             rows: [
-                Row(text: Strings.Report_a_bug,
+                Row(text: Strings.Rate_Dissenter,
                     selection: { [unowned self] in
-                        // Report a bug
-                        self.settingsDelegate?.settingsOpenURLInNewTab(BraveUX.BraveCommunityURL)
-                        self.dismiss(animated: true)
-                    },
-                    cellClass: MultilineButtonCell.self),
-                Row(text: Strings.Rate_Brave,
-                    selection: { [unowned self] in
-                        // Rate Brave
-                        guard let writeReviewURL = URL(string: "https://itunes.apple.com/app/id1052879175?action=write-review")
+                        // Rate Dissenter
+                        guard let writeReviewURL = URL(string: "https://itunes.apple.com/app/id1463486989?action=write-review")
                             else { return }
                         UIApplication.shared.open(writeReviewURL)
                         self.dismiss(animated: true)
