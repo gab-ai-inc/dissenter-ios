@@ -91,12 +91,12 @@ fileprivate extension Preferences {
         }
         
         // Shields
-        migrate(key: "braveBlockAdsAndTracking", to: Preferences.Shields.blockAdsAndTracking)
-        migrate(key: "braveHttpsEverywhere", to: Preferences.Shields.httpsEverywhere)
-        migrate(key: "braveSafeBrowsing", to: Preferences.Shields.blockPhishingAndMalware)
+        migrate(key: "dissenterBlockAdsAndTracking", to: Preferences.Shields.blockAdsAndTracking)
+        migrate(key: "dissenterHttpsEverywhere", to: Preferences.Shields.httpsEverywhere)
+        migrate(key: "dissenterSafeBrowsing", to: Preferences.Shields.blockPhishingAndMalware)
         migrate(key: "noscript_on", to: Preferences.Shields.blockScripts)
         migrate(key: "fingerprintprotection_on", to: Preferences.Shields.fingerprintingProtection)
-        migrate(key: "braveAdblockUseRegional", to: Preferences.Shields.useRegionAdBlock)
+        migrate(key: "dissenterAdblockUseRegional", to: Preferences.Shields.useRegionAdBlock)
         
         // Popups
         migrate(key: "popupForDDG", to: Preferences.Popups.duckDuckGoPrivateSearch)
