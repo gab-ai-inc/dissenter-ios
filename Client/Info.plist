@@ -34,10 +34,10 @@
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLName</key>
-			<string>com.brave.ios</string>
+			<string>com.dissenter.ios</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>brave</string>
+				<string>dissenter</string>
 			</array>
 		</dict>
 	</array>

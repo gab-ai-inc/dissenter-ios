@@ -10,7 +10,7 @@ private let log = Logger.browserLogger
 struct ScriptOpener {
     /// Opens a javascript file with a given name. Uses Data framework's bundle by default.
     static func get(withName name: String, fromMainBundle: Bool = false) -> String? {
-        let bundleId = "com.brave.Data"
+        let bundleId = "com.dissenter.Data"
         
         guard let bundle = fromMainBundle ? Bundle.main : Bundle(identifier: bundleId) else {
             assertionFailure("Could not get a Data framework with identifier: \(bundleId)")
