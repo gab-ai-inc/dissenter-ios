@@ -8,7 +8,7 @@
     ]
   }, 
   "default": {
-    "searchDefault": "Google", 
+    "searchDefault": "DuckDuckGo", 
     "visibleDefaultEngines": [
       "bing"
     ]
