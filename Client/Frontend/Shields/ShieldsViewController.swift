@@ -85,7 +85,7 @@ class ShieldsViewController: UIViewController, PopoverContentComponent {
         shieldsView.shieldsContainerStackView.fingerprintingStatView.valueLabel.text = String(tab.contentBlocker.stats.fingerprintingCount)
     }
     
-    private func updateBraveShieldState(shield: BraveShield, on: Bool, option: Preferences.Option<Bool>?) {
+    private func updateDissenterShieldState(shield: DissenterShield, on: Bool, option: Preferences.Option<Bool>?) {
         guard let url = url else { return }
         let allOff = shield == .AllOff
         // `.AllOff` uses inverse logic. Technically we set "all off" when the switch is OFF, unlike all the others
@@ -93,7 +93,7 @@ class ShieldsViewController: UIViewController, PopoverContentComponent {
         // respect the global preference rather than the overridden value. (Prevents toggling domain state from
         // affecting future changes to the global pref)
         let isOn = allOff ? !on : on
-        Domain.setBraveShield(forUrl: url, shield: shield, isOn: isOn,
+        Domain.setDissenterShield(forUrl: url, shield: shield, isOn: isOn,
                               isPrivateBrowsing: PrivateBrowsingManager.shared.isPrivateBrowsing)
     }
     
@@ -124,7 +124,7 @@ class ShieldsViewController: UIViewController, PopoverContentComponent {
     // MARK: -
     
     /// Groups the shield types with their control and global preference
-    private lazy var shieldControlMapping: [(BraveShield, ToggleView, Preferences.Option<Bool>?)] = [
+    private lazy var shieldControlMapping: [(DissenterShield, ToggleView, Preferences.Option<Bool>?)] = [
         (.AllOff, shieldsView.shieldOverrideControl, nil),
         (.AdblockAndTp, shieldsView.shieldsContainerStackView.adsTrackersControl, Preferences.Shields.blockAdsAndTracking),
         (.SafeBrowsing, shieldsView.shieldsContainerStackView.blockMalwareControl, Preferences.Shields.blockPhishingAndMalware),
@@ -151,7 +151,7 @@ class ShieldsViewController: UIViewController, PopoverContentComponent {
                     self.updateGlobalShieldState(on, animated: true)
                 }
                 // Localized / per domain toggles triggered here
-                self.updateBraveShieldState(shield: shield, on: on, option: option)
+                self.updateDissenterShieldState(shield: shield, on: on, option: option)
                 self.shieldsSettingsChanged?(self)
             }
         }
