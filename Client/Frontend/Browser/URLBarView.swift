@@ -39,7 +39,7 @@ protocol URLBarDelegate: class {
     // Returns either (search query, true) or (url, false).
     func urlBarDisplayTextForURL(_ url: URL?) -> (String?, Bool)
     func urlBarDidBeginDragInteraction(_ urlBar: URLBarView)
-    func urlBarDidTapBraveShieldsButton(_ urlBar: URLBarView)
+    func urlBarDidTapDissenterShieldsButton(_ urlBar: URLBarView)
     func urlBarDidTapMenuButton(_ urlBar: URLBarView)
     func urlBarDidLongPressReloadButton(_ urlBar: URLBarView, from button: UIButton)
 }
@@ -143,9 +143,9 @@ class URLBarView: UIView {
     lazy var shieldsButton: ToolbarButton = {
         let button = ToolbarButton()
         button.setImage(UIImage(imageLiteralResourceName: "shields-menu-icon"), for: .normal)
-        button.addTarget(self, action: #selector(didClickBraveShieldsButton), for: .touchUpInside)
+        button.addTarget(self, action: #selector(didClickDissenterShieldsButton), for: .touchUpInside)
         button.imageView?.contentMode = .center
-        button.accessibilityLabel = Strings.Brave_Panel
+        button.accessibilityLabel = Strings.Dissenter_Panel
         button.accessibilityIdentifier = "urlBar-shieldsButton"
         return button
     }()
@@ -562,8 +562,8 @@ class URLBarView: UIView {
         delegate?.urlBarDidTapMenuButton(self)
     }
     
-    @objc func didClickBraveShieldsButton() {
-        delegate?.urlBarDidTapBraveShieldsButton(self)
+    @objc func didClickDissenterShieldsButton() {
+        delegate?.urlBarDidTapDissenterShieldsButton(self)
     }
 }
 

@@ -48,7 +48,7 @@ class FavoritesViewController: UIViewController, Themeable {
     }()
     private let dataSource: FavoritesDataSource
     
-    private let braveShieldStatsView = BraveShieldStatsView(frame: CGRect.zero).then {
+    private let dissenterShieldStatsView = DissenterShieldStatsView(frame: CGRect.zero).then {
         $0.autoresizingMask = [.flexibleWidth]
     }
     
@@ -117,15 +117,15 @@ class FavoritesViewController: UIViewController, Themeable {
         // Could setup as section header but would need to use flow layout,
         // Auto-layout subview within collection doesn't work properly,
         // Quick-and-dirty layout here.
-        var statsViewFrame: CGRect = braveShieldStatsView.frame
+        var statsViewFrame: CGRect = dissenterShieldStatsView.frame
         statsViewFrame.origin.x = 20
         // Offset the stats view from the inset set above
         statsViewFrame.origin.y = -(UI.statsHeight + UI.statsBottomMargin)
         statsViewFrame.size.width = collection.frame.width - statsViewFrame.minX * 2
         statsViewFrame.size.height = UI.statsHeight
-        braveShieldStatsView.frame = statsViewFrame
+        dissenterShieldStatsView.frame = statsViewFrame
         
-        collection.addSubview(braveShieldStatsView)
+        collection.addSubview(dissenterShieldStatsView)
         collection.addSubview(ddgButton)
         
         ddgButton.addSubview(ddgLogo)
@@ -205,7 +205,7 @@ class FavoritesViewController: UIViewController, Themeable {
     func applyTheme(_ theme: Theme) {
         let isPrivate = theme == .private
         view.backgroundColor = isPrivate ? UX.HomePanel.BackgroundColorPBM : UX.HomePanel.BackgroundColor
-        braveShieldStatsView.timeStatView.color = isPrivate ? UX.GreyA : UX.GreyJ
+        dissenterShieldStatsView.timeStatView.color = isPrivate ? UX.GreyA : UX.GreyJ
     }
     
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {

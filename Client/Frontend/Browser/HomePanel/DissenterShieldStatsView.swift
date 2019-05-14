@@ -4,9 +4,9 @@
 
 import Foundation
 import Shared
-import BraveShared
+import DissenterShared
 
-class BraveShieldStatsView: UIView, Themeable {
+class DissenterShieldStatsView: UIView, Themeable {
     func applyTheme(_ theme: Theme) {
         // BRAVE TODO:
     }
@@ -16,14 +16,7 @@ class BraveShieldStatsView: UIView, Themeable {
     lazy var adsStatView: StatView = {
         let statView = StatView(frame: CGRect.zero)
         statView.title = Strings.ShieldsAdAndTrackerStats
-        statView.color = UX.BraveOrange
-        return statView
-    }()
-
-    lazy var httpsStatView: StatView = {
-        let statView = StatView(frame: CGRect.zero)
-        statView.title = Strings.ShieldsHttpsStats
-        statView.color = UX.Green
+        statView.color = UX.DissenterGreen
         return statView
     }()
     
@@ -35,7 +28,7 @@ class BraveShieldStatsView: UIView, Themeable {
     }()
     
     lazy var stats: [StatView] = {
-        return [self.adsStatView, self.httpsStatView, self.timeStatView]
+        return [self.adsStatView, self.timeStatView]
     }()
     
     override init(frame: CGRect) {
@@ -47,7 +40,7 @@ class BraveShieldStatsView: UIView, Themeable {
         
         update()
         
-        NotificationCenter.default.addObserver(self, selector: #selector(update), name: NSNotification.Name(rawValue: BraveGlobalShieldStats.DidUpdateNotification), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(update), name: NSNotification.Name(rawValue: DissenterGlobalShieldStats.DidUpdateNotification), object: nil)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -71,8 +64,7 @@ class BraveShieldStatsView: UIView, Themeable {
     }
     
     @objc private func update() {
-        adsStatView.stat = "\(BraveGlobalShieldStats.shared.adblock + BraveGlobalShieldStats.shared.trackingProtection)"
-        httpsStatView.stat = "\(BraveGlobalShieldStats.shared.httpse)"
+        adsStatView.stat = "\(DissenterGlobalShieldStats.shared.adblock + DissenterGlobalShieldStats.shared.trackingProtection)"
         timeStatView.stat = timeSaved
     }
     
@@ -82,7 +74,7 @@ class BraveShieldStatsView: UIView, Themeable {
     
     var timeSaved: String {
         get {
-            let estimatedMillisecondsSaved = (BraveGlobalShieldStats.shared.adblock + BraveGlobalShieldStats.shared.trackingProtection) * millisecondsPerItem
+            let estimatedMillisecondsSaved = (DissenterGlobalShieldStats.shared.adblock + DissenterGlobalShieldStats.shared.trackingProtection) * millisecondsPerItem
             let hours = estimatedMillisecondsSaved < 1000 * 60 * 60 * 24
             let minutes = estimatedMillisecondsSaved < 1000 * 60 * 60
             let seconds = estimatedMillisecondsSaved < 1000 * 60

@@ -43,7 +43,7 @@ extension ContentBlockerHelper: TabContentScript {
         if resourceType == .script && domain.isShieldExpected(.NoScript,
                                                               isPrivateBrowsing: isPrivateBrowsing) {
             self.stats = self.stats.addingScriptBlock()
-            BraveGlobalShieldStats.shared.scripts += 1
+            DissenterGlobalShieldStats.shared.scripts += 1
             return
         }
         
@@ -62,9 +62,9 @@ extension ContentBlockerHelper: TabContentScript {
                 }
                 self.stats = self.stats.create(byAddingListItem: listItem)
                 
-                // Increase global stats (here due to BlocklistName being in Client and BraveGlobalShieldStats being
-                // in BraveShared)
-                let stats = BraveGlobalShieldStats.shared
+                // Increase global stats (here due to BlocklistName being in Client and DissenterGlobalShieldStats being
+                // in DissenterShared)
+                let stats = DissenterGlobalShieldStats.shared
                 switch listItem {
                 case .ad: stats.adblock += 1
                 case .https: stats.httpse += 1

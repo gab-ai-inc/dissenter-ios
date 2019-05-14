@@ -1632,7 +1632,7 @@ extension BrowserViewController: URLBarDelegate {
         dismissVisibleMenus()
     }
     
-    func urlBarDidTapBraveShieldsButton(_ urlBar: URLBarView) {
+    func urlBarDidTapDissenterShieldsButton(_ urlBar: URLBarView) {
         // BRAVE TODO: Use actual instance
         guard let selectedTab = tabManager.selectedTab else { return }
         let shields = ShieldsViewController(tab: selectedTab)
@@ -1641,7 +1641,7 @@ extension BrowserViewController: URLBarDelegate {
             // the setting changed is the global `.AllOff` shield
             self.tabManager.selectedTab?.reload()
             
-            // In 1.6 we "reload" the whole web view state, dumping caches, etc. (reload():BraveWebView.swift:495)
+            // In 1.6 we "reload" the whole web view state, dumping caches, etc. (reload():DissenterWebView.swift:495)
             // BRAVE TODO: Port over proper tab reloading with Shields
         }
         let popover = PopoverController(contentController: shields, contentSizeBehavior: .preferredContentSize)

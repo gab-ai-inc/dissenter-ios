@@ -5,7 +5,7 @@
 import Foundation
 import WebKit
 
-class BraveWebView: WKWebView {
+class DissenterWebView: WKWebView {
     
     init(frame: CGRect, configuration: WKWebViewConfiguration = WKWebViewConfiguration(), privacyProtection: PrivacyProtectionProtocol = PrivacyProtection()) {
         if privacyProtection.nonPersistent {

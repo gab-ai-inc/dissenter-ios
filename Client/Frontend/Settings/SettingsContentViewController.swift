@@ -54,7 +54,7 @@ class SettingsContentViewController: UIViewController, WKNavigationDelegate {
     fileprivate var interstitialErrorView: UILabel!
 
     // The web view that displays content.
-    var webView: BraveWebView!
+    var webView: DissenterWebView!
 
     fileprivate func startLoading(_ timeout: Double = DefaultTimeoutTimeInterval) {
         if self.isLoaded {
@@ -105,9 +105,9 @@ class SettingsContentViewController: UIViewController, WKNavigationDelegate {
         startLoading()
     }
 
-    func makeWebView() -> BraveWebView {
+    func makeWebView() -> DissenterWebView {
         let frame = CGRect(width: 1, height: 1)
-        let webView = BraveWebView(frame: frame)
+        let webView = DissenterWebView(frame: frame)
         webView.allowsLinkPreview = false
         webView.navigationDelegate = self
         return webView
