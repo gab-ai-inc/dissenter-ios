@@ -5,7 +5,7 @@
 "NSCameraUsageDescription" = "Isso permite que você tire e carregue fotos.";
 
 /* Privacy - Face ID Usage Description */
-"NSFaceIDUsageDescription" = "O Brave exige o Face ID para acessar seus logins salvos.";
+"NSFaceIDUsageDescription" = "O Dissenter exige o Face ID para acessar seus logins salvos.";
 
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this

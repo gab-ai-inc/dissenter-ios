@@ -5,7 +5,7 @@
 "NSCameraUsageDescription" = "Ini membolehkan anda mengambil dan memuat naik foto.";
 
 /* Privacy - Face ID Usage Description */
-"NSFaceIDUsageDescription" = "Brave memerlukan ID Muka untuk mengakses log masuk anda yang disimpan.";
+"NSFaceIDUsageDescription" = "Dissenter memerlukan ID Muka untuk mengakses log masuk anda yang disimpan.";
 
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this

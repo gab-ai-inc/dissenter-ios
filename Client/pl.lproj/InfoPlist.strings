@@ -5,7 +5,7 @@
 "NSCameraUsageDescription" = "Pozwala na wykonywanie i przesyłanie zdjęć.";
 
 /* Privacy - Face ID Usage Description */
-"NSFaceIDUsageDescription" = "Brave wymaga dostępu do Face ID w celu uzyskania dostęp do zapisanych loginów.";
+"NSFaceIDUsageDescription" = "Dissenter wymaga dostępu do Face ID w celu uzyskania dostęp do zapisanych loginów.";
 
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this

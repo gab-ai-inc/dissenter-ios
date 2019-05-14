@@ -5,7 +5,7 @@
 "NSCameraUsageDescription" = "这可使您拍照和上传照片。";
 
 /* Privacy - Face ID Usage Description */
-"NSFaceIDUsageDescription" = "Brave需要 Face ID 才能访问您保存的登录信息。";
+"NSFaceIDUsageDescription" = "Dissenter需要 Face ID 才能访问您保存的登录信息。";
 
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this

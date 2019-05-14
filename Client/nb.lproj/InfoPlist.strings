@@ -5,7 +5,7 @@
 "NSCameraUsageDescription" = "Dette lar deg ta bilder og laste dem opp.";
 
 /* Privacy - Face ID Usage Description */
-"NSFaceIDUsageDescription" = "Brave krever Face ID for å gi tilgang til dine lagrede innlogginger.";
+"NSFaceIDUsageDescription" = "Dissenter krever Face ID for å gi tilgang til dine lagrede innlogginger.";
 
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
