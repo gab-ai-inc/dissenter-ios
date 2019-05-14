@@ -9,7 +9,7 @@ import DissenterShared
 
 class SafeBrowsingTests: XCTestCase {
     
-    let domainsList = Set<String>(arrayLiteral: "brave.com", "example.com")
+    let domainsList = Set<String>(arrayLiteral: "dissenter.com", "example.com")
 
     override func setUp() {
         super.setUp()
@@ -26,13 +26,13 @@ class SafeBrowsingTests: XCTestCase {
     func testShouldBlock() {
         let sb = SafeBrowsing(domainList: domainsList)
         
-        XCTAssert(sb.shouldBlock(URL(string: "http://brave.com")!))
-        XCTAssert(sb.shouldBlock(URL(string: "https://brave.com")!))
+        XCTAssert(sb.shouldBlock(URL(string: "http://dissenter.com")!))
+        XCTAssert(sb.shouldBlock(URL(string: "https://dissenter.com")!))
         
         // Make sure subdomains are blocked too.
-        XCTAssert(sb.shouldBlock(URL(string: "https://www.brave.com")!))
+        XCTAssert(sb.shouldBlock(URL(string: "https://www.dissenter.com")!))
         
-        XCTAssertFalse(sb.shouldBlock(URL(string: "https://bravexxx.com")!))
+        XCTAssertFalse(sb.shouldBlock(URL(string: "https://dissenterxxx.com")!))
         XCTAssert(sb.shouldBlock(URL(string: "https://example.com")!))
         XCTAssertFalse(sb.shouldBlock(URL(string: "https://foo.com")!))
     }
@@ -41,7 +41,7 @@ class SafeBrowsingTests: XCTestCase {
         let sb = SafeBrowsing(domainList: domainsList)
         
         Preferences.Shields.blockPhishingAndMalware.value = false
-        XCTAssertFalse(sb.shouldBlock(URL(string: "https://brave.com")!))
+        XCTAssertFalse(sb.shouldBlock(URL(string: "https://dissenter.com")!))
         XCTAssertFalse(sb.shouldBlock(URL(string: "https://example.com")!))
         XCTAssertFalse(sb.shouldBlock(URL(string: "https://foo.com")!))
     }
@@ -50,24 +50,24 @@ class SafeBrowsingTests: XCTestCase {
         let context = DataController.viewContext
         let sb = SafeBrowsing(domainList: domainsList)
         
-        let braveUrl = URL(string: "https://brave.com")!
+        let dissenterUrl = URL(string: "https://dissenter.com")!
         let exampleUrl = URL(string: "https://example.com")!
         
-        // Brave domain will have safe browsing shield turned off.
+        // Dissenter domain will have safe browsing shield turned off.
         // No need to call getOrCreateForUrl here.
-        Domain.setBraveShieldInternal(forUrl: braveUrl, shield: .SafeBrowsing, isOn: false, isPrivateBrowsing: false, context: .existing(context))
+        Domain.setDissenterShieldInternal(forUrl: dissenterUrl, shield: .SafeBrowsing, isOn: false, isPrivateBrowsing: false, context: .existing(context))
         
         // example.com will have default value nil which means true
         _ = Domain.getOrCreate(forUrl: exampleUrl)
         
         // Global shield on, local shield should have precedence over global shield
-        XCTAssertFalse(sb.shouldBlock(braveUrl))
+        XCTAssertFalse(sb.shouldBlock(dissenterUrl))
         XCTAssert(sb.shouldBlock(exampleUrl))
         
         Preferences.Shields.blockPhishingAndMalware.value = false
-        Domain.setBraveShieldInternal(forUrl: exampleUrl, shield: .SafeBrowsing, isOn: true, isPrivateBrowsing: false, context: .existing(context))
+        Domain.setDissenterShieldInternal(forUrl: exampleUrl, shield: .SafeBrowsing, isOn: true, isPrivateBrowsing: false, context: .existing(context))
         
-        XCTAssertFalse(sb.shouldBlock(braveUrl))
+        XCTAssertFalse(sb.shouldBlock(dissenterUrl))
         XCTAssert(sb.shouldBlock(exampleUrl))
         
     }

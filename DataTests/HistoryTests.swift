@@ -14,8 +14,8 @@ class HistoryTests: CoreDataTestCase {
     }
 
     func testAdd() {
-        let title = "Brave"
-        let url = URL(string: "https://brave.com")!
+        let title = "Dissenter"
+        let url = URL(string: "https://dissenter.com")!
         
         let object = createAndWait(title: title, url: url)
         XCTAssertEqual(try! DataController.viewContext.count(for: fetchRequest), 1)
@@ -50,7 +50,7 @@ class HistoryTests: CoreDataTestCase {
         
         // Wait a moment to make a date difference
         sleep(UInt32(2))
-        let secondObject = createAndWait(title: "Second", url: URL(string: "https://brave.com")!)
+        let secondObject = createAndWait(title: "Second", url: URL(string: "https://dissenter.com")!)
         XCTAssertEqual(try! DataController.viewContext.count(for: fetchRequest), 2)
         
         XCTAssertNoThrow(try frc.performFetch())
@@ -62,8 +62,8 @@ class HistoryTests: CoreDataTestCase {
     }
     
     func testGetExisting() {
-        let title = "Brave"
-        let url = URL(string: "https://brave.com")!
+        let title = "Dissenter"
+        let url = URL(string: "https://dissenter.com")!
         let wrongUrl = URL(string: "https://wrong.example.com")!
         
         _ = createAndWait(title: title, url: url)
@@ -92,7 +92,7 @@ class HistoryTests: CoreDataTestCase {
         let deleteExpectation = expectation(description: "deleteExpectation")
         
         createAndWait()
-        createAndWait(title: "title", url: URL(string: "https://brave.com")!)
+        createAndWait(title: "title", url: URL(string: "https://dissenter.com")!)
         XCTAssertEqual(try! DataController.viewContext.count(for: fetchRequest), 2)
         
         backgroundSaveAndWaitForExpectation {
@@ -111,7 +111,7 @@ class HistoryTests: CoreDataTestCase {
         createAndWait(url: URL(string: "https://example.com/page1")!)
         createAndWait(url: URL(string: "https://example.com/page2")!)
         createAndWait(url: URL(string: "https://example.com/page3")!)
-        createAndWait(url: URL(string: "https://brave.com")!)
+        createAndWait(url: URL(string: "https://dissenter.com")!)
         
         let found = History.byFrecency(query: "example")
         XCTAssertEqual(found.count, 3)

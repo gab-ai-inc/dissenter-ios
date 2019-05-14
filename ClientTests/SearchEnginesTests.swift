@@ -10,7 +10,7 @@ import DissenterShared
 
 class SearchEnginesTests: XCTestCase {
     
-    private let DefaultSearchEngineName = "Google"
+    private let DefaultSearchEngineName = "DuckDuckGo"
     // BRAVE TODO: This list is not accurate because Dissenter uses many more engines
     private let ExpectedEngineNames = ["Qwant", "Bing", "DuckDuckGo", "Google", "StartPage"]
     
@@ -178,22 +178,22 @@ class SearchEnginesTests: XCTestCase {
     }
 
     func testUnorderedSearchEngines() {
-        let unorderedList = ["Google", "Bing", "DuckDuckGo", "Qwant", "StartPage"]
+        let unorderedList = ["DuckDuckGo", "Bing", "Qwant", "StartPage", "Google"]
         ["zh-TW", "en-CA", "de-DE", "en-US"].forEach {
             XCTAssertEqual(SearchEngines.getUnorderedBundledEnginesFor(locale: Locale(identifier: $0)).compactMap({$0.shortName}), unorderedList)
         }
         
-        let russianList = ["Google", "Яндекс", "DuckDuckGo", "Qwant", "StartPage"]
+        let russianList = ["DuckDuckGo", "Яндекс", "Qwant", "StartPage", "Google"]
         XCTAssertEqual(SearchEngines.getUnorderedBundledEnginesFor(locale: Locale(identifier: "ru")).compactMap({$0.shortName}), russianList)
     }
 
     func testGetOrderedEngines() {
         // setup an existing search engine in the profile
         let profile = MockProfile()
-        profile.prefs.setObject(["Google"], forKey: "search.orderedEngineNames")
+        profile.prefs.setObject(["DuckDuckGo"], forKey: "search.orderedEngineNames")
         let engines = SearchEngines(files: profile.files)
         XCTAssert(engines.orderedEngines.count > 1, "There should be more than one search engine")
-        XCTAssertEqual(engines.orderedEngines.first!.shortName, "Google", "Google should be the first search engine")
+        XCTAssertEqual(engines.orderedEngines.first!.shortName, "DuckDuckGo", "DuckDuckGo should be the first search engine")
     }
 
 }

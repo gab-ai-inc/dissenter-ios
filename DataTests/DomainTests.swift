@@ -15,7 +15,7 @@ class DomainTests: CoreDataTestCase {
     
     func testGetOrCreate() {
         let url = URL(string: "http://example.com")!
-        let url2 = URL(string: "http://brave.com")!
+        let url2 = URL(string: "http://dissenter.com")!
         
         XCTAssertNotNil(Domain.getOrCreate(forUrl: url))
         XCTAssertEqual(try! DataController.viewContext.count(for: fetchRequest), 1)

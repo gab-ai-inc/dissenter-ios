@@ -12,8 +12,8 @@ class HttpCookieExtensionTest: XCTestCase {
         // Set some cookies here
         let expectation = XCTestExpectation(description: "Cookie is loaded from file")
         
-        let properties: [HTTPCookiePropertyKey: Any] = [HTTPCookiePropertyKey.name : "BraveCookieTest",
-                                            HTTPCookiePropertyKey.domain: "brave.com",
+        let properties: [HTTPCookiePropertyKey: Any] = [HTTPCookiePropertyKey.name : "DissenterCookieTest",
+                                            HTTPCookiePropertyKey.domain: "dissenter.com",
                                             .path: "/",
                                             .value: "something",
                                             .secure: "TRUE",
@@ -26,7 +26,7 @@ class HttpCookieExtensionTest: XCTestCase {
                     WKWebsiteDataStore.default().httpCookieStore.delete(cookie, completionHandler: {
                         HTTPCookie.loadFromDisk(completion: { _ in
                             WKWebsiteDataStore.default().httpCookieStore.getAllCookies({ cookies in
-                                if cookies.contains(where: {$0.name == "BraveCookieTest"}) {
+                                if cookies.contains(where: {$0.name == "DissenterCookieTest"}) {
                                     expectation.fulfill()
                                 }
                             })

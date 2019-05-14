@@ -18,7 +18,7 @@ class DeviceTests: CoreDataTestCase {
         
         // Adding not current device to verify nothing is returned in Device.currentDevice()
         backgroundSaveAndWaitForExpectation {
-            Device.add(name: "Brave")
+            Device.add(name: "Dissenter")
         }
         let device = Device.currentDevice()
         
@@ -36,7 +36,7 @@ class DeviceTests: CoreDataTestCase {
 
     func testDeleteAll() {
         backgroundSaveAndWaitForExpectation {
-            Device.add(name: "Brave")
+            Device.add(name: "Dissenter")
         }
         
         backgroundSaveAndWaitForExpectation {
@@ -92,7 +92,7 @@ class DeviceTests: CoreDataTestCase {
         root.deviceId = newDeviceId
         
         backgroundSaveAndWaitForExpectation {
-            Device.add(name: "Brave", isCurrent: true)
+            Device.add(name: "Dissenter", isCurrent: true)
         }
         
         let device = Device.currentDevice()
