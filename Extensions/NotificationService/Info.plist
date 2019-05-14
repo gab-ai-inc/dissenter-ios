@@ -17,9 +17,9 @@
 	<key>CFBundlePackageType</key>
 	<string>XPC!</string>
 	<key>CFBundleShortVersionString</key>
-	<string>$(BRAVE_VERSION)</string>
+	<string>$(DISSENTER_VERSION)</string>
 	<key>CFBundleVersion</key>
-	<string>$(BRAVE_BUILD_ID)</string>
+	<string>$(DISSENTER_BUILD_ID)</string>
 	<key>MozDevelopmentTeam</key>
 	<string>$(DEVELOPMENT_TEAM)</string>
 	<key>NSExtension</key>

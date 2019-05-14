@@ -125,12 +125,12 @@ platform :ios do
   # TODO: Attempt action override on same name
   private_lane :get_client_version_number do
     buildIdFile = Xcodeproj::Config.new("#{CONFIG_PATH}/Base.xcconfig")
-    buildId = buildIdFile.attributes['BRAVE_VERSION']
+    buildId = buildIdFile.attributes['DISSENTER_VERSION']
 
     # Traditionally, would pull version number via:
     # get_version_number(target: "Client")
     # This however does not work since we use xcconfigq variables and Fastlane does not seem to parse
-    #   these very well (e.g. this returns the literal value: "$(BRAVE_VERSION)")
+    #   these very well (e.g. this returns the literal value: "$(DISSENTER_VERSION)")
   end
 
   private_lane :get_client_build_number do
