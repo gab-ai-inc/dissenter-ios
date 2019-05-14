@@ -33,9 +33,9 @@ extension Preferences {
 // MARK: - User Preferences
 extension Preferences {
     final class General {
-        /// Whether this is the first time user has ever launched Brave after intalling. *Should never be set to `true` manually!*
+        /// Whether this is the first time user has ever launched Dissenter after intalling. *Should never be set to `true` manually!*
         static let isFirstLaunch = Option<Bool>(key: "general.first-launch", default: true)
-        /// Whether or not to save logins in Brave
+        /// Whether or not to save logins in Dissenter
         static let saveLogins = Option<Bool>(key: "general.save-logins", default: true)
         /// Whether or not to block popups from websites automaticaly
         static let blockPopups = Option<Bool>(key: "general.block-popups", default: true)

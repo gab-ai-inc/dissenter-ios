@@ -15,7 +15,7 @@ extension Bookmark {
     /// Base order is needed to distinguish between bookmarks on different devices and platforms.
     static var baseOrder: String { return Preferences.Sync.baseSyncOrder.value }
     
-    /// syncOrder for Brave < 1.8 has to be set in order to support the new ordering mechanism.
+    /// syncOrder for Dissenter < 1.8 has to be set in order to support the new ordering mechanism.
     /// Pre 1.8 bookmarks didn't have syncOrder set which makes it hard to calculate syncOrder for new
     // bookmarks, especially the ones inside of folders(nested Bookmarks syncOrder should be based on
     // its parentFolder order which we don't have in pre 1.8)
@@ -46,7 +46,7 @@ extension Bookmark {
     }
     
     /// Sets order for all bookmarks. Needed after user joins sync group for the first time,
-    // or after updating from older Brave versions(<1.8.0)
+    // or after updating from older Dissenter versions(<1.8.0)
     /// Returns an array of bookmarks with updated `syncOrder`.
     @discardableResult
     class func updateBookmarksWithNewSyncOrder(parentFolder: Bookmark? = nil,

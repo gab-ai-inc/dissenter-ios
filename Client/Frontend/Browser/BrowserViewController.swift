@@ -1637,7 +1637,7 @@ extension BrowserViewController: URLBarDelegate {
         guard let selectedTab = tabManager.selectedTab else { return }
         let shields = ShieldsViewController(tab: selectedTab)
         shields.shieldsSettingsChanged = { [unowned self] _ in
-            // Reload this tab. This will also trigger an update of the brave icon in `TabLocationView` if
+            // Reload this tab. This will also trigger an update of the Dissenter icon in `TabLocationView` if
             // the setting changed is the global `.AllOff` shield
             self.tabManager.selectedTab?.reload()
             
