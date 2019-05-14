@@ -2,74 +2,74 @@
  [
   "username", 
   [
-   "BraveStrings.swift", 
-   "BraveStrings.swift"
+   "DissenterStrings.swift",
+   "DissenterStrings.swift"
   ]
  ], 
  [
   "enter passcode", 
   [
-   "BraveStrings.swift", 
-   "BraveStrings.swift"
+   "DissenterStrings.swift",
+   "DissenterStrings.swift"
   ]
  ], 
  [
   "search", 
   [
-   "BraveStrings.swift", 
-   "BraveStrings.swift"
+   "DissenterStrings.swift",
+   "DissenterStrings.swift"
   ]
  ], 
  [
   "find in page", 
   [
-   "BraveStrings.swift", 
-   "BraveStrings.swift"
+   "DissenterStrings.swift",
+   "DissenterStrings.swift"
   ]
  ], 
  [
   "ok", 
   [
-   "BraveStrings.swift", 
-   "BraveStrings.swift", 
-   "Strings.swift", 
-   "Strings.swift", 
-   "Strings.swift", 
+   "DissenterStrings.swift",
+   "DissenterStrings.swift",
+   "Strings.swift",
+   "Strings.swift",
+   "Strings.swift",
    "Strings.swift"
   ]
  ], 
  [
   "close", 
   [
-   "Strings.swift", 
-   "BraveStrings.swift"
+   "Strings.swift",
+   "DissenterStrings.swift"
   ]
  ], 
  [
   "no", 
   [
-   "BraveStrings.swift", 
-   "BraveStrings.swift"
+   "DissenterStrings.swift",
+   "DissenterStrings.swift"
   ]
  ], 
  [
   "edit", 
   [
-   "Strings.swift", 
-   "BraveStrings.swift"
+   "Strings.swift",
+   "DissenterStrings.swift"
   ]
  ], 
  [
   "close tab", 
   [
-   "Strings.swift", 
-   "BraveStrings.swift"
+   "Strings.swift",
+   "DissenterStrings.swift"
   ]
  ], 
  [
   "yesterday", 
   [
-   "BraveStrings.swift", 
+   "DissenterStrings.swift",
    "TimeConstants.swift"
   ]
  ], 
@@ -83,8 +83,8 @@
  [
   "forward", 
   [
-   "Strings.swift", 
-   "BraveStrings.swift"
+   "Strings.swift",
+   "DissenterStrings.swift"
   ]
  ], 
  [
@@ -97,58 +97,58 @@
  [
   "done", 
   [
-   "BraveStrings.swift", 
-   "BraveStrings.swift", 
+   "DissenterStrings.swift",
+   "DissenterStrings.swift",
    "Strings.swift"
   ]
  ], 
  [
   "back", 
   [
-   "Strings.swift", 
-   "BraveStrings.swift"
+   "Strings.swift",
+   "DissenterStrings.swift"
   ]
  ], 
  [
   "add tab", 
   [
-   "BraveStrings.swift", 
-   "BraveStrings.swift"
+   "DissenterStrings.swift",
+   "DissenterStrings.swift"
   ]
  ], 
  [
   "cancel", 
   [
-   "BraveStrings.swift", 
-   "BraveStrings.swift", 
-   "BraveStrings.swift", 
-   "BraveStrings.swift", 
-   "BraveStrings.swift", 
-   "Strings.swift", 
-   "Strings.swift", 
+   "DissenterStrings.swift",
+   "DissenterStrings.swift",
+   "DissenterStrings.swift",
+   "DissenterStrings.swift",
+   "DissenterStrings.swift",
+   "Strings.swift",
+   "Strings.swift",
    "Strings.swift"
   ]
  ], 
  [
   "new tab", 
   [
-   "BraveStrings.swift", 
-   "BraveStrings.swift", 
+   "DissenterStrings.swift",
+   "DissenterStrings.swift",
    "Strings.swift"
   ]
  ], 
  [
   "password", 
   [
-   "BraveStrings.swift", 
-   "BraveStrings.swift"
+   "DissenterStrings.swift",
+   "DissenterStrings.swift"
   ]
  ], 
  [
   "delete", 
   [
-   "BraveStrings.swift", 
-   "BraveStrings.swift"
+   "DissenterStrings.swift",
+   "DissenterStrings.swift"
   ]
  ]
 ]
