@@ -6,7 +6,7 @@ import WebKit
 import Shared
 import Data
 import Deferred
-import BraveShared
+import DissenterShared
 
 extension ContentBlockerHelper: TabContentScript {
     class func name() -> String {

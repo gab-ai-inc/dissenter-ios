@@ -3,7 +3,7 @@
 import UIKit
 import Shared
 import AVFoundation
-import BraveShared
+import DissenterShared
 import Data
 
 class SyncPairCameraViewController: SyncViewController {
@@ -91,14 +91,14 @@ class SyncPairCameraViewController: SyncViewController {
         titleLabel = UILabel()
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.font = UIFont.systemFont(ofSize: 20, weight: UIFont.Weight.semibold)
-        titleLabel.textColor = BraveUX.GreyJ
+        titleLabel.textColor = DissenterUX.GreyJ
         titleLabel.text = Strings.SyncToDevice
         titleDescriptionStackView.addArrangedSubview(titleLabel)
 
         descriptionLabel = UILabel()
         descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
         descriptionLabel.font = UIFont.systemFont(ofSize: 15, weight: UIFont.Weight.regular)
-        descriptionLabel.textColor = BraveUX.GreyH
+        descriptionLabel.textColor = DissenterUX.GreyH
         descriptionLabel.numberOfLines = 0
         descriptionLabel.lineBreakMode = .byWordWrapping
         descriptionLabel.textAlignment = .center
@@ -115,7 +115,7 @@ class SyncPairCameraViewController: SyncViewController {
         enterWordsButton.translatesAutoresizingMaskIntoConstraints = false
         enterWordsButton.setTitle(Strings.EnterCodeWords, for: .normal)
         enterWordsButton.titleLabel?.font = UIFont.systemFont(ofSize: 15, weight: UIFont.Weight.semibold)
-        enterWordsButton.setTitleColor(BraveUX.GreyH, for: .normal)
+        enterWordsButton.setTitleColor(DissenterUX.GreyH, for: .normal)
         enterWordsButton.addTarget(self, action: #selector(SEL_enterWords), for: .touchUpInside)
         stackView.addArrangedSubview(enterWordsButton)
         

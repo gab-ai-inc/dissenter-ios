@@ -12,7 +12,7 @@ import SwiftKeychainWrapper
 import LocalAuthentication
 import CoreSpotlight
 import UserNotifications
-import BraveShared
+import DissenterShared
 import Data
 
 private let log = Logger.browserLogger
@@ -244,11 +244,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UIViewControllerRestorati
         
         AdblockResourceDownloader.shared.regionalAdblockResourcesSetup()
 
-        UINavigationBar.appearance().tintColor = BraveUX.BraveOrange
+        UINavigationBar.appearance().tintColor = DissenterUX.DissenterGreen
       
         (UISwitch.appearance() as UISwitch).do {
-            $0.tintColor = BraveUX.SwitchTintColor
-            $0.onTintColor = BraveUX.BraveOrange
+            $0.tintColor = DissenterUX.SwitchTintColor
+            $0.onTintColor = DissenterUX.DissenterGreen
         }
       
         return shouldPerformAdditionalDelegateHandling

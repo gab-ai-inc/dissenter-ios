@@ -4,7 +4,7 @@
 
 import Shared
 import SnapKit
-import BraveShared
+import DissenterShared
 import Data
 
 private struct URLBarViewUX {
@@ -102,7 +102,7 @@ class URLBarView: UIView {
     fileprivate lazy var cancelButton: UIButton = {
         let cancelButton = InsetButton()
         cancelButton.setTitle(Strings.CancelButtonTitle, for: .normal)
-        cancelButton.setTitleColor(BraveUX.CancelTextColor, for: .normal)
+        cancelButton.setTitleColor(DissenterUX.CancelTextColor, for: .normal)
         cancelButton.accessibilityIdentifier = "urlBar-cancel"
         cancelButton.addTarget(self, action: #selector(didClickCancel), for: .touchUpInside)
         cancelButton.setContentCompressionResistancePriority(.required, for: .horizontal)
@@ -703,9 +703,9 @@ extension URLBarView: Themeable {
         showQRButtonTintColor = UIColor.Browser.Tint.colorFor(theme)
         switch theme {
         case .regular:
-            backgroundColor = BraveUX.ToolbarsBackgroundSolidColor
+            backgroundColor = DissenterUX.ToolbarsBackgroundSolidColor
         case .private:
-            backgroundColor = BraveUX.DarkToolbarsBackgroundSolidColor
+            backgroundColor = DissenterUX.DarkToolbarsBackgroundSolidColor
         }
         line.backgroundColor = UIColor.Browser.URLBarDivider.colorFor(theme)
     }
@@ -799,9 +799,9 @@ extension ToolbarTextField: Themeable {
     func applyTheme(_ theme: Theme) {
         switch theme {
         case .regular:
-            backgroundColor = BraveUX.LocationBarBackgroundColor
+            backgroundColor = DissenterUX.LocationBarBackgroundColor
         case .private:
-            backgroundColor = BraveUX.LocationBarBackgroundColor_PrivateMode
+            backgroundColor = DissenterUX.LocationBarBackgroundColor_PrivateMode
         }
 
         textColor = UIColor.TextField.TextAndTint.colorFor(theme)

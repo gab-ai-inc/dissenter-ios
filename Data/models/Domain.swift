@@ -3,7 +3,7 @@
 import UIKit
 import CoreData
 import Foundation
-import BraveShared
+import DissenterShared
 
 public final class Domain: NSManagedObject, CRUD {
     

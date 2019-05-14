@@ -6,7 +6,7 @@ import UIKit
 import Shared
 import SnapKit
 import XCGLogger
-import BraveShared
+import DissenterShared
 
 private let log = Logger.browserLogger
 
@@ -339,9 +339,9 @@ extension TabLocationView: Themeable {
     func applyTheme(_ theme: Theme) {
         switch theme {
         case .regular:
-            backgroundColor = BraveUX.LocationBarBackgroundColor
+            backgroundColor = DissenterUX.LocationBarBackgroundColor
         case .private:
-            backgroundColor = BraveUX.LocationBarBackgroundColor_PrivateMode
+            backgroundColor = DissenterUX.LocationBarBackgroundColor_PrivateMode
         }
 
         urlTextField.textColor = UIColor.Browser.Tint.colorFor(theme)

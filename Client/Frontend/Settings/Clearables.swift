@@ -6,7 +6,7 @@ import Foundation
 import Shared
 import Data
 import Deferred
-import BraveShared
+import DissenterShared
 import WebKit
 
 // A base protocol for something that can be cleared.

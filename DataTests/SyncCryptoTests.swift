@@ -4,7 +4,7 @@
 
 import XCTest
 @testable import Data
-import BraveShared
+import DissenterShared
 import JavaScriptCore
 
 class SyncCryptoTests: CoreDataTestCase {

@@ -2,7 +2,7 @@
 
 import UIKit
 import Shared
-import BraveShared
+import DissenterShared
 import Data
 
 struct SyncUX {

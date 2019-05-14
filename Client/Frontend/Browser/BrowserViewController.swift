@@ -15,7 +15,7 @@ import MobileCoreServices
 import SwiftyJSON
 import Deferred
 import Data
-import BraveShared
+import DissenterShared
 import SwiftKeychainWrapper
 
 private let log = Logger.browserLogger

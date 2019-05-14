@@ -4,7 +4,7 @@ import UIKit
 import CoreData
 import Shared
 import Data
-import BraveShared
+import DissenterShared
 
 private let log = Logger.browserLogger
 
@@ -44,7 +44,7 @@ class SyncSettingsTableViewController: UITableViewController {
             $0.textContainerInset = UIEdgeInsets(top: 36, left: 16, bottom: 16, right: 16)
             $0.isEditable = false
             $0.isSelectable = false
-            $0.textColor = BraveUX.GreyH
+            $0.textColor = DissenterUX.GreyH
             $0.textAlignment = .center
             $0.font = UIFont.systemFont(ofSize: 15)
             $0.sizeToFit()
@@ -227,7 +227,7 @@ class SyncSettingsTableViewController: UITableViewController {
                  NSAttributedString.Key.font: UIFont.systemFont(ofSize: 17, weight: UIFont.Weight.regular)])
         }
         
-        let decoratedText = attributedString(for: Strings.SyncAddAnotherDevice, color: BraveUX.BraveOrange)
+        let decoratedText = attributedString(for: Strings.SyncAddAnotherDevice, color: DissenterUX.DissenterGreen)
         
         cell.textLabel?.attributedText = decoratedText
         cell.textLabel?.textAlignment = .center

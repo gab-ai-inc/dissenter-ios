@@ -4,7 +4,7 @@
 
 import UIKit
 import Shared
-import BraveShared
+import DissenterShared
 import Deferred
 
 private let SectionToggles = 0

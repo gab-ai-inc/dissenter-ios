@@ -5,7 +5,7 @@
 import Storage
 import SnapKit
 import Shared
-import BraveShared
+import DissenterShared
 import Data
 
 /// Displays shield settings and shield stats for a given URL

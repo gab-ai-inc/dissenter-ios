@@ -9,7 +9,7 @@ import XCGLogger
 import Eureka
 import Storage
 import Data
-import BraveShared
+import DissenterShared
 
 private let log = Logger.browserLogger
 
@@ -139,14 +139,14 @@ class BookmarksViewController: SiteTableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    self.view.backgroundColor = BraveUX.BackgroundColorForSideToolbars
+    self.view.backgroundColor = DissenterUX.BackgroundColorForSideToolbars
     
     tableView.allowsSelectionDuringEditing = true
     
     let navBar = self.navigationController?.navigationBar
-    navBar?.barTintColor = BraveUX.BackgroundColorForSideToolbars
+    navBar?.barTintColor = DissenterUX.BackgroundColorForSideToolbars
     navBar?.isTranslucent = false
-    navBar?.titleTextAttributes = [.font: UIFont.systemFont(ofSize: UIConstants.DefaultChromeSize, weight: .medium), .foregroundColor: BraveUX.GreyJ]
+    navBar?.titleTextAttributes = [.font: UIFont.systemFont(ofSize: UIConstants.DefaultChromeSize, weight: .medium), .foregroundColor: DissenterUX.GreyJ]
     navBar?.clipsToBounds = true
     
     let width = self.view.bounds.size.width
@@ -154,7 +154,7 @@ class BookmarksViewController: SiteTableViewController {
     
     editBookmarksToolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: width, height: toolbarHeight))
     createEditBookmarksToolbar()
-    editBookmarksToolbar.barTintColor = BraveUX.BackgroundColorForSideToolbars
+    editBookmarksToolbar.barTintColor = DissenterUX.BackgroundColorForSideToolbars
     editBookmarksToolbar.isTranslucent = false
     
     self.view.addSubview(editBookmarksToolbar)
@@ -245,7 +245,7 @@ class BookmarksViewController: SiteTableViewController {
     items.append(editBookmarksButton)
     items.append(UIBarButtonItem.fixedSpace(5))
     
-    items.forEach { $0.tintColor = BraveUX.LightBlue }
+    items.forEach { $0.tintColor = DissenterUX.LightBlue }
     
     editBookmarksToolbar.items = items
     
@@ -358,8 +358,8 @@ class BookmarksViewController: SiteTableViewController {
         cell.imageView?.contentMode = .center
         cell.imageView?.layer.borderWidth = 0.0
       } else {
-        cell.imageView?.layer.borderColor = BraveUX.faviconBorderColor.cgColor
-        cell.imageView?.layer.borderWidth = BraveUX.faviconBorderWidth
+        cell.imageView?.layer.borderColor = DissenterUX.faviconBorderColor.cgColor
+        cell.imageView?.layer.borderWidth = DissenterUX.faviconBorderWidth
         // favicon object associated through domain relationship - set from cache or download
         cell.imageView?.setIconMO(item.domain?.favicon, forURL: URL(string: item.url ?? ""))
       }

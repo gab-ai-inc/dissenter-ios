@@ -4,7 +4,7 @@
 
 import UIKit
 import Shared
-import BraveShared
+import DissenterShared
 
 @objc protocol FavoriteCellDelegate {
     func editFavorite(_ favoriteCell: FavoriteCell)
@@ -45,8 +45,8 @@ class FavoriteCell: UICollectionViewCell {
         $0.contentMode = .scaleAspectFit
         $0.clipsToBounds = true
         $0.layer.cornerRadius = UI.cornerRadius
-        $0.layer.borderColor = BraveUX.faviconBorderColor.cgColor
-        $0.layer.borderWidth = BraveUX.faviconBorderWidth
+        $0.layer.borderColor = DissenterUX.faviconBorderColor.cgColor
+        $0.layer.borderWidth = DissenterUX.faviconBorderWidth
         $0.layer.minificationFilter = CALayerContentsFilter.trilinear
         $0.layer.magnificationFilter = CALayerContentsFilter.nearest
     }

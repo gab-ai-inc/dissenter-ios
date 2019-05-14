@@ -3,7 +3,7 @@
 import UIKit
 import Shared
 import Data
-import BraveShared
+import DissenterShared
 
 /// Sometimes during heavy operations we want to prevent user from navigating back, changing screen etc.
 protocol NavigationPrevention {
@@ -43,8 +43,8 @@ class SyncWelcomeViewController: SyncViewController {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.systemFont(ofSize: 20, weight: UIFont.Weight.semibold)
-        label.textColor = BraveUX.GreyJ
-        label.text = Strings.BraveSync
+        label.textColor = DissenterUX.GreyJ
+        label.text = Strings.DissenterSync
         label.textAlignment = .center
         return label
     }()
@@ -53,11 +53,11 @@ class SyncWelcomeViewController: SyncViewController {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.systemFont(ofSize: 15, weight: UIFont.Weight.regular)
-        label.textColor = BraveUX.GreyH
+        label.textColor = DissenterUX.GreyH
         label.numberOfLines = 0
         label.lineBreakMode = .byWordWrapping
         label.textAlignment = .center
-        label.text = Strings.BraveSyncWelcome
+        label.text = Strings.DissenterSyncWelcome
         label.setContentHuggingPriority(UILayoutPriority(rawValue: 250), for: .horizontal)
 
         return label
@@ -76,7 +76,7 @@ class SyncWelcomeViewController: SyncViewController {
         button.setTitle(Strings.ScanSyncCode, for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 17, weight: UIFont.Weight.bold)
         button.setTitleColor(UIColor.white, for: .normal)
-        button.backgroundColor = BraveUX.BraveOrange
+        button.backgroundColor = DissenterUX.DissenterGreen
         button.addTarget(self, action: #selector(existingUserAction), for: .touchUpInside)
 
         button.snp.makeConstraints { make in
@@ -91,7 +91,7 @@ class SyncWelcomeViewController: SyncViewController {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle(Strings.NewSyncCode, for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 15, weight: UIFont.Weight.semibold)
-        button.setTitleColor(BraveUX.GreyH, for: .normal)
+        button.setTitleColor(DissenterUX.GreyH, for: .normal)
         button.addTarget(self, action: #selector(newToSyncAction), for: .touchUpInside)
         return button
     }()

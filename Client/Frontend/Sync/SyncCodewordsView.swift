@@ -1,7 +1,7 @@
 /* This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 import Shared
-import BraveShared
+import DissenterShared
 import Data
 
 class SyncCodewordsView: UIView, UITextViewDelegate {
@@ -10,7 +10,7 @@ class SyncCodewordsView: UIView, UITextViewDelegate {
         textView.autocapitalizationType = .none
         textView.autocorrectionType = .yes
         textView.font = UIFont.systemFont(ofSize: 18, weight: UIFont.Weight.medium)
-        textView.textColor = BraveUX.GreyJ
+        textView.textColor = DissenterUX.GreyJ
         return textView
     }()
     
@@ -18,7 +18,7 @@ class SyncCodewordsView: UIView, UITextViewDelegate {
         let label = UILabel()
         label.text = Strings.CodeWordInputHelp
         label.font = UIFont.systemFont(ofSize: 18, weight: UIFont.Weight.regular)
-        label.textColor = BraveUX.GreyE
+        label.textColor = DissenterUX.GreyE
         label.lineBreakMode = .byWordWrapping
         label.numberOfLines = 0
         return label

@@ -4,7 +4,7 @@
 
 import Foundation
 import Shared
-import BraveShared
+import DissenterShared
 import Deferred
 
 private let log = Logger.browserLogger

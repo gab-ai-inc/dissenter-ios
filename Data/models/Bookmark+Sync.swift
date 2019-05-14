@@ -4,7 +4,7 @@
 import Foundation
 import CoreData
 import Shared
-import BraveShared
+import DissenterShared
 import JavaScriptCore
 
 private let log = Logger.browserLogger

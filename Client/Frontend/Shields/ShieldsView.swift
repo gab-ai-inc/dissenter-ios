@@ -4,7 +4,7 @@
 
 import Foundation
 import Shared
-import BraveShared
+import DissenterShared
 
 extension ShieldsViewController {
     /// The custom loaded view for the `ShieldsViewController`
@@ -23,7 +23,7 @@ extension ShieldsViewController {
         // Global Shields Override
         let shieldOverrideControl: ToggleView = {
             let toggleView = ToggleView(title: Strings.Site_shield_settings, toggleSide: .right)
-            toggleView.titleLabel.textColor = BraveUX.GreyJ
+            toggleView.titleLabel.textColor = DissenterUX.GreyJ
             toggleView.titleLabel.font = .systemFont(ofSize: 17.0, weight: .medium)
             return toggleView
         }()
@@ -111,7 +111,7 @@ extension ShieldsViewController {
         
         private class func dividerView() -> UIView {
             let divider = UIView()
-            divider.backgroundColor = BraveUX.ColorForSidebarLineSeparators
+            divider.backgroundColor = DissenterUX.ColorForSidebarLineSeparators
             divider.snp.makeConstraints { $0.height.equalTo(1.0 / UIScreen.main.scale) }
             return divider
         }
@@ -128,10 +128,10 @@ extension ShieldsViewController {
         
         // Stats
         let statsHeaderLabel = headerLabel(title: Strings.Blocking_Monitor)
-        let adsTrackersStatView = StatView(title: Strings.Ads_and_Trackers, valueColor: BraveUX.BraveOrange)
-        let httpsUpgradesStatView = StatView(title: Strings.HTTPS_Upgrades, valueColor: BraveUX.Green)
-        let scriptsBlockedStatView = StatView(title: Strings.Scripts_Blocked, valueColor: BraveUX.Purple)
-        let fingerprintingStatView = StatView(title: Strings.Fingerprinting_Methods, valueColor: BraveUX.GreyG)
+        let adsTrackersStatView = StatView(title: Strings.Ads_and_Trackers, valueColor: DissenterUX.DissenterGreen)
+        let httpsUpgradesStatView = StatView(title: Strings.HTTPS_Upgrades, valueColor: DissenterUX.Green)
+        let scriptsBlockedStatView = StatView(title: Strings.Scripts_Blocked, valueColor: DissenterUX.Purple)
+        let fingerprintingStatView = StatView(title: Strings.Fingerprinting_Methods, valueColor: DissenterUX.GreyG)
         
         // Settings
         let settingsDivider = dividerView()

@@ -5,7 +5,7 @@
 import Foundation
 import WebKit
 import Shared
-import BraveShared
+import DissenterShared
 
 class NightModeHelper: TabContentScript {
     fileprivate weak var tab: Tab?

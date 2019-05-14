@@ -6,7 +6,7 @@ import WebKit
 import Shared
 import Deferred
 import Data
-import BraveShared
+import DissenterShared
 
 private let log = Logger.browserLogger
 

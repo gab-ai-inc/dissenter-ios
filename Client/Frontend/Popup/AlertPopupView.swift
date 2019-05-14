@@ -3,7 +3,7 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 import UIKit
-import BraveShared
+import DissenterShared
 
 class AlertPopupView: PopupView {
     
@@ -33,7 +33,7 @@ class AlertPopupView: PopupView {
         }
         
         titleLabel = UILabel(frame: CGRect.zero)
-        titleLabel.textColor = BraveUX.GreyJ
+        titleLabel.textColor = DissenterUX.GreyJ
         titleLabel.textAlignment = .center
         titleLabel.font = UIFont.systemFont(ofSize: 24, weight: UIFont.Weight.bold)
         titleLabel.text = title
@@ -41,7 +41,7 @@ class AlertPopupView: PopupView {
         containerView.addSubview(titleLabel)
         
         messageLabel = UILabel(frame: CGRect.zero)
-        messageLabel.textColor = BraveUX.GreyH
+        messageLabel.textColor = DissenterUX.GreyH
         messageLabel.textAlignment = .center
         messageLabel.font = UIFont.systemFont(ofSize: 15, weight: UIFont.Weight.regular)
         messageLabel.text = message
@@ -52,7 +52,7 @@ class AlertPopupView: PopupView {
         
         setPopupContentView(view: containerView)
         setStyle(popupStyle: .dialog)
-        setDialogColor(color: BraveUX.PopupDialogColorLight)
+        setDialogColor(color: DissenterUX.PopupDialogColorLight)
     }
     
     func updateSubviews() {

@@ -5,7 +5,7 @@ import Shared
 import SnapKit
 import pop
 import Data
-import BraveShared
+import DissenterShared
 
 class SyncDeviceTypeButton: UIControl {
     
@@ -15,13 +15,13 @@ class SyncDeviceTypeButton: UIControl {
     var pressed: Bool = false {
         didSet {
             if pressed {
-                label.textColor = BraveUX.BraveOrange
+                label.textColor = DissenterUX.DissenterGreen
                 if let anim = POPSpringAnimation(propertyNamed: kPOPLayerScaleXY) {
                     anim.toValue = NSValue(cgSize: CGSize(width: 0.9, height: 0.9))
                     layer.pop_add(anim, forKey: "size")
                 }
             } else {
-                label.textColor = BraveUX.GreyJ
+                label.textColor = DissenterUX.GreyJ
                 if let anim = POPSpringAnimation(propertyNamed: kPOPLayerScaleXY) {
                     anim.toValue = NSValue(cgSize: CGSize(width: 1.0, height: 1.0))
                     layer.pop_add(anim, forKey: "size")
@@ -36,19 +36,19 @@ class SyncDeviceTypeButton: UIControl {
         clipsToBounds = false
         backgroundColor = UIColor.white
         layer.cornerRadius = 12
-        layer.shadowColor = BraveUX.GreyJ.cgColor
+        layer.shadowColor = DissenterUX.GreyJ.cgColor
         layer.shadowRadius = 3
         layer.shadowOpacity = 0.1
         layer.shadowOffset = CGSize(width: 0, height: 1)
         
         imageView.image = UIImage(named: image)
         imageView.contentMode = .center
-        imageView.tintColor = BraveUX.GreyJ
+        imageView.tintColor = DissenterUX.GreyJ
         addSubview(imageView)
         
         label.text = title
         label.font = UIFont.systemFont(ofSize: 17.0, weight: UIFont.Weight.bold)
-        label.textColor = BraveUX.GreyJ
+        label.textColor = DissenterUX.GreyJ
         label.textAlignment = .center
         addSubview(label)
         
@@ -100,7 +100,7 @@ class SyncSelectDeviceTypeViewController: SyncViewController {
         $0.textAlignment = .center
         $0.numberOfLines = 0
         $0.font = UIFont.systemFont(ofSize: 15, weight: UIFont.Weight.regular)
-        $0.textColor = BraveUX.GreyH
+        $0.textColor = DissenterUX.GreyH
     }
     
     let mainStackView = UIStackView().then {

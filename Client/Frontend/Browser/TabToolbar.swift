@@ -5,7 +5,7 @@
 import UIKit
 import SnapKit
 import Shared
-import BraveShared
+import DissenterShared
 
 protocol TabToolbarProtocol: class {
     var tabToolbarDelegate: TabToolbarDelegate? { get set }
@@ -281,9 +281,9 @@ extension TabToolbar: Themeable {
     func applyTheme(_ theme: Theme) {
         switch theme {
         case .regular:
-            backgroundColor = BraveUX.ToolbarsBackgroundSolidColor
+            backgroundColor = DissenterUX.ToolbarsBackgroundSolidColor
         case .private:
-            backgroundColor = BraveUX.DarkToolbarsBackgroundSolidColor
+            backgroundColor = DissenterUX.DarkToolbarsBackgroundSolidColor
         }
 
         helper?.setTheme(theme: theme, forButtons: actionButtons)

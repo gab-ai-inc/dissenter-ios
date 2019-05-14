@@ -4,7 +4,7 @@
 
 import Foundation
 import Shared
-import BraveShared
+import DissenterShared
 import Storage
 import Data
 import CoreData
@@ -117,8 +117,8 @@ class HistoryViewController: SiteTableViewController {
     
     cell.imageView?.contentMode = .scaleAspectFit
     cell.imageView?.image = FaviconFetcher.defaultFavicon
-    cell.imageView?.layer.borderColor = BraveUX.faviconBorderColor.cgColor
-    cell.imageView?.layer.borderWidth = BraveUX.faviconBorderWidth
+    cell.imageView?.layer.borderColor = DissenterUX.faviconBorderColor.cgColor
+    cell.imageView?.layer.borderWidth = DissenterUX.faviconBorderWidth
     cell.imageView?.layer.cornerRadius = 6
     cell.imageView?.layer.masksToBounds = true
     

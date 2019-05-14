@@ -4,7 +4,7 @@
 
 import UIKit
 import Shared
-import BraveShared
+import DissenterShared
 import WebKit
 import Storage
 import SnapKit

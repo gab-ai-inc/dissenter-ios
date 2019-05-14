@@ -6,7 +6,7 @@ import UIKit
 import SnapKit
 import Storage
 import Shared
-import BraveShared
+import DissenterShared
 
 struct TabTrayControllerUX {
     static let CornerRadius = CGFloat(6.0)

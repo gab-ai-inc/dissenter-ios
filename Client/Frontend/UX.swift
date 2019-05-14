@@ -29,7 +29,7 @@ struct UX {
         static let cellLabelColorPrivate = UIColor(rgb: 0xDBDBDB)
     }
     
-    static let BraveOrange = UIColor(rgb: 0xfb542b)
+    static let DissenterGreen = UIColor(rgb: 0xfb542b)
     
     static let Blue = UIColor(rgb: 0x424acb)
     static let LightBlue = UIColor(rgb: 0x4A90E2)

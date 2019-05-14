@@ -4,7 +4,7 @@
 
 import UIKit
 import Shared
-import BraveShared
+import DissenterShared
 import Static
 import SwiftKeychainWrapper
 import LocalAuthentication
@@ -87,7 +87,7 @@ class SettingsViewController: TableViewController {
         
         super.init(style: .grouped)
         
-        UITableViewCell.appearance().tintColor = BraveUX.BraveOrange
+        UITableViewCell.appearance().tintColor = DissenterUX.DissenterGreen
     }
     
     @available(*, unavailable)
@@ -100,7 +100,7 @@ class SettingsViewController: TableViewController {
         navigationItem.title = Strings.Settings
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: Strings.Done, style: .done, target: self, action: #selector(tappedDone))
         navigationItem.rightBarButtonItem?.accessibilityIdentifier = "SettingsViewController.navigationItem.rightBarButtonItem"
-        navigationItem.rightBarButtonItem?.tintColor = BraveUX.BraveOrange
+        navigationItem.rightBarButtonItem?.tintColor = DissenterUX.DissenterGreen
         
         tableView.accessibilityIdentifier = "SettingsViewController.tableView"
         tableView.separatorColor = UIConstants.TableViewSeparatorColor
@@ -338,14 +338,14 @@ class SettingsViewController: TableViewController {
                 Row(text: Strings.Privacy_Policy,
                     selection: { [unowned self] in
                         // Show privacy policy
-                        let privacy = SettingsContentViewController().then { $0.url = BraveUX.BravePrivacyURL }
+                        let privacy = SettingsContentViewController().then { $0.url = DissenterUX.DissenterPrivacyURL }
                         self.navigationController?.pushViewController(privacy, animated: true)
                     },
                     accessory: .disclosureIndicator, cellClass: MultilineValue1Cell.self),
                 Row(text: Strings.Terms_of_Use,
                     selection: { [unowned self] in
                         // Show terms of use
-                        let toc = SettingsContentViewController().then { $0.url = BraveUX.BraveTermsOfUseURL }
+                        let toc = SettingsContentViewController().then { $0.url = DissenterUX.DissenterTermsOfUseURL }
                         self.navigationController?.pushViewController(toc, animated: true)
                     },
                     accessory: .disclosureIndicator, cellClass: MultilineValue1Cell.self)

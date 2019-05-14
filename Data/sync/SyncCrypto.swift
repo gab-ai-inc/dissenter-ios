@@ -3,7 +3,7 @@
 import UIKit
 import WebKit
 import Shared
-import BraveShared
+import DissenterShared
 import SwiftyJSON
 import JavaScriptCore
 

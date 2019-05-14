@@ -5,7 +5,7 @@
 import Foundation
 import WebKit
 import Data
-import BraveShared
+import DissenterShared
 
 class FingerprintingProtection: TabContentScript {
     fileprivate weak var tab: Tab?

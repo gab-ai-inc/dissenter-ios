@@ -4,7 +4,7 @@
 
 import UIKit
 import Shared
-import BraveShared
+import DissenterShared
 import XCGLogger
 import Storage
 import Deferred
@@ -56,7 +56,7 @@ class FavoritesViewController: UIViewController, Themeable {
     
     private let ddgLabel = UILabel().then {
         $0.numberOfLines = 0
-        $0.textColor = BraveUX.GreyD
+        $0.textColor = DissenterUX.GreyD
         $0.font = UIFont.systemFont(ofSize: 14, weight: UIFont.Weight.regular)
         $0.text = Strings.DDG_promotion
     }

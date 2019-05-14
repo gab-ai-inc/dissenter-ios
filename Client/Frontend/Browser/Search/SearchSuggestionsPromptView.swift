@@ -4,7 +4,7 @@
 
 import UIKit
 import Shared
-import BraveShared
+import DissenterShared
 
 class SearchSuggestionPromptView: UIView {
     
@@ -16,7 +16,7 @@ class SearchSuggestionPromptView: UIView {
         static let PromptYesFont = UIFont.systemFont(ofSize: 15, weight: UIFont.Weight.bold)
         static let PromptNoFont = UIFont.systemFont(ofSize: 15, weight: UIFont.Weight.regular)
         static let PromptInsets = UIEdgeInsets(top: 15, left: 12, bottom: 15, right: 12)
-        static let PromptButtonColor = BraveUX.Blue
+        static let PromptButtonColor = DissenterUX.Blue
     }
     
     init(optionSelected: @escaping (Bool) -> Void) {
@@ -27,7 +27,7 @@ class SearchSuggestionPromptView: UIView {
         backgroundColor = UX.PromptColor
         
         let promptBottomBorder = UIView()
-        promptBottomBorder.backgroundColor = BraveUX.GreyD
+        promptBottomBorder.backgroundColor = DissenterUX.GreyD
         addSubview(promptBottomBorder)
         
         let promptImage = UIImageView()

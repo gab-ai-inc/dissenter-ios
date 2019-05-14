@@ -3,7 +3,7 @@
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 import XCTest
-import BraveShared
+import DissenterShared
 @testable import Data
 @testable import Client
 

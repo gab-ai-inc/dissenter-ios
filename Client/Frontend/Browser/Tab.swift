@@ -6,7 +6,7 @@ import Foundation
 import WebKit
 import Storage
 import Shared
-import BraveShared
+import DissenterShared
 import SwiftyJSON
 import XCGLogger
 import Data

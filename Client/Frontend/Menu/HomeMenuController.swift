@@ -4,7 +4,7 @@
 
 import Foundation
 import UIKit
-import BraveShared
+import DissenterShared
 import Shared
 import SnapKit
 import Data
@@ -108,7 +108,7 @@ class HomeMenuController: UIViewController {
     topButtonsView.addSubview(settingsButton)
     topButtonsView.addSubview(divider)
     
-    divider.backgroundColor = BraveUX.ColorForSidebarLineSeparators
+    divider.backgroundColor = DissenterUX.ColorForSidebarLineSeparators
     
     settingsButton.setImage(#imageLiteral(resourceName: "menu-settings").template, for: .normal)
     settingsButton.addTarget(self, action: #selector(onClickSettingsButton), for: .touchUpInside)
@@ -131,8 +131,8 @@ class HomeMenuController: UIViewController {
     
     pageButtons.keys.forEach { $0.addTarget(self, action: #selector(onClickPageButton), for: .touchUpInside) }
     
-    settingsButton.tintColor = BraveUX.ActionButtonTintColor
-    addBookmarkButton.tintColor = BraveUX.ActionButtonTintColor
+    settingsButton.tintColor = DissenterUX.ActionButtonTintColor
+    addBookmarkButton.tintColor = DissenterUX.ActionButtonTintColor
     
     view.addSubview(historyController.view)
     view.addSubview(bookmarksNavController.view)
@@ -233,14 +233,14 @@ class HomeMenuController: UIViewController {
     // Hide all old views
     self.pageButtons.forEach { (btn, controller) in
       btn.isSelected = false
-      btn.tintColor = BraveUX.ActionButtonTintColor
+      btn.tintColor = DissenterUX.ActionButtonTintColor
       controller.view.isHidden = true
     }
     
     // Setup the new view
     newView.isHidden = false
     sender.isSelected = true
-    sender.tintColor = BraveUX.ActionButtonSelectedTintColor
+    sender.tintColor = DissenterUX.ActionButtonSelectedTintColor
     
     visibleController = vc
   }

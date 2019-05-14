@@ -2,7 +2,7 @@
 
 import UIKit
 import Shared
-import BraveShared
+import DissenterShared
 import Data
 
 enum DeviceType {
@@ -24,7 +24,7 @@ class SyncAddDeviceViewController: SyncViewController {
     lazy var codewordsView: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 18.0, weight: UIFont.Weight.medium)
-        label.textColor = BraveUX.GreyJ
+        label.textColor = DissenterUX.GreyJ
         label.lineBreakMode = NSLineBreakMode.byWordWrapping
         label.numberOfLines = 0
         return label
@@ -34,7 +34,7 @@ class SyncAddDeviceViewController: SyncViewController {
         let button = UIButton()
         button.setTitle(Strings.CopyToClipboard, for: .normal)
         button.addTarget(self, action: #selector(SEL_copy), for: .touchUpInside)
-        button.setTitleColor(BraveUX.BraveOrange, for: .normal)
+        button.setTitleColor(DissenterUX.DissenterGreen, for: .normal)
         button.contentEdgeInsets = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
         button.isHidden = true
         return button
@@ -140,7 +140,7 @@ class SyncAddDeviceViewController: SyncViewController {
     func setupVisuals() {
         modeControl = UISegmentedControl(items: [Strings.QRCode, Strings.CodeWords])
         modeControl.translatesAutoresizingMaskIntoConstraints = false
-        modeControl.tintColor = BraveUX.BraveOrange
+        modeControl.tintColor = DissenterUX.DissenterGreen
         modeControl.selectedSegmentIndex = 0
         modeControl.addTarget(self, action: #selector(SEL_changeMode), for: .valueChanged)
         modeControl.isHidden = deviceType == .computer
@@ -155,12 +155,12 @@ class SyncAddDeviceViewController: SyncViewController {
         titleLabel = UILabel()
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.font = UIFont.systemFont(ofSize: 20, weight: UIFont.Weight.semibold)
-        titleLabel.textColor = BraveUX.GreyJ
+        titleLabel.textColor = DissenterUX.GreyJ
         titleDescriptionStackView.addArrangedSubview(titleLabel)
 
         descriptionLabel = UILabel()
         descriptionLabel.font = UIFont.systemFont(ofSize: 15, weight: UIFont.Weight.regular)
-        descriptionLabel.textColor = BraveUX.GreyH
+        descriptionLabel.textColor = DissenterUX.GreyH
         descriptionLabel.numberOfLines = 0
         descriptionLabel.lineBreakMode = .byTruncatingTail
         descriptionLabel.textAlignment = .center
@@ -195,7 +195,7 @@ class SyncAddDeviceViewController: SyncViewController {
         doneButton.setTitle(Strings.Done, for: .normal)
         doneButton.titleLabel?.font = UIFont.systemFont(ofSize: 17, weight: UIFont.Weight.bold)
         doneButton.setTitleColor(UIColor.white, for: .normal)
-        doneButton.backgroundColor = BraveUX.BraveOrange
+        doneButton.backgroundColor = DissenterUX.DissenterGreen
         doneButton.addTarget(self, action: #selector(SEL_done), for: .touchUpInside)
 
         doneEnterWordsStackView.addArrangedSubview(doneButton)
@@ -204,7 +204,7 @@ class SyncAddDeviceViewController: SyncViewController {
         enterWordsButton.translatesAutoresizingMaskIntoConstraints = false
         enterWordsButton.setTitle(Strings.ShowCodeWords, for: .normal)
         enterWordsButton.titleLabel?.font = UIFont.systemFont(ofSize: 15, weight: UIFont.Weight.semibold)
-        enterWordsButton.setTitleColor(BraveUX.GreyH, for: .normal)
+        enterWordsButton.setTitleColor(DissenterUX.GreyH, for: .normal)
         enterWordsButton.addTarget(self, action: #selector(SEL_showCodewords), for: .touchUpInside)
 
         let buttonsStackView = UIStackView(arrangedSubviews: [UIView.spacer(.horizontal, amount: 16),
