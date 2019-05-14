@@ -381,17 +381,6 @@ class SettingsViewController: TableViewController {
                     let vc = AdblockDebugMenuTableViewController(style: .grouped)
                     self?.navigationController?.pushViewController(vc, animated: true)
                 }, accessory: .disclosureIndicator, cellClass: MultilineValue1Cell.self),
-                Row(text: "View URP Logs", selection: {
-                    self.navigationController?.pushViewController(UrpLogsViewController(), animated: true)
-                }, accessory: .disclosureIndicator, cellClass: MultilineValue1Cell.self),
-                Row(text: "URP Code: \(UserReferralProgram.getReferralCode() ?? "--")"),
-                Row(text: "Load all QA Links", selection: {
-                    let url = URL(string: "https://raw.githubusercontent.com/brave/qa-resources/master/testlinks.json")!
-                    let string = try? String(contentsOf: url)
-                    let urls = JSON(parseJSON: string!)["links"].arrayValue.compactMap { URL(string: $0.stringValue) }
-                    self.settingsDelegate?.settingsOpenURLs(urls)
-                    self.dismiss(animated: true)
-                }, cellClass: MultilineButtonCell.self),
                 Row(text: "CRASH!!!", selection: {
                     let alert = UIAlertController(title: "Force crash?", message: nil, preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "Crash app", style: .destructive) { _ in

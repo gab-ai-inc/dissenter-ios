@@ -40,9 +40,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UIViewControllerRestorati
     
     var authenticator: AppAuthenticator?
     
-    /// Object used to handle server pings
-    let dau = DAU()
-
     @discardableResult func application(_ application: UIApplication, willFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         //
         // Determine if the application cleanly exited last time it was used. We default to true in
@@ -228,19 +225,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UIViewControllerRestorati
             FavoritesHelper.addDefaultFavorites()
             profile?.searchEngines.setupDefaultRegionalSearchEngines()
         }
-        if let urp = UserReferralProgram.shared {
-            if isFirstLaunch {
-                urp.referralLookup { url in
-                    guard let url = url?.asURL else { return }
-                    self.browserViewController.openReferralLink(url: url)
-                }
-            } else {
-                urp.pingIfEnoughTimePassed()
-            }
-        } else {
-            log.error("Failed to initialize user referral program")
-            UrpLog.log("Failed to initialize user referral program")
-        }
         
         AdblockResourceDownloader.shared.regionalAdblockResourcesSetup()
 
@@ -291,10 +275,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UIViewControllerRestorati
             quickActions.handleShortCutItem(shortcut, withBrowserViewController: browserViewController)
             quickActions.launchedShortcutItem = nil
         }
-        
-        // We try to send DAU ping each time the app goes to foreground to work around network edge cases
-        // (offline, bad connection etc.)
-        dau.sendPingToServer()
     }
 
     func applicationDidEnterBackground(_ application: UIApplication) {
