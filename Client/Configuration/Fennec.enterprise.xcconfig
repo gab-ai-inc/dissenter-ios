@@ -4,7 +4,7 @@
 
 #include "Base.xcconfig"
 
-MOZ_BUNDLE_DISPLAY_NAME = BraveNight
+MOZ_BUNDLE_DISPLAY_NAME = DissenterNight
 
 BRAVE_API_KEY = key
 
