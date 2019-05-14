@@ -1,0 +1,952 @@
+/* About settings section title */
+"About" = "Tentang";
+
+/* See http://mzl.la/1G7uHo7 */
+"AccessPhotoDeniedAlertMessage" = "Ini memungkinkan Anda menyimpan gambar ke Rol Kamera Anda.";
+
+/* See http://mzl.la/1G7uHo7 */
+"AccessPhotoDeniedAlertTitle" = "Dissenter ingin mengakses Foto Anda";
+
+/* Button to add a bookmark */
+"AddBookmark" = "Tambahkan Markah";
+
+/* Add to favorites share action. */
+"AddToFavorites" = "Tambahkan ke Favorit";
+
+/* individual blocking statistic title */
+"AdsAndTrackers" = "Iklan dan Pelacak";
+
+/* Shields Ads Stat */
+"AdsAndTrackersrBlocked" = "Iklan & Pelacak
+Diblokir";
+
+/* Shields Ads Stat */
+"AdsrBlocked" = "Iklan
+Diblokir";
+
+/* Used as a button label for crash dialog prompt */
+"AlwaysSendButtonTitle" = "Selalu Kirim";
+
+/* tabs bar show/hide option */
+"AlwaysShow" = "Selalu tampilkan";
+
+/* Label used as a setting item and title of the following screen to change the current passcode */
+"AuthenticationChangePasscode" = "Ubah Kode Akses";
+
+/* Touch ID prompt subtitle when disabling Touch ID */
+"AuthenticationDisableTouchReason" = "Gunakan sidik jari Anda untuk menonaktifkan Touch ID.";
+
+/* Text displayed above the input field when entering a new passcode */
+"AuthenticationEnterAPasscode" = "Masukkan kode akses";
+
+/* Text displayed above the input field when changing the existing passcode */
+"AuthenticationEnterNewPasscode" = "Masukkan kode akses baru";
+
+/* Text displayed above the input field when changing the existing passcode */
+"AuthenticationEnterPasscode" = "Masukkan kode akses";
+
+/* Title of the dialog used to request the passcode */
+"AuthenticationEnterPasscodeTitle" = "Masukkan Kode Akses";
+
+/* Label for the Face ID/Passcode item in Settings */
+"AuthenticationFaceIDPasscodeSetting" = "Face ID & Kode Akses";
+
+/* Immediately' interval item for selecting when to require passcode */
+"AuthenticationImmediately" = "Segera";
+
+/* Error message displayed when user enters incorrect passcode when trying to enter a protected section of the app with attempts remaining */
+"AuthenticationIncorrectAttemptsRemaining" = "Kode akses salah. Coba lagi (Percobaan tersisa: %d).";
+
+/* Touch ID prompt subtitle when accessing logins */
+"AuthenticationLoginsTouchReason" = "Gunakan sidik jari Anda untuk mengakses fungsi Masuk sekarang.";
+
+/* Error message displayed when user enters incorrect passcode and has reached the maximum number of attempts. */
+"AuthenticationMaximumAttemptsReached" = "Batas percobaan maksimum telah tercapai. Coba lagi setelah satu jam.";
+
+/* Error message displayed when user enters incorrect passcode and has reached the maximum number of attempts. */
+"AuthenticationMaximumAttemptsReachedNoTime" = "Batas percobaan maksimum telah tercapai. Coba lagi nanti.";
+
+/* Label for the Passcode item in Settings */
+"AuthenticationPasscode" = "Kode Akses Untuk Masuk";
+
+/* Text displayed above the input field when confirming a passcode */
+"AuthenticationReenterPasscode" = "Masukkan kembali kode akses";
+
+/* Text displayed in the 'Interval' section, followed by the current interval setting, e.g. 'Immediately' */
+"AuthenticationRequirePasscode" = "Memerlukan Kode Akses";
+
+/* Touch ID prompt subtitle when accessing the require passcode setting */
+"AuthenticationRequirePasscodeTouchReason" = "Gunakan sidik jari Anda untuk mengakses konfigurasi interval kode akses yang diperlukan.";
+
+/* Title of the dialog used to set a passcode */
+"AuthenticationSetPasscode" = "Atur Kode Akses";
+
+/* Label for the Touch ID/Passcode item in Settings */
+"AuthenticationTouchIDPasscodeSetting" = "Touch ID & Kode Akses";
+
+/* Label used as a setting item to turn off passcode */
+"AuthenticationTurnOffPasscode" = "Nonaktifkan Kode Akses";
+
+/* Label used as a setting item to turn on passcode */
+"AuthenticationTurnOnPasscode" = "Aktifkan Kode Akses";
+
+/* Error message displayed when user enters incorrect passcode when trying to enter a protected section of the app */
+"AuthenticationWrongPasscodeError" = "Kode akses salah. Coba lagi.";
+
+/* Label for Cancel button */
+"AuthPromptAlertCancelButtonTitle" = "Batal";
+
+/* Authentication prompt message with a realm. First parameter is the hostname. Second is the realm string */
+"AuthPromptAlertFormatRealmMessageText" = "Nama pengguna dan sandi sedang diminta oleh %1$@. Situs merespons: %2$@";
+
+/* Authentication prompt log in button */
+"AuthPromptAlertLogInButtonTitle" = "Masuk";
+
+/* Authentication prompt message with no realm. Parameter is the hostname of the site */
+"AuthPromptAlertMessageText" = "Nama pengguna dan sandi sedang diminta oleh %@.";
+
+/* Password textbox in Authentication prompt */
+"AuthPromptAlertPasswordPlaceholderText" = "Sandi";
+
+/* Authentication prompt title */
+"AuthPromptAlertTitle" = "Memerlukan autentikasi";
+
+/* Username textbox in Authentication prompt */
+"AuthPromptAlertUsernamePlaceholderText" = "Nama pengguna";
+
+/* cookie settings option */
+"Block3rdPartyCookies" = "Blokir cookie pihak ke-3";
+
+/* No comment provided by engineer. */
+"BlockAdsAndTracking" = "Blokir Iklan & Pelacakan";
+
+/* cookie settings option */
+"BlockAllCookies" = "Blokir semua cookie";
+
+/* block all cookies settings action title */
+"BlockAllCookiesAction" = "Blokir Semua";
+
+/* Information displayed to user when block all cookie is enabled. */
+"BlockAllCookiesAlertInfo" = "Memblokir semua kuki akan mencegah beberapa situs web berfungsi secara normal.";
+
+/* Title of alert displayed to user when block all cookie is enabled. */
+"BlockAllCookiesAlertTitle" = "Blokir semua kuki?";
+
+/* Message of alert displayed to user when block all cookie operation fails */
+"BlockAllCookiesFailedAlertMsg" = "Gagal mengatur preferensi. Coba lagi.";
+
+/* title for section showing page blocking statistics */
+"BlockingMonitor" = "Memblokir Monitor";
+
+/* Dissenter panel individual toggle title */
+"BlockPhishing" = "Blokir Phishing";
+
+/* No comment provided by engineer. */
+"BlockPhishingAndMalware" = "Blokir Phishing dan Malware";
+
+/* Setting to enable popup blocking */
+"BlockPopups" = "Blokir Pop-up";
+
+/* No comment provided by engineer. */
+"BlockScripts" = "Blokir Skrip";
+
+/* Bookmark Folder Section Title */
+"BookmarkFolder" = "Folder Markah";
+
+/* Bookmark Info Section Title */
+"BookmarkInfo" = "Info Markah";
+
+/* title for bookmarks panel */
+"Bookmarks" = "Markah";
+
+/* Button to show the Dissenter panel */
+"DissenterPanel" = "Panel Dissenter";
+
+/* Section title for adbblock, tracking protection, HTTPS-E, and cookies */
+"DissenterShieldDefaults" = "Default Perisai Dissenter";
+
+/* Dissenter sync page title */
+"DissenterSync" = "Dissenter Sync (beta)";
+
+/* Sync settings welcome */
+"DissenterSyncWelcome" = "Untuk memulai, Anda perlu memasang Dissenter di semua perangkat yang ingin disinkronisasi. Untuk menyinkronkan, mulai rantai sinkronisasi yang akan Anda gunakan untuk menghubungkan semua perangkat dengan aman.";
+
+/* Browser Lock feature callout enable action. */
+"BrowserLockCalloutEnable" = "Aktifkan";
+
+/* Browser Lock feature callout message. */
+"BrowserLockCalloutMessage" = "Dengan Kunci Peramban, Anda harus memasukkan PIN agar dapat mengakses Dissenter.";
+
+/* Browser Lock feature callout not now action. */
+"BrowserLockCalloutNotNow" = "Jangan Sekarang";
+
+/* Browser Lock feature callout title. */
+"BrowserLockCalloutTitle" = "Pribadi berarti pribadi.";
+
+/* Settings item for clearing browsing history */
+"BrowsingHistory" = "Riwayat Penelusuran";
+
+/* Settings item for clearing the cache */
+"Cache" = "Tembolok";
+
+/* No comment provided by engineer. */
+"CancelButtonTitle" = "Batal";
+
+/* Button in settings that clears private data for the selected items. Also used as section title in settings panel */
+"ClearPrivateData" = "Hapus Data Pribadi";
+
+/* The cancel button when confirming clear private data. */
+"ClearPrivateDataAlertCancelButtonTitle" = "Batal";
+
+/* Description of the confirmation dialog shown when a user tries to clear their private data. */
+"ClearPrivateDataAlertMessage" = "Tindakan ini akan menghapus semua data pribadi Anda. Tindakan ini tidak dapat dibatalkan.";
+
+/* The button that clears private data. */
+"ClearPrivateDataAlertOkButtonTitle" = "OK";
+
+/* The cancel button when confirming clear history. */
+"ClearSyncedHistoryAlertCancelButtoTitle" = "Batal";
+
+/* Description of the confirmation dialog shown when a user tries to clear history that's synced to another device. */
+"ClearSyncedHistoryAlertMessage" = "Tindakan ini akan menghapus semua data pribadi Anda, termasuk riwayat dari perangkat Anda yang disinkronisasi.";
+
+/* The confirmation button that clears history even when Sync is connected. */
+"ClearSyncedHistoryAlertOkButtoTitle" = "OK";
+
+/* No comment provided by engineer. */
+"CloseAllTabsTitle" = "Tutup Semua %i Tab";
+
+/* Code words input help */
+"CodeWordInputHelp" = "Ketik kode kata untuk rantai sinkronisasi yang disediakan.";
+
+/* Code words section title */
+"CodeWords" = "Kode Kata";
+
+/* No comment provided by engineer. */
+"Confirm" = "Konfirmasikan";
+
+/* Cookie settings option title */
+"CookieControl" = "Kontrol Cookie";
+
+/* Settings item for clearing cookies */
+"Cookies" = "Cookie";
+
+/* Copied action complete title */
+"Copied" = "Disalin!";
+
+/* Copied codewords title */
+"CopiedToClipboard" = "Disalin ke Clipboard!";
+
+/* Copy app info to clipboard action sheet action. */
+"CopyAppInfoToClipboard" = "Salin informasi aplikasi ke clipboard.";
+
+/* Context menu item for copying an image to the clipboard */
+"CopyImageActionTitle" = "Salin Gambar";
+
+/* Context menu item for copying a link URL to the clipboard */
+"CopyLinkActionTitle" = "Salin Tautan";
+
+/* Copy codewords title */
+"CopyToClipboard" = "Salin ke Clipboard";
+
+/* Currently usedd search engines section name. */
+"CurrentlyUsedSearchEngines" = "Mesin pencari yang digunakan saat ini";
+
+/* DuckDuckGo callout enable action. */
+"DDGCalloutEnable" = "Ya";
+
+/* DuckDuckGo message. */
+"DDGCalloutMessage" = "Dengan pencarian pribadi, Dissenter akan menggunakan DuckDuckGo untuk menjawab pencarian saat Anda berada di tab pribadi ini. DuckDuckGo adalah mesin pencari yang tidak melacak riwayat pencarian, sehingga Anda dapat melakukan pencarian secara pribadi.";
+
+/* DuckDuckGo callout no action. */
+"DDGCalloutNo" = "Tidak";
+
+/* DuckDuckGo callout title. */
+"DDGCalloutTitle" = "Lakukan pencarian pribadi dengan DuckDuckGo?";
+
+/* No comment provided by engineer. */
+"Delete" = "Hapus";
+
+/* Message for the alert shown when the user tries to delete a bookmarks folder */
+"DeleteBookmarksFolderAlertMessage" = "Tindakan ini akan menghapus semua folder dan markah di dalamnya. Anda yakin ingin melanjutkan?";
+
+/* Title for the alert shown when the user tries to delete a bookmarks folder */
+"DeleteBookmarksFolderAlertTitle" = "Hapus Folder?";
+
+/* Prompt option for cancelling out of deletion */
+"DeleteLoginAlertCancelActionTitle" = "Batal";
+
+/* Prompt message warning the user that deleting non-synced logins will permanently remove them */
+"DeleteLoginAlertLocalMessage" = "Info Masuk akan dihapus secara permanen.";
+
+/* Prompt message warning the user that deleted logins will remove logins from all connected devices */
+"DeleteLoginAlertSyncedDevicesMessage" = "Info Masuk akan dihapus dari semua perangkat yang terhubung.";
+
+/* Prompt title when deleting logins */
+"DeleteLoginAlertTitle" = "Anda yakin?";
+
+/* Label for the button used to delete the current login. */
+"DeleteLoginButtonTitle" = "Hapus";
+
+/* Sync device settings page title. */
+"Devices" = "Perangkat pada rantai";
+
+/* Current device model and iOS version copied to clipboard. */
+"DeviceTemplate" = "Perangkat %1$@ (%2$@)";
+
+/* No comment provided by engineer. */
+"Done" = "Selesai";
+
+/* cookie settings option */
+"DontBlockCookies" = "Jangan blokir cookie";
+
+/* Used as a button label for crash dialog prompt */
+"DontSendButtonTitle" = "Jangan kirim";
+
+/* No comment provided by engineer. */
+"Edit" = "Edit";
+
+/* Button to edit a bookmark */
+"EditBookmark" = "Edit Markah";
+
+/* Button to edit a favorite */
+"EditFavorite" = "Edit Favorit";
+
+/* Sync enter code words */
+"EnterCodeWords" = "Masukkan kode kata";
+
+/* Enter sync code words below */
+"EnterCodeWordsBelow" = "Masukkan kode kata di bawah ini";
+
+/* Description for new folder popup */
+"EnterFolderName" = "Masukkan nama folder";
+
+/* Shown in error pages for files that can't be shown and need to be downloaded. */
+"ErrorPageOpenInSafariButtonTitle" = "Buka di Safari";
+
+/* Shown in error pages on a button that will try to load the page again */
+"ErrorPageReloadButtonTitle" = "Coba lagi";
+
+/* Label for button to perform advanced actions on the error page */
+"ErrorPagesAdvancedButton" = "Tingkat Lanjut";
+
+/* Warning text when clicking the Advanced button on error pages */
+"ErrorPagesAdvancedWarning1" = "Peringatan: kami tidak dapat mengkonfirmasi bahwa sambungan Anda ke situs ini aman.";
+
+/* Additional warning text when clicking the Advanced button on error pages */
+"ErrorPagesAdvancedWarning2" = "Hal ini mungkin terjadi karena kesalahan konfigurasi atau dirusak oleh penyerang. Lanjutkan jika Anda menerima potensi risiko tersebut.";
+
+/* Warning text on the certificate error page */
+"ErrorPagesCertWarningDescription" = "Pemilik %@ telah salah mengkonfigurasi situs webnya. Untuk melindungi informasi agar tidak dicuri, Dissenter tidak tersambung ke situs web ini. ";
+
+/* Title on the certificate error page */
+"ErrorPagesCertWarningTitle" = "Sambungan Anda tidak pribadi";
+
+/* Label for button to go back from the error page */
+"ErrorPagesGoBackButton" = "Kembali";
+
+/* Button label to temporarily continue to the site from the certificate error page */
+"ErrorPagesVisitOnceButton" = "Tetap kunjungi situs ";
+
+/* Shields Time Saved Stat */
+"EstTimerSaved" = "± Waktu
+Dihemat";
+
+/* Share action title */
+"FindInPage" = "Temukan di Halaman";
+
+/* Done button in Find in Page Toolbar. */
+"FindInPageDoneButtonAccessibilityLabel" = "Selesai";
+
+/* Accessibility label for next result button in Find in Page Toolbar. */
+"FindInPageNextResultButtonAccessibilityLabel" = "Hasil selanjutnya";
+
+/* Accessibility label for previous result button in Find in Page Toolbar. */
+"FindInPagePreviousResultButtonAccessibilityLabel" = "Hasil sebelumnya";
+
+/* individual blocking statistic title */
+"FingerprintingMethods" = "Metode Sidik Jari";
+
+/* blocking stat title */
+"FingerprintingnProtection" = "Perlindungan
+Sidik Jari";
+
+/* No comment provided by engineer. */
+"FingerprintingProtection" = "Perlindungan Sidik Jari";
+
+/* Grand camera access */
+"GrantCameraAccess" = "Aktifkan Kamera";
+
+/* No comment provided by engineer. */
+"Home" = "Beranda";
+
+/* No comment provided by engineer. */
+"HTTPSEverywhere" = "HTTPS Everywhere";
+
+/* Shields Https Stat */
+"HTTPSrUpgrades" = "Peningkatan
+HTTPS";
+
+/* individual blocking statistic title */
+"HTTPSUpgrades" = "Peningkatan HTTPS";
+
+/* title for per-site shield toggles */
+"IndividualControls" = "Kontrol Individu";
+
+/* History tableview section header */
+"LastMonth" = "Bulan lalu";
+
+/* History tableview section header */
+"LastWeek" = "Minggu lalu";
+
+/* DuckDuckGo promotion label. */
+"LearnAboutPrivateSearchrwithDuckDuckGo" = "Pelajari tentang pencarian pribadi 
+dengan DuckDuckGo";
+
+/* Footer label describing when the current login was last modified with the timestamp as the parameter. */
+"LoginDetailLastModifiedCellFormatTitle" = "Terakhir dimodifikasi %@";
+
+/* Label displayed above the password row in Login Detail View. */
+"LoginDetailPasswordCellTitle" = "sandi";
+
+/* Label displayed above the username row in Login Detail View. */
+"LoginDetailUsernameCellTitle" = "nama pengguna";
+
+/* Label displayed above the website row in Login Detail View. */
+"LoginDetailWebsiteCellTitle" = "situs web";
+
+/* Label for the button used to deselect all logins. */
+"LoginListDeselectAllButtonTitle" = "Batalkan Semua Pilihan";
+
+/* Label displayed when no logins are found after searching. */
+"LoginListNoLoginTitle" = "Info masuk tidak ditemukan";
+
+/* Title for Logins List View screen. */
+"LoginListScreenTitle" = "Info Masuk";
+
+/* Label for the button used to select all logins. */
+"LoginListSelectAllButtonTitle" = "Pilih Semua";
+
+/* Copy password text selection menu item */
+"MenuItemCopyTitle" = "Salin";
+
+/* Text selection menu item */
+"MenuItemFindInPageTitle" = "Temukan di Halaman";
+
+/* Hide password text selection menu item */
+"MenuItemHidePasswordTitle" = "Sembunyikan";
+
+/* Open and Fill website text selection menu item */
+"MenuItemOpenAndFillTitle" = "Buka & Isi";
+
+/* Reveal password text selection menu item */
+"MenuItemRevealPasswordTitle" = "Tampilkan";
+
+/* Bookmark title / Device name */
+"Name" = "Nama";
+
+/* tabs bar show/hide option */
+"NeverShow" = "Jangan pernah tampilkan";
+
+/* Title for new folder popup */
+"NewFolder" = "Folder Baru";
+
+/* New sync code button title */
+"NewSyncCode" = "Mulai Rantai Sinkronisasi baru";
+
+/* New Tab title */
+"NewTab" = "Tab Baru";
+
+/* Sync Alert */
+"NotEnoughWordsDescription" = "Masukkan semua kata, lalu coba lagi.";
+
+/* Sync Alert */
+"NotEnoughWordsTitle" = "Kata Tidak Cukup";
+
+/* Context menu item for opening all folder bookmarks */
+"OpenAllBookmarks" = "Buka Semua (%i)";
+
+/* Context menu for opening image in new tab */
+"OpenImageInNewTab" = "Buka Gambar di Tab Baru";
+
+/* Context menu option for opening a link in a new private tab */
+"OpenNewPrivateTabButtonTitle" = "Buka di Tab Pribadi Baru";
+
+/* Context menu item for opening a link in a new tab */
+"OpenNewTabButtonTitle" = "Buka di Tab Baru";
+
+/* See http://mzl.la/1G7uHo7 */
+"OpenPhoneSettingsActionTitle" = "Buka Pengaturan";
+
+/* Sync pair device settings section title */
+"Pair" = "Pasangkan";
+
+/* Error message displayed to user when their confirming passcode doesn't match the first code. */
+"PasscodeConfirmMisMatchErrorText" = "Kode akses tidak cocok. Coba lagi.";
+
+/* Error message displayed when user tries to enter the same passcode as their existing code when changing it. */
+"PasscodeMatchOldErrorText" = "Kode akses baru harus berbeda dari kode yang ada.";
+
+/* Label for preview action on Tab Tray Tab to add current tab to Bookmarks */
+"PreviewActionAddToBookmarksActionTitle" = "Tambahkan ke Markah";
+
+/* Label for preview action on Tab Tray Tab to close the current tab */
+"PreviewActionCloseTabActionTitle" = "Tutup Tab";
+
+/* Label for preview action on Tab Tray Tab to copy the URL of the current tab to clipboard */
+"PreviewActionCopyURLActionTitle" = "Salin URL";
+
+/* Accessibility label, associated to the 3D Touch action on the current tab in the tab tray, used to display a larger preview of the tab. */
+"PreviewFormatAccessibilityLabel" = "Pratinjau %@";
+
+/* Settings privacy section title */
+"Privacy" = "Privasi";
+
+/* Show Dissenter Browser Privacy Policy page from the Privacy section in the settings. */
+"PrivacyPolicy" = "Kebijakan Privasi";
+
+/* Private button title */
+"Private" = "Pribadi";
+
+/* No comment provided by engineer. */
+"PrivateBrowsing" = "Penjelajahan Pribadi";
+
+/* Setting to keep app in private mode */
+"PrivateBrowsingOnly" = "Hanya Penjelajahan Pribadi";
+
+/* Private tab detail text */
+"PrivateTabDetails" = "Menggunakan Tab Pribadi hanya akan mengubah fungsi Dissenter di perangkat Anda, namun tidak mengubah perilaku orang lain.
+
+Situs selalu mengetahui alamat IP Anda saat mengunjunginya. Dari kondisi ini, situs sering kali dapat selalu mengetahui lokasi Anda, terutama kota. Terkadang lokasi yang diketahui dapat lebih spesifik. Situs juga mengetahui semua yang Anda beri tahu secara spesifik seperti istilah pencarian. Jika masuk, situs akan mengetahui bahwa Anda adalah pemilik akun tersebut. Anda tetap akan keluar saat menutup Tab Pribadi karena Dissenter akan menghapus kuki yang Anda gunakan untuk masuk.
+
+ISP mana pun yang menyambungkan Anda ke Internet dapat melihat semua aktivitas jaringan Anda. Sering kali, operator seluler Anda yang melihatnya. Jika Anda tersambung ke jaringan WiFi, maka pemilik jaringan tersebut yang dapat melihat aktivitas jaringan, dan jika Anda menggunakan VPN, maka yang menjalankan VPN tersebut yang dapat melihat aktivitas jaringan. ISP dapat melihat situs yang dikunjungi saat Anda mengunjunginya. Jika situs tersebut menggunakan HTTPS, situs tersebut hanya dapat mengetahui aktivitas Anda di situs tersebut. Namun jika situs hanya menggunakan HTTP, maka ISP dapat melihat semuanya: istilah pencarian Anda, halaman yang dibaca, dan tautan yang diikuti.
+
+Jika perusahaan mengelola perangkat Anda, mereka juga dapat melacak aktivitas perangkat Anda. Menggunakan Tab Pribadi mungkin tidak akan menghentikan mereka untuk mengetahui situs yang Anda kunjungi. Orang lain yang memiliki akses ke perangkat Anda juga dapat memasang perangkat lunak yang memantau aktivitas Anda, dan Tab Pribadi tidak akan dapat melindungi Anda dari hal ini.";
+
+/* Private tab information link */
+"PrivateTabLink" = "Pelajari tentang tab pribadi.";
+
+/* Default engine for private search. */
+"PrivateTabSearch" = "Tab Pribadi";
+
+/* QR Code section title */
+"QRCode" = "Kode QR";
+
+/* Title for quick-search engines settings section. */
+"QuickSearchEngines" = "Mesin Pencari Cepat";
+
+/* Accessibility label for button increasing font size in display settings of reader mode */
+"ReaderModeBiggerFontButtonAccessibilityLabel" = "Perbesar ukuran teks";
+
+/* Button for larger reader font size. Keep this extremely short! This is shown in the reader mode toolbar. */
+"ReaderModeBiggerFontButtonTitle" = "+";
+
+/* Accessibility label for brightness adjustment slider in Reader Mode display settings */
+"ReaderModeBrightSliderAccessibilityLabel" = "Kecerahan";
+
+/* Name for display settings button in reader mode. Display in the meaning of presentation, not monitor. */
+"ReaderModeDisplaySettingsButtonTitle" = "Pengaturan Tampilan";
+
+/* Error displayed when reader mode cannot be enabled */
+"ReaderModeErrorConvertDisplayText" = "Terjadi kesalahan saat mengonversi halaman";
+
+/* Font type setting in the reading view settings */
+"ReaderModeFontButtonSansSerifTitle" = "Sans-serif";
+
+/* Font type setting in the reading view settings */
+"ReaderModeFontButtonSerifTitle" = "Serif";
+
+/* Button for reader mode font size. Keep this extremely short! This is shown in the reader mode toolbar. */
+"ReaderModeFontSizeLabelText" = "Aa";
+
+/* Accessibility hint for the font type buttons in reader mode display settings */
+"ReaderModeFontTypeButtonAccessibilityHint" = "Ubah jenis fon.";
+
+/* Message displayed when the reader mode page is loading. This message will appear only when sharing to Dissenter reader mode from another app. */
+"ReaderModeLoadingContentDisplayText" = "Memuat konten...";
+
+/* Link for going to the non-reader page when the reader view could not be loaded. This message will appear only when sharing to Dissenter reader mode from another app. */
+"ReaderModeLoadOriginalLinkText" = "Muat laman asli";
+
+/* Message displayed when the reader mode page could not be loaded. This message will appear only when sharing to Dissenter reader mode from another app. */
+"ReaderModePageCantShowDisplayText" = "Laman tidak dapat ditampilkan pada Tampilan Baca";
+
+/* Accessibility label for button decreasing font size in display settings of reader mode */
+"ReaderModeSmallerFontButtonAccessibilityLabel" = "Perkecil ukuran teks";
+
+/* Button for smaller reader font size. Keep this extremely short! This is shown in the reader mode toolbar. */
+"ReaderModeSmallerFontButtonTitle" = "-";
+
+/* Accessibility hint for the color theme setting buttons in reader mode display settings */
+"ReaderModeThemeButtonAccessibilityHint" = "Ubah warna tema.";
+
+/* Dark theme setting in Reading View settings */
+"ReaderModeThemeButtonTitleDark" = "Gelap";
+
+/* Light theme setting in Reading View settings */
+"ReaderModeThemeButtonTitleLight" = "Terang";
+
+/* Sepia theme setting in Reading View settings */
+"ReaderModeThemeButtonTitleSepia" = "Sepia";
+
+/* Action button for removing sync device. */
+"RemoveDevice" = "Hapus";
+
+/* Button to remove a favorite */
+"RemoveFavorite" = "Hapus Favorit";
+
+/* Show mail composer to report a bug. */
+"ReportABug" = "Laporkan masalah";
+
+/* Restore Tabs Affirmative Action */
+"RestoreTabAffirmativeButtonTitle" = "Oke";
+
+/* Restore Tabs Negative Action */
+"RestoreTabNegativeButtonTitle" = "Tidak";
+
+/* Restore Tabs Prompt Description */
+"RestoreTabOnCrashAlertMessage" = "Sepertinya Dissenter mogok. Ingin mengembalikan tab Anda?";
+
+/* Restore Tabs Prompt Title */
+"RestoreTabOnCrashAlertTitle" = "Terjadi masalah.";
+
+/* Settings item for clearing passwords and login data */
+"SavedLogins" = "Info Masuk Tersimpan";
+
+/* Context menu item for saving an image */
+"SaveImageActionTitle" = "Simpan Gambar";
+
+/* Setting to enable the built-in password manager */
+"SaveLogins" = "Simpan Info Masuk";
+
+/* Scan sync code title */
+"Scan" = "Pindai";
+
+/* Scan sync code button title */
+"ScanSyncCode" = "Saya memiliki Kode Sinkronisasi";
+
+/* individual blocking statistic title */
+"ScriptsBlocked" = "Skrip Diblokir";
+
+/* Label for search engine buttons. The argument corresponds to the name of the search engine. */
+"SearchEngineFormatText" = "Pencarian %@";
+
+/* Title for default search engine picker. */
+"SearchEnginePickerNavTitle" = "Mesin Pencari Default";
+
+/* Search engines section of settings */
+"SearchEngines" = "Mesin Pencari";
+
+/* Accessibility hint describing the action performed when a search suggestion is clicked */
+"SearchesForSuggestionButtonAccessibilityText" = "Cari saran";
+
+/* Accessibility message e.g. spoken by VoiceOver after the user taps the close button in the search field to clear the search and exit search mode */
+"SearchInputViewClearButtonTitle" = "Hapus Pencarian";
+
+/* Accessibility label for entering search mode for logins */
+"SearchInputViewOverlayAccessibilityLabel" = "Masuk ke Mode Pencarian";
+
+/* Accessibility label for the search input field in the Logins list */
+"SearchInputViewTextFieldAccessibilityLabel" = "Kolom Input Pencarian";
+
+/* Title for the search field at the top of the Logins list screen */
+"SearchInputViewTitle" = "Cari";
+
+/* Navigation title for search settings. */
+"SearchSettingNavTitle" = "Cari";
+
+/* Label for search settings button. */
+"SearchSettingsButtonTitle" = "Pengaturan Pencarian";
+
+/* Label for show search suggestions setting. */
+"SearchSettingSuggestionCellTitle" = "Tampilkan Saran Pencarian";
+
+/* Accessibility label for image of default search engine displayed left to the actual search suggestions from the engine. The parameter substituted for \"%@\" is the name of the search engine. E.g.: Search suggestions from Google */
+"SearchSuggestionFromFormatText" = "Saran pencarian dari %@";
+
+/* Settings security section title */
+"Security" = "Keamanan";
+
+/* Message displayed in the crash dialog above the buttons used to select when sending reports */
+"SendCrashReportAlertMessage" = "Kirim laporan mogok agar Dissenter dapat memperbaikinya?";
+
+/* Title for prompt displayed to user after the app crashes */
+"SendCrashReportAlertTitle" = "Duh! Dissenter mogok";
+
+/* Used as a button label for crash dialog prompt */
+"SendReportButtonTitle" = "Kirim Laporan";
+
+/* No comment provided by engineer. */
+"Settings" = "Pengaturan";
+
+/* Error message that is shown in settings when there was a problem loading */
+"SettingsContentLoadErrorMessage" = "Tidak dapat memuat halaman.";
+
+/* Context menu item for sharing a link URL */
+"ShareLinkActionTitle" = "Bagikan Tautan";
+
+/* shields overview message */
+"ShieldsOverview" = "Perisai Situs memungkinkan Anda mengontrol saat iklan dan pelacak diblokir untuk setiap situs yang dikunjungi. Jika memilih untuk melihat iklan pada situs tertentu, Anda dapat mengaktifkannya di sini.";
+
+/* shields overview footer message */
+"ShieldsOverviewFooter" = "Catatan: Beberapa situs mungkin memerlukan skrip agar dapat berfungsi dengan baik, jadi perisai ini akan dinonaktifkan secara baku.";
+
+/* Time Saved Days */
+"ShieldsTimeStatsDays" = "h";
+
+/* Time Saved Hours */
+"ShieldsTimeStatsHour" = "j";
+
+/* Time Saved Minutes */
+"ShieldsTimeStatsMinutes" = "menit";
+
+/* Time Saved Seconds */
+"ShieldsTimeStatsSeconds" = "d";
+
+/* Button to show the bookmarks list */
+"ShowBookmarks" = "Tampilkan Markah";
+
+/* Show code words instead */
+"ShowCodeWords" = "Tampilkan kode kata";
+
+/* Button to show the history list */
+"ShowHistory" = "Tampilkan Riwayat";
+
+/* tabs bar show/hide option */
+"ShowInLandscapeOnly" = "Tampilkan hanya dalam lanskap";
+
+/* Accessibility Label for the tabs button in the browser toolbar */
+"ShowTabs" = "Tampilkan Tab";
+
+/* Setting to show/hide the tabs bar */
+"ShowTabsBar" = "Tampilkan Bilah Tab";
+
+/* Dissenter panel topmost title */
+"SiteShieldSettings" = "Perisai";
+
+/* Open search section of settings */
+"StandardTabSearch" = "Tab Standar";
+
+/* Support section title */
+"Support" = "Dukungan";
+
+/* Sync settings section title */
+"Sync" = "Sinkronisasi (beta)";
+
+/* Add another device cell button. */
+"SyncAddAnotherDevice" = "Tambahkan perangkat lain";
+
+/* Add a Computer title */
+"SyncAddComputerTitle" = "Tambahkan Komputer";
+
+/* Add mobile device to sync with scan */
+"SyncAddDeviceScan" = "Pindai Kode QR Rantai";
+
+/* Sync add device description */
+"SyncAddDeviceScanDescription" = "Pada perangkat seluler kedua Anda, navigasikan ke Sinkronisasi Dissenter pada panel Pengaturan, lalu ketuk tombol \"Pindai Kode Sinkronisasi\". Gunakan kamera untuk memindai Kode QR di bawah.";
+
+/* Add device to sync with code words */
+"SyncAddDeviceWords" = "Masukkan kode sinkronisasi";
+
+/* Sync add device description */
+"SyncAddMobileWordsDescription" = "Pada perangkat Anda, navigasikan ke Sinkronisasi Dissenter dalam panel Pengaturan, lalu ketuk tombol \"%@\". Masukkan kode rantai sinkronisasi yang ditampilkan di bawah.";
+
+/* Add Tablet or phone title */
+"SyncAddTabletOrPhoneTitle" = "Tambahkan Tablet atau Ponsel";
+
+/* Choose device type for sync */
+"SyncChooseDevice" = "Pilih Jenis Perangkat";
+
+/* Header for device choosing screen. */
+"SyncChooseDeviceHeader" = "Pilih jenis perangkat yang ingin Anda sinkronisasikan.";
+
+/* Computer device button title */
+"SyncComputerDevice" = "Komputer";
+
+/* Sync you browser settings across devices. */
+"SyncDevices" = "Perangkat & Pengaturan";
+
+/* Message for sync initialization error alert */
+"SyncInitErrorMessage" = "Agen Sinkronisasi Dissenter saat ini sedang luring atau tidak dapat dihubungi. Coba lagi nanti.";
+
+/* Title for sync initialization error alert */
+"SyncInitErrorTitle" = "Kesalahan Komunikasi Sinkronisasi Dissenter";
+
+/* No internet connection alert body. */
+"SyncNoConnectionBody" = "Periksa sambungan internet Anda, lalu coba lagi.";
+
+/* No internet connection alert title. */
+"SyncNoConnectionTitle" = "Tidak dapat tersambung untuk sinkronisasi";
+
+/* Message for removing the current device from Sync */
+"SyncRemoveCurrentDeviceMessage" = "Data perangkat lokal akan tetap tersimpan di semua perangkat. Perangkat lainnya dalam Rantai Sinkronisasi ini akan tetap disinkronisasi. ";
+
+/* Title for removing the current device from Sync */
+"SyncRemoveCurrentDeviceTitle" = "Hapus %@ dari Rantai Sinkronisasi?";
+
+/* Remove device button for action sheet. */
+"SyncRemoveDeviceAction" = "Hapus perangkat";
+
+/* Default name for a device */
+"SyncRemoveDeviceDefaultName" = "Perangkat";
+
+/* Message for removing last device from Sync */
+"SyncRemoveLastDeviceMessage" = "Data yang saat ini disinkronisasi akan disimpan, namun semua data dalam tembolok Sinkronisasi Dissenter akan dihapus. Anda harus memulai Rantai Sinkronisasi baru agar dapat menyinkronkan data perangkat lagi.";
+
+/* Button name for removing last device from Sync */
+"SyncRemoveLastDeviceRemoveButtonName" = "Hapus Rantai Sinkronisasi";
+
+/* Title for removing last device from Sync */
+"SyncRemoveLastDeviceTitle" = "Menghapus %@ akan menghapus Rantai Sinkronisasi.";
+
+/* Message for removing other device from Sync */
+"SyncRemoveOtherDeviceMessage" = "Menghapus perangkat dari Rantai Sinkronisasi tidak akan menghapus data yang disinkronisasi dari perangkat.";
+
+/* Title for removing other device from Sync */
+"SyncRemoveOtherDeviceTitle" = "Hapus %@ dari Rantai Sinkronisasi?";
+
+/* Sync remove device. */
+"SyncRemoveThisDevice" = "Hapus perangkat ini";
+
+/* Sync remove device? */
+"SyncRemoveThisDeviceQuestion" = "Hapus perangkat ini?";
+
+/* Sync remove device? */
+"SyncRemoveThisDeviceQuestionDesc" = "Sambungan perangkat ini akan diputus dari grup sinkronisasi dan tidak akan lagi menerima atau mengirim data sinkronisasi. Semua data yang ada akan tetap tersimpan di perangkat ini.";
+
+/* Header title for Sync settings */
+"SyncSettingsHeader" = "Daftar perangkat di bawah mencakup semua perangkat dalam rantai sinkronisasi. Setiap perangkat dapat dikelola dari perangkat lainnya.";
+
+/* Switch back to camera button */
+"SyncSwitchBackToCameraButton" = "Saya akan menggunakan kamera...";
+
+/* Tablet or phone button title */
+"SyncTabletOrMobileDevice" = "Tablet atau Ponsel";
+
+/* This device cell */
+"SyncThisDevice" = "Perangkat Ini";
+
+/* Sync to existing device */
+"SyncToDevice" = "Sinkronisasikan dengan perangkat";
+
+/* Sync to existing device description */
+"SyncToDeviceDescription" = "Menggunakan perangkat tersinkronisasi yang ada, buka Pengaturan Dissenter dan menavigasikannya ke “Perangkat & Pengaturan”, ketuk ‘+’ agar dapat menambahkan perangkat baru dan menampilkan kode sinkronisasi.";
+
+/* Description on popup when setting up a sync group fails */
+"SyncUnableCreateGroup" = "Tidak dapat membuat grup sinkronisasi baru.";
+
+/* No comment provided by engineer. */
+"SyncUnsuccessful" = "Gagal";
+
+/* Accessibility label for action denoting closing a tab in tab list (tray) */
+"TabAccessibilityCloseActionLabel" = "Tutup";
+
+/* Accessiblity hint for toggling on/off private mode */
+"TabPrivateModeToggleAccessibilityHint" = "Aktifkan/nonaktifkan mode pribadi";
+
+/* Accessibility label for toggling on/off private mode */
+"TabPrivateModeToggleAccessibilityLabel" = "Mode Pribadi";
+
+/* Toggled OFF accessibility value */
+"TabPrivateModeToggleAccessibilityValueOff" = "Nonaktif";
+
+/* Toggled ON accessibility value */
+"TabPrivateModeToggleAccessibilityValueOn" = "Aktif";
+
+/* Accessibility label for the navigation toolbar displayed at the bottom of the screen. */
+"TabToolbarAccessibilityLabel" = "Bilah Alat Navigasi";
+
+/* Accessibility label for the Add Tab button in the Tab Tray. */
+"TabToolbarAddTabButtonAccessibilityLabel" = "Tambah Tab";
+
+/* Accessibility label for the Back button in the tab toolbar. */
+"TabToolbarBackButtonAccessibilityLabel" = "Kembali";
+
+/* Accessibility Label for the tab toolbar Forward button */
+"TabToolbarForwardButtonAccessibilityLabel" = "Berikutnya";
+
+/* Accessibility label for the lock icon, which is only present if the connection is secure */
+"TabToolbarLockImageAccessibilityLabel" = "Sambungan aman";
+
+/* Accessibility label for the Reader View button */
+"TabToolbarReaderViewButtonAccessibilityLabel" = "Tampilan Pembaca";
+
+/* Accessibility label for action adding current page to reading list. */
+"TabToolbarReaderViewButtonTitle" = "Tambahkan ke Daftar Baca";
+
+/* Accessibility Label for the tab toolbar Reload button */
+"TabToolbarReloadButtonAccessibilityLabel" = "Muat ulang";
+
+/* The text shown in the URL bar on about:home */
+"TabToolbarSearchAddressPlaceholderText" = "Cari atau masukkan alamat";
+
+/* Accessibility Label for the browser toolbar Share button */
+"TabToolbarShareButtonAccessibilityLabel" = "Bagikan";
+
+/* Accessibility Label for the tab toolbar Stop button */
+"TabToolbarStopButtonAccessibilityLabel" = "Berhenti";
+
+/* Accessibility label for the Tabs Tray view. */
+"TabTrayAccessibilityLabel" = "Baki Tab";
+
+/* Accessibility label for the Add Tab button in the Tab Tray. */
+"TabTrayAddTabAccessibilityLabel" = "Tambah Tab";
+
+/* Accessibility hint for tab tray's displayed tab. */
+"TabTrayCellCloseAccessibilityHint" = "Geser ke kanan atau kiri dengan tiga jari untuk menutup tab.";
+
+/* Accessibility label (used by assistive technology) notifying the user that the tab is being closed. */
+"TabTrayClosingTabAccessibilityNotificationText" = "Menutup Tab";
+
+/* Message spoken by VoiceOver to indicate that there are no tabs in the Tabs Tray */
+"TabTrayEmptyVoiceOverText" = "Tidak ada tab";
+
+/* Message spoken by VoiceOver saying the range of tabs that are currently visible in Tabs Tray, along with the total number of tabs. E.g. \"Tabs 8 to 10 of 15\" says tabs 8, 9 and 10 are visible, out of 15 tabs total. */
+"TabTrayMultiTabPositionFormatVoiceOverText" = "Tab %1$@ hingga %2$@ dari %3$@";
+
+/* Accessibility label for the New Tab button in the tab toolbar. */
+"TabTrayNewTabButtonAccessibilityLabel" = "Tab Baru";
+
+/* Message spoken by VoiceOver saying the position of the single currently visible tab in Tabs Tray, along with the total number of tabs. E.g. \"Tab 2 of 5\" says that tab 2 is visible (and is the only visible tab), out of 5 tabs total. */
+"TabTraySingleTabPositionFormatVoiceOverText" = "Tab %1$@ dari %2$@";
+
+/* Show Dissenter Browser TOS page from the Privacy section in the settings. */
+"TermsOfUse" = "Persyaratan Penggunaan";
+
+/* History tableview section header */
+"Today" = "Hari Ini";
+
+/* Shields Trackers Stat */
+"TrackersrBlocked" = "Pelacak 
+Diblokir";
+
+/* Sync Alert */
+"UnableToConnectDescription" = "Tidak dapat bergabung ke grup sinkronisasi. Periksa kata yang dimasukkan, lalu coba lagi.";
+
+/* Sync Alert */
+"UnableToConnectTitle" = "Tidak Dapat Tersambung";
+
+/* Bookmark URL */
+"URL" = "URL";
+
+/* Accessibility label for address and search field, both words (Address, Search) are therefore nouns. */
+"URLBarViewLocationTextViewAccessibilityLabel" = "Alamat dan Pencarian";
+
+/* Setting to allow user in non-english locale to use adblock rules specifc to their language */
+"UseRegionalAdblock" = "Gunakan pemblokir iklan regional";
+
+/* Version number of Dissenter shown in settings */
+"VersionTemplate" = "Versi %1$@ (%2$@)";
+
+/* Accessibility label for the main web content view */
+"WebContentAccessibilityLabel" = "Konten web";
+
+/* Word count title */
+"WordCount" = "Jumlah kata: %i";
+
+/* Button title to confirm the deletion of a bookmarks folder */
+"YesDeleteButtonTitle" = "Ya, Hapus";
+
+/* History tableview section header */
+"Yesterday" = "Kemarin";
+
