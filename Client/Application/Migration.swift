@@ -102,12 +102,12 @@ fileprivate extension Preferences {
         migrate(key: "popupForDDG", to: Preferences.Popups.duckDuckGoPrivateSearch)
         migrate(key: "popupForBrowserLock", to: Preferences.Popups.browserLock)
         
-        // BraveShared
-        migrateBraveShared(keyPrefix: keyPrefix)
         
         // On 1.6 lastLaunchInfo is used to check if it's first app launch or not.
         // This needs to be translated to our new preference.
         Preferences.General.isFirstLaunch.value = Preferences.DAU.lastLaunchInfo.value == nil
+        // DissenterShared
+        migrateDissenterShared(keyPrefix: keyPrefix)
         
         // Core Data
         
