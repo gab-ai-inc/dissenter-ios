@@ -19,7 +19,7 @@ enum WriteContext {
 }
 
 public class DataController: NSObject {
-    private static let databaseName = "Brave.sqlite"
+    private static let databaseName = "Dissenter.sqlite"
     
     // MARK: - Public interface
     
