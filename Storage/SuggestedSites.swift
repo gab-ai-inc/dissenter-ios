@@ -24,23 +24,19 @@ open class SuggestedSite: Site {
     }
 }
 
-public let SuggestedSites: SuggestedSitesCursor = SuggestedSitesCursor()
+//public let SuggestedSites: SuggestedSitesCursor = SuggestedSitesCursor()
 
-open class SuggestedSitesCursor: ArrayCursor<SuggestedSite> {
-    fileprivate init() {
-        let locale = Locale.current
-        let sites = DefaultSuggestedSites.sites[locale.identifier] ??
-                    DefaultSuggestedSites.sites["default"]! as Array<SuggestedSiteData>
-        let tiles = sites.map({ data -> SuggestedSite in
-            var site = data
-            if let domainMap = DefaultSuggestedSites.urlMap[data.url], let localizedURL = domainMap[locale.identifier] {
-                site.url = localizedURL
-            }
-            return SuggestedSite(data: site)
-        })
-        super.init(data: tiles, status: .success, statusMessage: "Loaded")
-    }
-}
+//open class SuggestedSitesCursor: ArrayCursor<SuggestedSite> {
+//    fileprivate init() {
+//        let locale = Locale.current
+//        let sites = DefaultSuggestedSites.sites["default"]! as Array<SuggestedSiteData>
+//        let tiles = sites.map({ data -> SuggestedSite in
+//            var site = data
+//            return SuggestedSite(data: site)
+//        })
+//        super.init(data: tiles, status: .success, statusMessage: "Loaded")
+//    }
+//}
 
 public struct SuggestedSiteData {
     var url: String
