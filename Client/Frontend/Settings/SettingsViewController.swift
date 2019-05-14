@@ -112,9 +112,9 @@ class SettingsViewController: TableViewController {
     private var sections: [Section] {
         var list = [Section]()
         list.append(generalSection)
-        #if !NO_SYNC
-            list.append(syncSection)
-        #endif
+//        #if !NO_SYNC
+//            list.append(syncSection)
+//        #endif
         list.append(contentsOf: [privacySection,
                                  securitySection,
                                  shieldsSection,
