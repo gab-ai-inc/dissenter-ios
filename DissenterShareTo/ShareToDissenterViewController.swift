@@ -10,7 +10,7 @@ class ShareToDissenterViewController: SLComposeServiceViewController {
     
     // TODO: Separate scheme for debug builds, so it can be tested without need to uninstall production app.
     private func urlScheme(for url: String) -> URL? {
-        return URL(string: "dissenter://open-url?url=\(url)")
+        return URL(string: "dissenter://open-url?url=https://dissenter.com/discussion/begin?url=\(url)")
     }
     
     override func configurationItems() -> [Any]! {
