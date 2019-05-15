@@ -1,8 +1,8 @@
 /* This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 public struct DissenterUX {    
-    public static let DissenterPrivacyURL = URL(string: "https://www.dissenter.com/privacy/")!
-    public static let DissenterTermsOfUseURL = URL(string: "https://www.dissenter.com/terms_of_use")!
+    public static let DissenterPrivacyURL = URL(string: "https://www.dissenter.com/privacy-policy")!
+    public static let DissenterTermsOfUseURL = URL(string: "https://www.dissenter.com/terms-of-use")!
     public static let PrefKeyOptInDialogWasSeen = "OptInDialogWasSeen"
     public static let PrefKeyUserAllowsTelemetry = "userallowstelemetry"
     
