@@ -107,7 +107,7 @@ platform :ios do
       sdk: "iphoneos",
       clean: true,
       skip_package_ipa: true,
-      xcargs: "-allowProvisioningUpdates DISSENTER_API_KEY=\"#{sh("head", "-1", "#{ENV['HOME']}/.dissenter-api-key")}\"",
+      xcargs: "-allowProvisioningUpdates",
     )
   end
 
