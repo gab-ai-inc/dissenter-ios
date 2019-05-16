@@ -239,7 +239,6 @@ class TabTrayController: UIViewController, Themeable {
 
     fileprivate lazy var emptyPrivateTabsView: EmptyPrivateTabsView = {
         let emptyView = EmptyPrivateTabsView()
-        emptyView.learnMoreButton.addTarget(self, action: #selector(didTapLearnMore), for: .touchUpInside)
         return emptyView
     }()
 
@@ -346,9 +345,6 @@ class TabTrayController: UIViewController, Themeable {
 
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        if privateMode {
-            resetEmptyPrivateBrowsingView()
-        }
     }
 
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
@@ -399,12 +395,6 @@ class TabTrayController: UIViewController, Themeable {
         toolbar.applyTheme(theme)
     }
     
-    /// Reset the empty private browsing state (hide the details, unhide the learn more button) if it was changed
-    func resetEmptyPrivateBrowsingView() {
-        emptyPrivateTabsView.detailsLabel.isHidden = true
-        emptyPrivateTabsView.learnMoreButton.isHidden = false
-    }
-
 // MARK: Selectors
     @objc func didClickDone() {
         if tabDataSource.tabs.isEmpty {
@@ -419,23 +409,6 @@ class TabTrayController: UIViewController, Themeable {
 
     @objc func didClickAddTab() {
         openNewTab()
-    }
-
-    @objc func didTapLearnMore() {
-        self.emptyPrivateTabsView.detailsLabel.alpha = 0.0
-        UIView.animate(withDuration: 0.15, animations: {
-            self.emptyPrivateTabsView.learnMoreButton.isHidden = true
-            self.emptyPrivateTabsView.detailsLabel.isHidden = false
-        }, completion: { _ in
-                UIView.animate(withDuration: 0.15) {
-                    self.emptyPrivateTabsView.detailsLabel.alpha = 1.0
-                }
-        })
-        // Needs to be done in a separate call so the stack view's height is updated properly based on the hidden
-        // status of learnMoreButton/detailsLabel
-        UIView.animate(withDuration: 0.2) {
-            self.emptyPrivateTabsView.updateContentInset()
-        }
     }
 
     @objc func didTogglePrivateMode() {
@@ -972,21 +945,6 @@ fileprivate class EmptyPrivateTabsView: UIView {
         $0.text = Strings.Private_Tab_Body
         $0.numberOfLines = 0
     }
-    
-    let detailsLabel = UILabel().then {
-        $0.textColor = EmptyPrivateTabsViewUX.DescriptionColor
-        $0.font = EmptyPrivateTabsViewUX.DescriptionFont
-        $0.text = Strings.Private_Tab_Details
-        $0.isHidden = true
-        $0.numberOfLines = 0
-    }
-
-    let learnMoreButton = UIButton(type: .system).then {
-        $0.setTitle(Strings.Private_Tab_Link, for: [])
-        $0.setTitleColor(UIConstants.PrivateModeTextHighlightColor, for: [])
-        $0.titleLabel?.font = EmptyPrivateTabsViewUX.LearnMoreFont
-        $0.titleLabel?.numberOfLines = 0
-    }
 
     let iconImageView = UIImageView(image: #imageLiteral(resourceName: "private_glasses")).then {
         $0.contentMode = .center
@@ -1002,9 +960,7 @@ fileprivate class EmptyPrivateTabsView: UIView {
         stackView.addArrangedSubview(iconImageView)
         stackView.addArrangedSubview(titleLabel)
         stackView.addArrangedSubview(descriptionLabel)
-        stackView.addArrangedSubview(detailsLabel)
-        stackView.addArrangedSubview(learnMoreButton)
-        
+    
         stackView.setCustomSpacing(EmptyPrivateTabsViewUX.StackViewSpacing * 2.0, after: iconImageView)
         
         scrollView.snp.makeConstraints {
