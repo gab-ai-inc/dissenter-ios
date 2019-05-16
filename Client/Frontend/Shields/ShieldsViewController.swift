@@ -31,14 +31,7 @@ class ShieldsViewController: UIViewController, PopoverContentComponent {
         
         super.init(nibName: nil, bundle: nil)
         
-        shieldsView.shieldsContainerStackView.hostLabel.text = url?.normalizedHost
-        
         updateToggleStatus()
-        updateShieldBlockStats()
-        
-        tab.contentBlocker.statsDidChange = { [weak self] _ in
-            self?.updateShieldBlockStats()
-        }
     }
     
     // MARK: - State
@@ -78,12 +71,6 @@ class ShieldsViewController: UIViewController, PopoverContentComponent {
         updateGlobalShieldState(shieldsView.shieldOverrideControl.toggleSwitch.isOn)
     }
     
-    private func updateShieldBlockStats() {
-        shieldsView.shieldsContainerStackView.adsTrackersStatView.valueLabel.text = String(tab.contentBlocker.stats.adCount + tab.contentBlocker.stats.trackerCount)
-        shieldsView.shieldsContainerStackView.scriptsBlockedStatView.valueLabel.text = String(tab.contentBlocker.stats.scriptCount)
-        shieldsView.shieldsContainerStackView.fingerprintingStatView.valueLabel.text = String(tab.contentBlocker.stats.fingerprintingCount)
-    }
-    
     private func updateDissenterShieldState(shield: DissenterShield, on: Bool, option: Preferences.Option<Bool>?) {
         guard let url = url else { return }
         let allOff = shield == .AllOff
@@ -103,10 +90,6 @@ class ShieldsViewController: UIViewController, PopoverContentComponent {
         let shieldsEnabled = isShieldsAvailable ? on : false
         let updateBlock = {
             self.shieldsView.shieldOverrideControl.isHidden = !isShieldsAvailable
-            self.shieldsView.shieldsContainerStackView.isHidden = !shieldsEnabled
-            self.shieldsView.shieldsContainerStackView.alpha = shieldsEnabled ? 1.0 : 0.0
-            self.shieldsView.overviewStackView.isHidden = shieldsEnabled
-            self.shieldsView.overviewStackView.alpha = shieldsEnabled ? 0.0 : 1.0
         }
         if animated {
             UIView.animate(withDuration: 0.25) {
@@ -125,11 +108,6 @@ class ShieldsViewController: UIViewController, PopoverContentComponent {
     /// Groups the shield types with their control and global preference
     private lazy var shieldControlMapping: [(DissenterShield, ToggleView, Preferences.Option<Bool>?)] = [
         (.AllOff, shieldsView.shieldOverrideControl, nil),
-        (.AdblockAndTp, shieldsView.shieldsContainerStackView.adsTrackersControl, Preferences.Shields.blockAdsAndTracking),
-        (.SafeBrowsing, shieldsView.shieldsContainerStackView.blockMalwareControl, Preferences.Shields.blockPhishingAndMalware),
-        (.NoScript, shieldsView.shieldsContainerStackView.blockScriptsControl, Preferences.Shields.blockScripts),
-        (.HTTPSE, shieldsView.shieldsContainerStackView.httpsUpgradesControl, Preferences.Shields.httpsEverywhere),
-        (.FpProtection, shieldsView.shieldsContainerStackView.fingerprintingControl, Preferences.Shields.fingerprintingProtection),
     ]
     
     var shieldsView: View {
