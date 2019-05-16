@@ -19,8 +19,6 @@ protocol TopSitesDelegate: AnyObject {
 
 class FavoritesViewController: UIViewController, Themeable {
     private struct UI {
-        static let statsHeight: CGFloat = 110.0
-        static let statsBottomMargin: CGFloat = 5
         static let searchEngineCalloutPadding: CGFloat = 30.0
     }
     weak var linkNavigationDelegate: LinkNavigationDelegate?
@@ -42,15 +40,11 @@ class FavoritesViewController: UIViewController, Themeable {
             $0.alwaysBounceVertical = true
             $0.accessibilityIdentifier = "Top Sites View"
             // Entire site panel, including the stats view insets
-            $0.contentInset = UIEdgeInsets(top: UI.statsHeight, left: 0, bottom: 0, right: 0)
+            $0.contentInset = UIEdgeInsets(top: 5, left: 0, bottom: 0, right: 0)
         }
         return view
     }()
     private let dataSource: FavoritesDataSource
-    
-    private let dissenterShieldStatsView = DissenterShieldStatsView(frame: CGRect.zero).then {
-        $0.autoresizingMask = [.flexibleWidth]
-    }
     
     private let ddgLogo = UIImageView(image: #imageLiteral(resourceName: "duckduckgo"))
     
@@ -114,18 +108,6 @@ class FavoritesViewController: UIViewController, Themeable {
         collection.dataSource = dataSource
         dataSource.collectionView = collection
         
-        // Could setup as section header but would need to use flow layout,
-        // Auto-layout subview within collection doesn't work properly,
-        // Quick-and-dirty layout here.
-        var statsViewFrame: CGRect = dissenterShieldStatsView.frame
-        statsViewFrame.origin.x = 20
-        // Offset the stats view from the inset set above
-        statsViewFrame.origin.y = -(UI.statsHeight + UI.statsBottomMargin)
-        statsViewFrame.size.width = collection.frame.width - statsViewFrame.minX * 2
-        statsViewFrame.size.height = UI.statsHeight
-        dissenterShieldStatsView.frame = statsViewFrame
-        
-        collection.addSubview(dissenterShieldStatsView)
         collection.addSubview(ddgButton)
         
         ddgButton.addSubview(ddgLogo)
