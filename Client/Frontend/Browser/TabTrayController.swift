@@ -115,7 +115,7 @@ class TabCell: UICollectionViewCell, Themeable {
     }
 
     func setTabSelected(_ tab: Tab) {
-        layer.shadowColor = UIConstants.SystemBlueColor.cgColor
+        layer.shadowColor = DissenterUX.DissenterGreen.cgColor
         layer.shadowOpacity = 1
         layer.shadowRadius = 0 // A 0 radius creates a solid border instead of a gradient blur
         layer.masksToBounds = false
