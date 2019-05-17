@@ -13,7 +13,7 @@ private struct URLBarViewUX {
     static let LocationHeight: CGFloat = 34
     static let ButtonHeight: CGFloat = 44
     static let LocationContentOffset: CGFloat = 8
-    static let TextFieldCornerRadius: CGFloat = 8
+    static let TextFieldCornerRadius: CGFloat = 17
     static let ProgressBarHeight: CGFloat = 3
     
     static let TabsButtonRotationOffset: CGFloat = 1.5
@@ -690,7 +690,7 @@ extension URLBarView: Themeable {
 class TabLocationContainerView: UIView {
     
     private struct LocationContainerUX {
-        static let CornerRadius: CGFloat = 8.0
+        static let CornerRadius: CGFloat = 17.0
     }
     
     override init(frame: CGRect) {
