@@ -11,6 +11,7 @@ import LocalAuthentication
 import SwiftyJSON
 import Data
 import WebKit
+import MessageUI
 
 extension TabBarVisibility: RepresentableOptionType {
     public var displayString: String {
@@ -75,7 +76,7 @@ protocol SettingsDelegate: class {
     func settingsDidFinish(_ settingsViewController: SettingsViewController)
 }
 
-class SettingsViewController: TableViewController {
+class SettingsViewController: TableViewController, MFMailComposeViewControllerDelegate {
     weak var settingsDelegate: SettingsDelegate?
     
     private let profile: Profile
@@ -111,13 +112,12 @@ class SettingsViewController: TableViewController {
     
     private var sections: [Section] {
         var list = [Section]()
-        list.append(generalSection)
 //        #if !NO_SYNC
 //            list.append(syncSection)
 //        #endif
-        list.append(contentsOf: [privacySection,
-                                 securitySection,
+        list.append(contentsOf: [generalSection,
                                  shieldsSection,
+                                 privacySection,
                                  supportSection,
                                  aboutSection])
         
@@ -136,16 +136,14 @@ class SettingsViewController: TableViewController {
     
     private lazy var generalSection: Section = {
         var general = Section(
-            header: .title(Strings.SettingsGeneralSectionTitle),
+            header: .title(Strings.SearchSettingNavTitle),
             rows: [
                 Row(text: Strings.SearchEngines, selection: {
                     let viewController = SearchSettingsTableViewController()
                     viewController.model = self.profile.searchEngines
                     viewController.profile = self.profile
                     self.navigationController?.pushViewController(viewController, animated: true)
-                }, accessory: .disclosureIndicator, cellClass: MultilineValue1Cell.self),
-                BoolRow(title: Strings.Save_Logins, option: Preferences.General.saveLogins),
-                BoolRow(title: Strings.Block_Popups, option: Preferences.General.blockPopups),
+                }, accessory: .disclosureIndicator, cellClass: MultilineValue1Cell.self)
             ]
         )
         
@@ -206,6 +204,20 @@ class SettingsViewController: TableViewController {
     }()
     
     private lazy var privacySection: Section = {
+        let passcodeTitle: String = {
+            let localAuthContext = LAContext()
+            if localAuthContext.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil) {
+                let title: String
+                if localAuthContext.biometryType == .faceID {
+                    return Strings.AuthenticationFaceIDPasscodeSetting
+                } else {
+                    return Strings.AuthenticationTouchIDPasscodeSetting
+                }
+            } else {
+                return Strings.AuthenticationPasscode
+            }
+        }()
+        
         var privacy = Section(
             header: .title(Strings.Privacy)
         )
@@ -222,91 +234,70 @@ class SettingsViewController: TableViewController {
                 accessory: .disclosureIndicator,
                 cellClass: MultilineValue1Cell.self
             ),
-            BoolRow(title: Strings.Block_all_cookies, option: Preferences.Privacy.blockAllCookies, onValueChange: { [unowned self] in
-                func toggleCookieSetting(with status: Bool) {
-                    // Lock/Unlock Cookie Folder
-                    let completionBlock: (Bool) -> Void = { _ in
-                        let success = FileManager.default.setFolderAccess([
-                            (.cookie, status),
-                            (.webSiteData, status)
-                            ])
-                        if success {
-                            Preferences.Privacy.blockAllCookies.value = status
-                        } else {
-                            //Revert the changes. Not handling success here to avoid a loop.
-                            FileManager.default.setFolderAccess([
-                                (.cookie, false),
-                                (.webSiteData, false)
-                                ])
-                            self.toggleSwitch(on: false, section: self.privacySection, rowUUID: Preferences.Privacy.blockAllCookies.key)
-                            
-                            // TODO: Throw Alert to user to try again?
-                            let alert = UIAlertController(title: nil, message: Strings.Block_all_cookies_failed_alert_msg, preferredStyle: .alert)
-                            alert.addAction(UIAlertAction(title: Strings.OKString, style: .default))
-                            self.present(alert, animated: true)
-                        }
-                    }
-                    // Save cookie to disk before purge for unblock load.
-                    status ? HTTPCookie.saveToDisk(completion: completionBlock) : completionBlock(true)
-                }
-                if $0 {
-                    let status = $0
-                    // THROW ALERT to inform user of the setting
-                    let alert = UIAlertController(title: Strings.Block_all_cookies_alert_title, message: Strings.Block_all_cookies_alert_info, preferredStyle: .alert)
-                    let okAction = UIAlertAction(title: Strings.Block_all_cookies_action, style: .destructive, handler: { (action) in
-                        toggleCookieSetting(with: status)
-                    })
-                    alert.addAction(okAction)
-                    
-                    let cancelAction = UIAlertAction(title: Strings.CancelButtonTitle, style: .cancel, handler: { (action) in
-                        self.toggleSwitch(on: false, section: self.privacySection, rowUUID: Preferences.Privacy.blockAllCookies.key)
-                    })
-                    alert.addAction(cancelAction)
-                    self.present(alert, animated: true)
-                } else {
-                    toggleCookieSetting(with: $0)
-                }
-            })
+            Row(text: passcodeTitle, selection: { [unowned self] in
+                let passcodeSettings = PasscodeSettingsViewController()
+                self.navigationController?.pushViewController(passcodeSettings, animated: true)
+                }, accessory: .disclosureIndicator, cellClass: MultilineValue1Cell.self),
+            BoolRow(title: Strings.Save_Logins, option: Preferences.General.saveLogins)
         ]
         privacy.rows.append(BoolRow(title: Strings.Private_Browsing_Only, option: Preferences.Privacy.privateBrowsingOnly))
         return privacy
-    }()
-    
-    private lazy var securitySection: Section = {
-        let passcodeTitle: String = {
-            let localAuthContext = LAContext()
-            if localAuthContext.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil) {
-                let title: String
-                if localAuthContext.biometryType == .faceID {
-                    return Strings.AuthenticationFaceIDPasscodeSetting
-                } else {
-                    return Strings.AuthenticationTouchIDPasscodeSetting
-                }
-            } else {
-                return Strings.AuthenticationPasscode
-            }
-        }()
-        
-        return Section(
-            header: .title(Strings.Security),
-            rows: [
-                Row(text: passcodeTitle, selection: { [unowned self] in
-                    let passcodeSettings = PasscodeSettingsViewController()
-                    self.navigationController?.pushViewController(passcodeSettings, animated: true)
-                    }, accessory: .disclosureIndicator, cellClass: MultilineValue1Cell.self)
-            ]
-        )
     }()
     
     private lazy var shieldsSection: Section = {
         var shields = Section(
             header: .title(Strings.Dissenter_Shield_Defaults),
             rows: [
+                BoolRow(title: Strings.Block_Popups, option: Preferences.General.blockPopups),
                 BoolRow(title: Strings.Block_Ads_and_Tracking, option: Preferences.Shields.blockAdsAndTracking),
-                BoolRow(title: Strings.HTTPS_Everywhere, option: Preferences.Shields.httpsEverywhere),
                 BoolRow(title: Strings.Block_Phishing_and_Malware, option: Preferences.Shields.blockPhishingAndMalware),
                 BoolRow(title: Strings.Block_Scripts, option: Preferences.Shields.blockScripts),
                 BoolRow(title: Strings.Fingerprinting_Protection, option: Preferences.Shields.fingerprintingProtection),
+                BoolRow(title: Strings.Block_all_cookies, option: Preferences.Privacy.blockAllCookies, onValueChange: { [unowned self] in
+                    func toggleCookieSetting(with status: Bool) {
+                        // Lock/Unlock Cookie Folder
+                        let completionBlock: (Bool) -> Void = { _ in
+                            let success = FileManager.default.setFolderAccess([
+                                (.cookie, status),
+                                (.webSiteData, status)
+                                ])
+                            if success {
+                                Preferences.Privacy.blockAllCookies.value = status
+                            } else {
+                                //Revert the changes. Not handling success here to avoid a loop.
+                                FileManager.default.setFolderAccess([
+                                    (.cookie, false),
+                                    (.webSiteData, false)
+                                    ])
+                                self.toggleSwitch(on: false, section: self.privacySection, rowUUID: Preferences.Privacy.blockAllCookies.key)
+                                
+                                // TODO: Throw Alert to user to try again?
+                                let alert = UIAlertController(title: nil, message: Strings.Block_all_cookies_failed_alert_msg, preferredStyle: .alert)
+                                alert.addAction(UIAlertAction(title: Strings.OKString, style: .default))
+                                self.present(alert, animated: true)
+                            }
+                        }
+                        // Save cookie to disk before purge for unblock load.
+                        status ? HTTPCookie.saveToDisk(completion: completionBlock) : completionBlock(true)
+                    }
+                    if $0 {
+                        let status = $0
+                        // THROW ALERT to inform user of the setting
+                        let alert = UIAlertController(title: Strings.Block_all_cookies_alert_title, message: Strings.Block_all_cookies_alert_info, preferredStyle: .alert)
+                        let okAction = UIAlertAction(title: Strings.Block_all_cookies_action, style: .destructive, handler: { (action) in
+                            toggleCookieSetting(with: status)
+                        })
+                        alert.addAction(okAction)
+                        
+                        let cancelAction = UIAlertAction(title: Strings.CancelButtonTitle, style: .cancel, handler: { (action) in
+                            self.toggleSwitch(on: false, section: self.privacySection, rowUUID: Preferences.Privacy.blockAllCookies.key)
+                        })
+                        alert.addAction(cancelAction)
+                        self.present(alert, animated: true)
+                    } else {
+                        toggleCookieSetting(with: $0)
+                    }
+                })
             ]
         )
         if let locale = Locale.current.languageCode, let _ = ContentBlockerRegion.with(localeCode: locale) {
@@ -314,6 +305,44 @@ class SettingsViewController: TableViewController {
         }
         return shields
     }()
+    
+    // Open mail composer to report bug
+    func configuredMailComposeViewController() -> MFMailComposeViewController {
+        let mailComposerVC = MFMailComposeViewController()
+        
+        let version = String(format: Strings.Version_template,
+        Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "",
+        Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as? String ?? "")
+        let device = UIDevice.current
+        let iOSVersion = "\(device.systemName) \(UIDevice.current.systemVersion)"
+        let deviceModel = String(format: Strings.Device_template, device.modelName, iOSVersion)
+    
+        mailComposerVC.mailComposeDelegate = self
+        mailComposerVC.setToRecipients(["support@gab.com"])
+        mailComposerVC.setSubject("Bug Report")
+        mailComposerVC.setMessageBody("<p>Version: \(version)<br>Device Model: \(deviceModel)</p>", isHTML: true)
+        
+        return mailComposerVC
+    }
+    
+    func showSendMailErrorAlert() {
+        let alert = UIAlertController(title: "Error", message: "Unable to send an email. Please email support@gab.com.", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func sendEmail() {
+        let mailComposeViewController = configuredMailComposeViewController()
+        if MFMailComposeViewController.canSendMail() {
+            self.present(mailComposeViewController, animated: true, completion: nil)
+        } else {
+            self.showSendMailErrorAlert()
+        }
+    }
+    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true, completion: nil)
+    }
     
     private lazy var supportSection: Section = {
         return Section(
@@ -328,6 +357,18 @@ class SettingsViewController: TableViewController {
                         self.dismiss(animated: true)
                     },
                     cellClass: MultilineValue1Cell.self),
+                Row(text: Strings.Report_a_bug,
+                    selection: { [unowned self] in
+                        self.sendEmail()
+                    },
+                    accessory: .disclosureIndicator, cellClass: MultilineValue1Cell.self),
+                Row(text: Strings.Help,
+                    selection: { [unowned self] in
+                        // Show help
+                        let help = SettingsContentViewController().then { $0.url = DissenterUX.DissenterSupportURL }
+                        self.navigationController?.pushViewController(help, animated: true)
+                    },
+                    accessory: .disclosureIndicator, cellClass: MultilineValue1Cell.self),
                 Row(text: Strings.Privacy_Policy,
                     selection: { [unowned self] in
                         // Show privacy policy
