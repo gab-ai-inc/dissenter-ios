@@ -377,6 +377,9 @@ Sidik Jari";
 /* Grand camera access */
 "GrantCameraAccess" = "Aktifkan Kamera";
 
+/* Show Dissenter Help page from the Support section in the settings. */
+"Help" = "Membantu";
+
 /* No comment provided by engineer. */
 "Home" = "Beranda";
 
@@ -509,22 +512,10 @@ dengan DuckDuckGo";
 "Private" = "Pribadi";
 
 /* No comment provided by engineer. */
-"PrivateBrowsing" = "Penjelajahan Pribadi";
+"PrivateBrowsing" = "Penjelajahan pribadi diaktifkan";
 
 /* Setting to keep app in private mode */
 "PrivateBrowsingOnly" = "Hanya Penjelajahan Pribadi";
-
-/* Private tab detail text */
-"PrivateTabDetails" = "Menggunakan Tab Pribadi hanya akan mengubah fungsi Dissenter di perangkat Anda, namun tidak mengubah perilaku orang lain.
-
-Situs selalu mengetahui alamat IP Anda saat mengunjunginya. Dari kondisi ini, situs sering kali dapat selalu mengetahui lokasi Anda, terutama kota. Terkadang lokasi yang diketahui dapat lebih spesifik. Situs juga mengetahui semua yang Anda beri tahu secara spesifik seperti istilah pencarian. Jika masuk, situs akan mengetahui bahwa Anda adalah pemilik akun tersebut. Anda tetap akan keluar saat menutup Tab Pribadi karena Dissenter akan menghapus kuki yang Anda gunakan untuk masuk.
-
-ISP mana pun yang menyambungkan Anda ke Internet dapat melihat semua aktivitas jaringan Anda. Sering kali, operator seluler Anda yang melihatnya. Jika Anda tersambung ke jaringan WiFi, maka pemilik jaringan tersebut yang dapat melihat aktivitas jaringan, dan jika Anda menggunakan VPN, maka yang menjalankan VPN tersebut yang dapat melihat aktivitas jaringan. ISP dapat melihat situs yang dikunjungi saat Anda mengunjunginya. Jika situs tersebut menggunakan HTTPS, situs tersebut hanya dapat mengetahui aktivitas Anda di situs tersebut. Namun jika situs hanya menggunakan HTTP, maka ISP dapat melihat semuanya: istilah pencarian Anda, halaman yang dibaca, dan tautan yang diikuti.
-
-Jika perusahaan mengelola perangkat Anda, mereka juga dapat melacak aktivitas perangkat Anda. Menggunakan Tab Pribadi mungkin tidak akan menghentikan mereka untuk mengetahui situs yang Anda kunjungi. Orang lain yang memiliki akses ke perangkat Anda juga dapat memasang perangkat lunak yang memantau aktivitas Anda, dan Tab Pribadi tidak akan dapat melindungi Anda dari hal ini.";
-
-/* Private tab information link */
-"PrivateTabLink" = "Pelajari tentang tab pribadi.";
 
 /* Default engine for private search. */
 "PrivateTabSearch" = "Tab Pribadi";
@@ -686,10 +677,7 @@ Jika perusahaan mengelola perangkat Anda, mereka juga dapat melacak aktivitas pe
 "ShareLinkActionTitle" = "Bagikan Tautan";
 
 /* shields overview message */
-"ShieldsOverview" = "Perisai Situs memungkinkan Anda mengontrol saat iklan dan pelacak diblokir untuk setiap situs yang dikunjungi. Jika memilih untuk melihat iklan pada situs tertentu, Anda dapat mengaktifkannya di sini.";
-
-/* shields overview footer message */
-"ShieldsOverviewFooter" = "Catatan: Beberapa situs mungkin memerlukan skrip agar dapat berfungsi dengan baik, jadi perisai ini akan dinonaktifkan secara baku.";
+"ShieldsOverview" = "Perisai Situs Web Dissenter memungkinkan Anda mengontrol kapan iklan dan pelacak diblokir untuk setiap situs web yang Anda kunjungi.";
 
 /* Time Saved Days */
 "ShieldsTimeStatsDays" = "h";

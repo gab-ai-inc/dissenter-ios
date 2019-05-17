@@ -377,6 +377,9 @@
 /* Grand camera access */
 "GrantCameraAccess" = "カメラを有効にする";
 
+/* Show Dissenter Help page from the Support section in the settings. */
+"Help" = "助けて";
+
 /* No comment provided by engineer. */
 "Home" = "ホーム";
 
@@ -509,22 +512,10 @@
 "Private" = "プライベート";
 
 /* No comment provided by engineer. */
-"PrivateBrowsing" = "プライベートブラウジング";
+"PrivateBrowsing" = "プライベートブラウジングは有効です";
 
 /* Setting to keep app in private mode */
 "PrivateBrowsingOnly" = "プライベートブラウジングのみ";
-
-/* Private tab detail text */
-"PrivateTabDetails" = "プライベートタブを使うと、Dissenterのデバイス上での動作は変わりますが、その他の行動は変わりません。
-              
-              あなたのIPアドレスは訪問先のサイトにより追跡され、あなたがいるおよその位置 (都市など) が推測されます。この位置情報は、さらに具体的になる場合もあります。また、サイトはあなたが具体的に伝達したあらゆる内容 (検索語句など) を知ることができます。サイトにログインした場合、サイトにはあなたがそのアカウントの所有者であることが伝わります。プライベートタブを閉じると、Dissenterはログイン状態を維持するCookieを破棄するため、あなたはログアウトします。
-              
-              あなたをインターネットに接続する者 (ISP) は、あなたのネットワークアクティビティをすべて見ることができます。多くの場合、これはご利用の携帯電話会社になります。WiFiネットワークに接続している場合は、そのネットワークの所有者になります。VPNを使用している場合は、そのVPNの管理者になります。ISPは、あなたがどのサイトを訪問したかを知ることができます。サイトがHTTPSを使っている場合、あなたがそのサイトで何をしたかについてISPにより推測される内容には限度がありますが、HTTPのみが使用されている場合は、ISPによりあらゆること (検索語句、読んだページ、ジャンプしたリンク) がサイトに伝わります。
-              
-              雇用主がデバイスを管理している場合、雇用主もあなたがそのデバイスで行った行動を追跡できる可能性があります。プライベートタブを使ったとしても、訪問先のサイトを隠すことは不可能です。また、そのデバイスにアクセスできる他の人があなたのアクティビティをモニタリングするソフトウェアをインストールしている可能性もあります。その場合、プライベートタブを使ってもモニタリングを回避することはできません。";
-
-/* Private tab information link */
-"PrivateTabLink" = "プライベートタブについて。";
 
 /* Default engine for private search. */
 "PrivateTabSearch" = "プライベートタブ";
@@ -686,10 +677,7 @@
 "ShareLinkActionTitle" = "リンクを共有";
 
 /* shields overview message */
-"ShieldsOverview" = "サイトの保護機能では、訪問したサイトで広告とトラッカーをブロックするタイミングをコントロールすることができます。特定のサイトで広告を表示させたい場合、ここで設定することができます。";
-
-/* shields overview footer message */
-"ShieldsOverviewFooter" = "注意: 一部のサイトでは適切な動作にスクリプトが必要なため、この保護機能はデフォルトでオフになっています。";
+"ShieldsOverview" = "Dissenter Webサイトシールドを使用すると、アクセスしたWebサイトごとに広告とトラッカーをブロックするタイミングを制御できます。";
 
 /* Time Saved Days */
 "ShieldsTimeStatsDays" = "日";

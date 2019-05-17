@@ -377,6 +377,9 @@
 /* Grand camera access */
 "GrantCameraAccess" = "카메라 활성화";
 
+/* Show Dissenter Help page from the Support section in the settings. */
+"Help" = "도움";
+
 /* No comment provided by engineer. */
 "Home" = "홈";
 
@@ -509,22 +512,10 @@
 "Private" = "비공개";
 
 /* No comment provided by engineer. */
-"PrivateBrowsing" = "비공개 브라우징";
+"PrivateBrowsing" = "비공개 브라우징이 사용 설정되었습니다.";
 
 /* Setting to keep app in private mode */
 "PrivateBrowsingOnly" = "비공개 브라우징으로만 열기";
-
-/* Private tab detail text */
-"PrivateTabDetails" = "비공개 탭을 사용할 경우 귀하의 기기에서 수행된 Dissenter 작업만이 변경되며, 다른 사용자의 동작은 변경되지 않습니다.
-
-사이트를 방문하면 사이트에서 항상 귀하의 IP 주소를 학습합니다. 즉, 사이트에서 귀하의 위치(주로 도시)를 대략적으로 추측할 수 있습니다. 경우에 따라서는 위치가 훨씬 구체적으로 추측되기도 합니다. 또한 귀하가 사이트에서 수행한 모든 작업(검색어 등)이 해당 사이트에 기록됩니다. 귀하가 사이트에 로그인하면 해당 사이트에서 귀하가 해당 계정의 소유자임을 인식합니다. 비공개 탭을 닫으면 Dissenter에서 로그인 상태를 유지하는 쿠키를 지우기 때문에 로그아웃 상태가 됩니다.
-
-인터넷 연결을 위해 귀하가 이용하는 ISP에서는 귀하의 네트워크 활동을 모두 확인할 수 있습니다. 대부분의 경우 이러한 ISP는 이동통신 사업자입니다. WiFi 네트워크에 연결한 경우 ISP는 해당 네트워크의 소유자이며, VPN을 사용하는 경우에는 해당 VPN의 운영자입니다. 귀하가 이용하는 ISP에서는 귀하가 사이트를 방문하면 귀하가 방문한 사이트를 알 수 있습니다. 해당 사이트에서 HTTPS를 사용하는 경우 ISP에서는 귀하가 해당 사이트에서 수행하는 작업을 기록에 따라 추측만 할 수 있습니다. 그러나 사이트에서 HTTP만을 사용한다면 ISP에서 귀하가 사용한 검색어, 귀하가 읽은 페이지와 따라 간 링크 등 모든 것을 알 수 있습니다.
-
-고용주가 귀하의 기기를 관리하는 경우 고용주는 귀하가 해당 기기로 무엇을 하는지 추적할 수도 있습니다. 비공개 탭을 사용한다고 해도 귀하가 방문한 사이트를 고용주가 알지 못하도록 차단하지는 못할 것입니다. 귀하의 기기에 액세스할 수 있는 권한을 가진 다른 사람도 귀하의 활동을 모니터링하는 소프트웨어를 설치할 수 있으며, 이것 또한 비공개 탭으로는 차단하지 못합니다.";
-
-/* Private tab information link */
-"PrivateTabLink" = "비공개 탭에 대해 자세히 알아보십시오.";
 
 /* Default engine for private search. */
 "PrivateTabSearch" = "비공개 탭";
@@ -686,10 +677,7 @@
 "ShareLinkActionTitle" = "링크 공유";
 
 /* shields overview message */
-"ShieldsOverview" = "사이트 차단을 사용하면 방문하는 사이트별로 광고와 트래커를 차단할지 관리할 수 있습니다. 특정 사이트에서 광고를 표시하려면 여기에서 해당 기능을 활성화할 수 있습니다.";
-
-/* shields overview footer message */
-"ShieldsOverviewFooter" = "참고: 일부 사이트에서는 스크립트가 정상 작동하도록 하여 이 차단을 기본적으로 비활성화할 수 있습니다.";
+"ShieldsOverview" = "Dissenter Website Shields를 사용하면 방문하는 각 웹 사이트에 대한 광고 및 추적기가 차단되는 시점을 제어 할 수 있습니다.";
 
 /* Time Saved Days */
 "ShieldsTimeStatsDays" = "일";

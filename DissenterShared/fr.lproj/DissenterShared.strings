@@ -377,6 +377,9 @@ empreintes digitales";
 /* Grand camera access */
 "GrantCameraAccess" = "Activer l'appareil photo";
 
+/* Show Dissenter Help page from the Support section in the settings. */
+"Help" = "Aidez-moi";
+
 /* No comment provided by engineer. */
 "Home" = "Accueil";
 
@@ -509,22 +512,10 @@ avec DuckDuckGo";
 "Private" = "Privé";
 
 /* No comment provided by engineer. */
-"PrivateBrowsing" = "Navigation privée";
+"PrivateBrowsing" = "La navigation privée est activée";
 
 /* Setting to keep app in private mode */
 "PrivateBrowsingOnly" = "Navigation privée uniquement";
-
-/* Private tab detail text */
-"PrivateTabDetails" = "L'utilisation des onglets privés change seulement les opérations que Dissenter peut effectuer sur votre appareil, mais pas le comportement des autres.
-
-Les sites obtiennent toujours votre adresse IP lorsque vous les consultez. Grâce à elle, ils peuvent souvent deviner votre position approximative (généralement votre ville). Parfois, cette localisation peut être déterminée de manière beaucoup plus précise. Les sites reçoivent toutes les informations que vous leur communiquez, comme les termes de recherche. Si vous vous connectez à un site, il saura que vous êtes le propriétaire de ce compte. Cependant, vous serez toujours déconnecté lorsque vous fermerez les onglets privés, car Dissenter supprime le cookie qui permet de vous garder connecté.
-
-Quel que soit votre fournisseur d'accès Internet, il peut voir toutes vos activités sur le réseau. Il s'agit souvent de votre opérateur mobile. Si vous êtes connecté à un réseau Wi-Fi, il s'agit du propriétaire du réseau, et si vous utilisez un VPN, il s'agit du fournisseur de ce VPN. Votre fournisseur d'accès Internet peut voir les sites que vous consultez lorsque vous les consultez. Si ces sites utilisent le protocole HTTPS, votre fournisseur n'aura aucune information concrète concernant vos activités sur ce site. Cependant, si un site utilise seulement le protocole HTTP, alors votre fournisseur d'accès Internet peut tout voir : vos termes de recherche, les pages que vous avez lues et les liens sur lesquels vous avez cliqué.
-
-Si un employeur gère votre appareil, il peut également suivre l'utilisation que vous en faites. L'utilisation des onglets privés ne l'empêchera certainement pas de savoir quels sites vous consultez. De plus, une personne ayant accès à votre appareil a pu installer un logiciel qui surveille votre activité, et les onglets privés ne vous protégeront pas contre cela non plus.";
-
-/* Private tab information link */
-"PrivateTabLink" = "En savoir plus sur les onglets privés.";
 
 /* Default engine for private search. */
 "PrivateTabSearch" = "Onglet privé";
@@ -686,10 +677,7 @@ Si un employeur gère votre appareil, il peut également suivre l'utilisation qu
 "ShareLinkActionTitle" = "Partager le lien";
 
 /* shields overview message */
-"ShieldsOverview" = "Les Shields des sites vous permettent de contrôler le blocage des publicités et des traceurs pour chaque site que vous consultez. Si vous souhaitez voir les publicités sur un site en particulier, vous pouvez les activer ici.";
-
-/* shields overview footer message */
-"ShieldsOverviewFooter" = "Remarque : pour fonctionner correctement, certains sites doivent exécuter des scripts ; ce shield est donc désactivé par défaut.";
+"ShieldsOverview" = "Les Dissenter Shields vous permettent de contrôler le blocage des publicités et des traceurs pour chaque site que vous consultez.";
 
 /* Time Saved Days */
 "ShieldsTimeStatsDays" = "j";

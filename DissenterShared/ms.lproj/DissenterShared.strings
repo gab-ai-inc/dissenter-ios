@@ -377,6 +377,9 @@ Pencapjarian";
 /* Grand camera access */
 "GrantCameraAccess" = "Aktifkan Kamera";
 
+/* Show Dissenter Help page from the Support section in the settings. */
+"Help" = "Bantuan";
+
 /* No comment provided by engineer. */
 "Home" = "Halaman Utama";
 
@@ -509,22 +512,10 @@ dengan DuckDuckGo";
 "Private" = "Peribadi";
 
 /* No comment provided by engineer. */
-"PrivateBrowsing" = "Semakan Lalu Peribadi";
+"PrivateBrowsing" = "Penyemakan imbas peribadi didayakan";
 
 /* Setting to keep app in private mode */
 "PrivateBrowsingOnly" = "Semakan Lalu Peribadi Sahaja";
-
-/* Private tab detail text */
-"PrivateTabDetails" = "Penggunaan Tab Peribadi hanya dapat mengubah apa yang dibuat dengan Dissenter pada peranti anda, ia tidak mengubah tingkah laku orang lain.
-
-Laman sentiasa belajar alamat IP anda apabila anda melawat laman tersebut. Dengan ini, laman sering boleh meneka lokasi kasar anda - biasanya bandar anda. Kadang-kadang tekaan lokasi boleh menjadi lebih spesifik. Laman juga tahu semua perkara yang anda katakan kepada mereka secara khusus, seperti istilah carian. Jika anda log masuk ke laman, mereka akan mengetahui bahawa anda pemilik akaun itu. Anda masih akan dilog keluar apabila anda menutup Tab Peribadi kerana Dissenter akan membuang kuki yang mengekalkan log masuk anda.
-
-Sesiapa pun yang menghubungkan anda kepada Internet (ISP anda) dapat melihat semua aktiviti rangkaian anda. Biasanya, ini merupakan pembawa mudah alih anda. Jika anda disambungkan ke rangkaian WiFi, ini merupakan pemilik rangkaian itu, dan jika anda menggunakan VPN, maka sesiapa pun yang menguruskan VPN itu. ISP anda boleh melihat laman web yang anda kunjungi semasa anda melawatnya. Sekiranya laman web tersebut menggunakan HTTPS, mereka hanya dapat meneka apa yang anda lakukan di laman web tersebut. Sekiranya laman hanya menggunakan HTTP maka ISP anda dapat melihat segala-galanya: istilah carian anda, laman yang anda baca, dan pautan yang anda ikuti.
-
-Sekiranya majikan menguruskan peranti anda, mereka mungkin juga menjejaki apa yang anda lakukan dengannya. Penggunaan Tab Peribadi mungkin tidak dapat menghalang mereka daripada mengetahui laman yang telah anda lawati. Seseorang yang mempunyai akses ke peranti anda juga boleh memasangkan perisian yang memantau aktiviti anda, dan Tab Pribadi tidak akan melindungi anda daripada perbuatan tersebut.";
-
-/* Private tab information link */
-"PrivateTabLink" = "Ketahui tentang tab peribadi.";
 
 /* Default engine for private search. */
 "PrivateTabSearch" = "Tab Peribadi";
@@ -686,10 +677,7 @@ Sekiranya majikan menguruskan peranti anda, mereka mungkin juga menjejaki apa ya
 "ShareLinkActionTitle" = "Kongsi Pautan";
 
 /* shields overview message */
-"ShieldsOverview" = "Perisai Tapak membenarkan anda mengawal bila iklan dan penjejak disekat untuk setiap tapak yang anda lawati. Jika anda suka melihat iklan di sesuatu tapak khusus, anda boleh mendayakannya di sini.";
-
-/* shields overview footer message */
-"ShieldsOverviewFooter" = "Nota: Sesetengah tapak mungkin memerlukan skrip untuk berfungsi dengan betul supaya perisai ini dimatikan secara lalai.";
+"ShieldsOverview" = "Dissenter Website Shields membenarkan anda mengawal apabila iklan dan pelacak dihalang untuk setiap laman web yang anda lawati.";
 
 /* Time Saved Days */
 "ShieldsTimeStatsDays" = "h";

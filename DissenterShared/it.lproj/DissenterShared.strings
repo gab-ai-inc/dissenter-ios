@@ -377,6 +377,9 @@ dal fingerprinting";
 /* Grand camera access */
 "GrantCameraAccess" = "Attiva Fotocamera";
 
+/* Show Dissenter Help page from the Support section in the settings. */
+"Help" = "Aiuto";
+
 /* No comment provided by engineer. */
 "Home" = "Home";
 
@@ -509,22 +512,10 @@ con DuckDuckGo";
 "Private" = "Privata";
 
 /* No comment provided by engineer. */
-"PrivateBrowsing" = "Navigazione privata";
+"PrivateBrowsing" = "La navigazione privata è abilitata";
 
 /* Setting to keep app in private mode */
 "PrivateBrowsingOnly" = "Solo navigazione privata";
-
-/* Private tab detail text */
-"PrivateTabDetails" = "L’uso delle schede private cambia soltanto quello che fa Dissenter sul tuo dispositivo, e non modifica il comportamento di nessun altro.
-
-I siti che visiti continuano a conoscere il tuo indirizzo IP. Partendo da questa informazione, spesso possono risalire alla tua posizione indicativa, in genere alla città in cui ti trovi; e a volte la conoscenza della posizione può essere molto più particolareggiata. Inoltre i siti sanno tutto quello che dici direttamente a loro, per esempio i termini che usi per le ricerche. Se fai il log‑in per accedere a un sito, questo saprà che sei tu il proprietario dell’account. Chiudendo la scheda privata, si continuerà a rimanere disconnessi perché Dissenter rimuoverà i cookie che servono a mantenere attivo l’accesso.
-
-Il tuo Internet service provider (ISP), cioè chi ti fornisce il collegamento a internet, chiunque esso sia, può vedere la tua attività di rete. Spesso si tratta del tuo operatore di telefonia mobile. Se ti connetti tramite una rete Wi‑Fi è il proprietario della rete, e se usi una VPN è chiunque gestisca la VPN. Il tuo ISP può vedere quali siti visiti mentre li visiti. Se questi siti usano il protocollo HTTPS, può al massimo ipotizzare quello che stai facendo durante la visita. Se però usano solo l’HTTP, allora il tuo ISP è in grado di vedere tutto: i termini di ricerca, le pagine che leggi e i link che apri.
-
-Se a gestire il tuo dispositivo è un datore di lavoro, potrebbe anche tenere traccia di quello che fai con il dispositivo. Usando le schede private, probabilmente non gli impedirai di sapere quali siti hai visitato. Qualcun altro con accesso al tuo dispositivo potrebbe inoltre avere installato del software che monitora la tua attività, e anche da questo le schede private non ti possono proteggere.";
-
-/* Private tab information link */
-"PrivateTabLink" = "Informazioni sulle schede private.";
 
 /* Default engine for private search. */
 "PrivateTabSearch" = "Scheda privata";
@@ -686,10 +677,7 @@ Se a gestire il tuo dispositivo è un datore di lavoro, potrebbe anche tenere tr
 "ShareLinkActionTitle" = "Condividi link";
 
 /* shields overview message */
-"ShieldsOverview" = "Con Shields decidi se bloccare gli annunci pubblicitari e i sistemi di tracciamento, per tutti i siti che visiti. Se su un sito specifico vuoi vedere gli annunci, puoi attivarli qui.";
-
-/* shields overview footer message */
-"ShieldsOverviewFooter" = "Nota: alcuni siti potrebbero richiedere il funzionamento corretto degli script; pertanto questa protezione viene disattivata per impostazione predefinita.";
+"ShieldsOverview" = "Dissenter Website Shields ti consente di controllare quando gli annunci e i tracker sono bloccati per ogni sito web che visiti.";
 
 /* Time Saved Days */
 "ShieldsTimeStatsDays" = "g";

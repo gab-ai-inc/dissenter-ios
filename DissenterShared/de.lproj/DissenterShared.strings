@@ -377,6 +377,9 @@ Schutz";
 /* Grand camera access */
 "GrantCameraAccess" = "Kamera aktivieren";
 
+/* Show Dissenter Help page from the Support section in the settings. */
+"Help" = "Hilfe";
+
 /* No comment provided by engineer. */
 "Home" = "Startseite";
 
@@ -509,22 +512,10 @@ mit DuckDuckGo";
 "Private" = "Privat";
 
 /* No comment provided by engineer. */
-"PrivateBrowsing" = "Privates Browsen";
+"PrivateBrowsing" = "Privates Surfen ist aktiviert";
 
 /* Setting to keep app in private mode */
 "PrivateBrowsingOnly" = "Nur privates Browsen";
-
-/* Private tab detail text */
-"PrivateTabDetails" = "Die Nutzung privater Tabs ändert lediglich das Verhalten von Dissenter auf Ihrem Gerät, nicht das Verhalten anderer.
-              
-              Wenn Sie eine Website besuchen, senden Sie stets Ihre IP-Adresse mit, wodurch Ihr Standort – in der Regel Ihre Stadt – grob ermittelt werden kann. Manchmal ist Ihr Standort auch konkreter feststellbar. Darüber hinaus erhalten die Websites alle von Ihnen mitgeteilten Informationen, z. B. Suchbegriffe. Wenn Sie sich bei einer Website anmelden, teilen Sie mit, dass Sie der Eigentümer dieses Kontos sind. Dennoch werden Sie abgemeldet, sobald Sie den entsprechenden privaten Tab schließen, da Dissenter den Cookie entfernt, mit dem Sie angemeldet bleiben.
-              
-              Für den, der Ihre Internetverbindung herstellt (Ihr ISP), ist Ihre gesamte Netzwerkaktivität sichtbar. Häufig handelt es sich hierbei um Ihren Mobilfunkanbieter. Wenn Sie mit einem WLAN-Netzwerk verbunden sind, ist dies der Eigentümer des Netzwerks. Falls Sie wiederum ein VPN nutzen, dann gehört es dem Betreiber des VPNs. Für Ihren ISP sind die von Ihnen besuchten Websites in dem Moment sichtbar, wenn Sie sie besuchen. Verwenden diese Websites HTTPS, erhalten sie keine konkreten Einblicke in Ihre Aktivitäten auf diesen Websites. Wenn eine Website jedoch nur HTTP nutzt, kann Ihr ISP alles sehen: Ihre Suchbegriffe, die von Ihnen gelesenen Seiten und die von Ihnen angeklickten Links.
-              
-              Wenn Ihr Arbeitgeber Ihr Gerät verwaltet, könnte auch dieser dessen Nutzung durch Sie verfolgen. Auch die Verwendung privater Tabs kann wahrscheinlich nicht verhindern, dass er die von Ihnen besuchten Websites einsehen kann. Jemand anderes, der Zugriff auf Ihr Gerät hat, könnte eine Software zur Überwachung Ihrer Aktivitäten installiert haben. Auch davor schützen Sie private Tabs nicht.";
-
-/* Private tab information link */
-"PrivateTabLink" = "Erfahren Sie mehr über private Tabs.";
 
 /* Default engine for private search. */
 "PrivateTabSearch" = "Privater Tab";
@@ -686,10 +677,7 @@ mit DuckDuckGo";
 "ShareLinkActionTitle" = "Link teilen";
 
 /* shields overview message */
-"ShieldsOverview" = "Mit Site Shields steuern Sie, wann Anzeigen und Tracker der von Ihnen besuchten Websites blockiert werden. Wenn Sie bei einer bestimmten Website Anzeigen sehen möchten, können Sie diese hier aktivieren.";
-
-/* shields overview footer message */
-"ShieldsOverviewFooter" = "Beachten Sie: Einige Sites benötigen möglicherweise Skripte, um korrekt zu funktionieren. Daher ist dieser Schutz standardmäßig deaktiviert.";
+"ShieldsOverview" = "Mit Dissenter Website Shields können Sie steuern, wann Anzeigen und Tracker für jede von Ihnen besuchte Website blockiert werden.";
 
 /* Time Saved Days */
 "ShieldsTimeStatsDays" = "d";

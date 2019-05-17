@@ -377,6 +377,9 @@ odcisków palców";
 /* Grand camera access */
 "GrantCameraAccess" = "Włącz aparat";
 
+/* Show Dissenter Help page from the Support section in the settings. */
+"Help" = "Wsparcie";
+
 /* No comment provided by engineer. */
 "Home" = "Strona domowa";
 
@@ -509,22 +512,10 @@ z wykorzystaniem DuckDuckGo";
 "Private" = "Prywatność";
 
 /* No comment provided by engineer. */
-"PrivateBrowsing" = "Przeglądanie w trybie prywatnym";
+"PrivateBrowsing" = "Prywatne przeglądanie jest włączone";
 
 /* Setting to keep app in private mode */
 "PrivateBrowsingOnly" = "Przeglądanie wyłącznie w trybie prywatnym";
-
-/* Private tab detail text */
-"PrivateTabDetails" = "Używanie kart prywatnych zmienia tylko działanie Dissenter na Twoim urządzeniu, nie zmieniając zachowań innych.
-
-Strony zawsze poznają Twój adres IP, gdy je odwiedzasz. Na tej podstawie są często w stanie z grubsza odgadnąć Twoją lokalizację – zazwyczaj miasto. Czasem określenie lokalizacji może być znacznie bardziej precyzyjne. Strony mają też informację o wszystkim, co przekaże im użytkownik np. o wyszukiwanych hasłach. W przypadku zalogowania się na stronie, wiadomo, kto jest właścicielem konta. Po zamknięciu kart prywatnych nastąpi wylogowanie, ponieważ Dissenter usuwa pliki cookie odpowiedzialne za zalogowanie.
-
-Każdy, kto podłącza Cię do Internetu (czyli Twój dostawca) widzi całą Twoją aktywność sieciową. Często jest to Twój dostawca usług telefonii komórkowej. W przypadku podłączenia do sieci Wi-Fi jest to właściciel tej sieci, a jeśli korzystasz z VPN, jest to jego operator. Twój dostawca widzi, jakie strony odwiedzasz. W przypadku korzystania z protokołu HTTPS można tyko zgadywać, co robisz na stronie, ale jeśli używany jest zwykły protokół HTTP to dostawca widzi wszystko: wyszukiwane hasła, czytane strony i klikane łącza.
-
-Jeśli Twój pracodawca zarządza Twoim urządzeniem to może też monitorować Twoje korzystanie z niego. Korzystanie z kart prywatnych prawdopodobnie nie ukryje odwiedzanych stron. Ktoś, kto ma dostęp do Twojego urządzenia mógł zainstalować oprogramowanie, które monitoruje Twoją aktywność, a karty prywatne nie chronią przed tym.";
-
-/* Private tab information link */
-"PrivateTabLink" = "Dowiedz się więcej o kartach w trybie prywatnym.";
 
 /* Default engine for private search. */
 "PrivateTabSearch" = "Karta w trybie prywatnym";
@@ -686,10 +677,7 @@ Jeśli Twój pracodawca zarządza Twoim urządzeniem to może też monitorować 
 "ShareLinkActionTitle" = "Udostępnij łącze";
 
 /* shields overview message */
-"ShieldsOverview" = "Zabezpieczenia witryn umożliwiają zarządzanie blokadą reklam i trackerów w przypadku każdej odwiedzanej strony. Jeżeli chcesz, aby reklamy  na danej stronie były wyświetlane, możesz je aktywować tutaj.";
-
-/* shields overview footer message */
-"ShieldsOverviewFooter" = "Uwaga: na niektórych stronach skrypty muszą działać prawidłowo, przez co zabezpieczenie jest domyślnie wyłączane.";
+"ShieldsOverview" = "Disterter Website Shields pozwalają kontrolować, kiedy reklamy i trackery są blokowane dla każdej odwiedzanej witryny.";
 
 /* Time Saved Days */
 "ShieldsTimeStatsDays" = "d.";

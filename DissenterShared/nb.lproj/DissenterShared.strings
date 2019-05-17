@@ -377,6 +377,9 @@ beskyttelse";
 /* Grand camera access */
 "GrantCameraAccess" = "Aktiver kamera";
 
+/* Show Dissenter Help page from the Support section in the settings. */
+"Help" = "Hjelp";
+
 /* No comment provided by engineer. */
 "Home" = "Hjem";
 
@@ -509,22 +512,10 @@ med DuckDuckGo";
 "Private" = "Privat";
 
 /* No comment provided by engineer. */
-"PrivateBrowsing" = "Privat surfing";
+"PrivateBrowsing" = "Privat nettlesing er aktivert";
 
 /* Setting to keep app in private mode */
 "PrivateBrowsingOnly" = "Kun privat surfing";
-
-/* Private tab detail text */
-"PrivateTabDetails" = "Det å bruke private faner påvirker kun det Dissenter gjør på enheten din, det forandrer ikke andres adferd.
-
-Nettsteder får alltid vite IP-adressen din når du besøker dem. Ut ifra dette kan de ofte gjette omtrent hvor du befinner deg, men vanligvis er ikke dette mer nøyaktig enn hvilken by du er i. Noen ganger kan imidlertid posisjonen de anslår, være mer spesifikk. Nettsteder får også vite alt du spesifikt oppgir til dem, som søkeord. Hvis du logger på et nettsted, vet nettstedet at du eier den gjeldende kontoen. Du blir likevel logget ut når du lukker de private fanene, for Dissenter kaster informasjonskapselen som holder deg pålogget.
-
-Den som kobler deg til internett (vanligvis internettleverandøren din) kan se all aktiviteten på nettverket ditt. Ofte er internettleverandøren mobilleverandøren din. Hvis du er koblet til et WiFi-nettverk, er internettleverandøren eieren av nettverket, og hvis du bruker en VPN, er det den som drifter VPN-en. Internettleverandøren din kan se hvilke nettsteder du besøker, samtidig som du besøker dem. Hvis disse nettstedene bruker HTTPS, kan internettleverandøren gjøre mer enn en kvalifisert gjetning angående hva du foretar deg på slike nettsteder. Hvis et nettsted kun bruker HTTP, kan imidlertid internettleverandøren din se alt: søkeordene dine, hvilke sider du leser, og hvilke lenker du følger.
-
-Hvis arbeidsgiveren din administrerer enheten din, kan arbeidsgiveren også se hva du gjør med den. Det å bruke private faner vil sannsynligvis ikke hindre at de finner ut hvilke nettsteder du har besøkt. Andre som har tilgang til enheten din, kan også ha installert programvare som overvåker aktiviteten din, og private faner beskytter deg heller ikke mot dette.";
-
-/* Private tab information link */
-"PrivateTabLink" = "Finn ut mer om private faner.";
 
 /* Default engine for private search. */
 "PrivateTabSearch" = "Privat fane";
@@ -686,10 +677,7 @@ Hvis arbeidsgiveren din administrerer enheten din, kan arbeidsgiveren også se h
 "ShareLinkActionTitle" = "Del lenke";
 
 /* shields overview message */
-"ShieldsOverview" = "Med Site Shield kan du kontrollere når annonser og sporingsprogrammer blokkeres på hver side du besøker. Hvis du vil se annonser på en bestemt side, kan du aktivere dem her.";
-
-/* shields overview footer message */
-"ShieldsOverviewFooter" = "Merknad: Det kan være at enkelte sider krever skripter for å fungere ordentlig, så dette skjoldet er slått av som standard.";
+"ShieldsOverview" = "Dissenter Website Shields lar deg kontrollere når annonser og sporingsspor blokkeres for hvert nettsted du besøker.";
 
 /* Time Saved Days */
 "ShieldsTimeStatsDays" = "d";

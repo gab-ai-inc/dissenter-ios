@@ -377,6 +377,9 @@ dactiloscópica";
 /* Grand camera access */
 "GrantCameraAccess" = "Activar cámara";
 
+/* Show Dissenter Help page from the Support section in the settings. */
+"Help" = "Ayuda";
+
 /* No comment provided by engineer. */
 "Home" = "Inicio";
 
@@ -508,22 +511,10 @@ de HTTPS";
 "Private" = "Privado";
 
 /* No comment provided by engineer. */
-"PrivateBrowsing" = "Navegación privada";
+"PrivateBrowsing" = "La navegación privada está habilitada";
 
 /* Setting to keep app in private mode */
 "PrivateBrowsingOnly" = "Solo navegación privada";
-
-/* Private tab detail text */
-"PrivateTabDetails" = "Lo único que cambia el uso de pestañas privadas es lo que hace Dissenter en tu dispositivo, no lo que hacen los demás.
-
-Los sitios web retienen tu dirección IP cada vez que los visitas, lo que significa que suelen tener una idea aproximada sobre tu ubicación (como la ciudad en la que te encuentras). A veces, la localización puede ser mucho más precisa. Los sitios web también retienen todo lo que compartes con ellos, como los términos de búsqueda que utilizas. Si inicias sesión en un sitio web, este sabrá que eres el propietario de esa cuenta. Aun así, tu sesión finalizará en cuanto cierres las pestañas privadas, ya que Dissenter desechará la cookie que mantiene tu sesión iniciada.
-
-Tu proveedor de acceso a Internet, sea quien sea, puede ver toda tu actividad en la red. A menudo, se trata de tu compañía telefónica. Si estás conectado a una red wifi, el proveedor será el propietario de dicha red, mientras que, si usas una VPN, el proveedor será el encargado de gestionar esa VPN. Tu proveedor de acceso a Internet puede ver qué sitios visitas en tiempo real. Si esos sitios utilizan HTTPS, solo podrán obtener una idea aproximada de lo que haces en esos sitios web; sin embargo, si un sitio no utiliza más que HTTP, tu proveedor de acceso a Internet podrá verlo todo: tus términos de búsqueda, las páginas que consultas y los enlaces en los que clicas.
-
-Si el dispositivo lo gestiona tu empresa, puede que esta también supervise lo que haces con él. Es muy probable que el uso de pestañas privadas no logre impedir que la empresa sepa qué sitios visitas. Además, existe la posibilidad de que otra persona con acceso a tu dispositivo haya instalado en él un software para controlar tu actividad, ante lo que las pestañas privadas tampoco pueden protegerte.";
-
-/* Private tab information link */
-"PrivateTabLink" = "Más información acerca de las pestañas privadas.";
 
 /* Default engine for private search. */
 "PrivateTabSearch" = "Pestaña privada";
@@ -685,10 +676,7 @@ Si el dispositivo lo gestiona tu empresa, puede que esta también supervise lo q
 "ShareLinkActionTitle" = "Compartir enlace";
 
 /* shields overview message */
-"ShieldsOverview" = "Los Shields del sitio le permiten controlar cuándo bloquear anuncios y rastreadores en cada sitio que visite. Si prefiere ver anuncios en un sitio en concreto, puede habilitarlos aquí.";
-
-/* shields overview footer message */
-"ShieldsOverviewFooter" = "Nota: Es posible que algunos sitios necesiten scripts para funcionar correctamente, por lo que este Shield está desactivado por defecto. ";
+"ShieldsOverview" = "Los Dissenter Website Shields le permiten controlar cuándo bloquear anuncios y rastreadores en cada sitio que visite.";
 
 /* Time Saved Days */
 "ShieldsTimeStatsDays" = "d";

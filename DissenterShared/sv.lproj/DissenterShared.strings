@@ -376,6 +376,9 @@ sparad";
 /* Grand camera access */
 "GrantCameraAccess" = "Aktivera kamera";
 
+/* Show Dissenter Help page from the Support section in the settings. */
+"Help" = "Hjälp";
+
 /* No comment provided by engineer. */
 "Home" = "Hem";
 
@@ -508,22 +511,10 @@ med DuckDuckGo";
 "Private" = "Privat";
 
 /* No comment provided by engineer. */
-"PrivateBrowsing" = "Privat surfning";
+"PrivateBrowsing" = "Privat browsing är aktiverad";
 
 /* Setting to keep app in private mode */
 "PrivateBrowsingOnly" = "Endast privat surfning";
-
-/* Private tab detail text */
-"PrivateTabDetails" = "När du använder privata flikar ändras Dissenter bara på din enhet, ingen annans.
-
-Webbplatser får alltid veta din IP-adress när du besöker dem. Utifrån detta kan de oftast räkna ut ungefär var du befinner dig, till exempel din ort. Ibland kan de gissa mer specifikt. Webbplatser vet också allt som du explicit anger, till exempel sökningar. Om du loggar in på en webbplats vet de att du äger kontot. Du loggas ut när du stänger den privata fliken eftersom Dissenter raderar den cookie som håller dig inloggad.
-
-Din internetleverantör, alltså den som tillhandahåller din internetanslutning, kan se all din nätverksaktivitet. Beroende på anslutningstyp är leverantören din mobilleverantör (för mobildata), wifi-nätets ägare (för wifi) eller den som tillhandahåller din VPN-anslutning (för VPN). Leverantören kan se vilka webbplatser du besöker. Om webbplatserna har HTTPS kan leverantören inte se mer än vilken platsen är, men om webbplatsen bara har HTTP kan leverantören se allt: vad du söker på, vilka sidor du läser och vilka länkar du följer.
-
-Om ditt företag ansvarar för din enhet kan de också se vad du gör med den. Att använda privata flikar kommer förmodligen inte hindra dem från att ta reda på vilka webbplatser du besökt. Någon annan med tillgång till din enhet kan ha installerat ett program som övervakar din aktivitet, och privata flikar skyddar inte mot det heller.";
-
-/* Private tab information link */
-"PrivateTabLink" = "Läs mer om privata flikar.";
 
 /* Default engine for private search. */
 "PrivateTabSearch" = "Privat flik";
@@ -685,10 +676,7 @@ Om ditt företag ansvarar för din enhet kan de också se vad du gör med den. A
 "ShareLinkActionTitle" = "Dela länk";
 
 /* shields overview message */
-"ShieldsOverview" = "Sköldarna låter dig styra när annonser och spårare blockeras för varje webbplats du besöker. Om du föredrar att se annonser på en viss webbplats kan du aktivera dem här.";
-
-/* shields overview footer message */
-"ShieldsOverviewFooter" = "Obs: Några webbplatser kan behöva skript för att fungera korrekt, därför är den här skölden avstängd som standard.";
+"ShieldsOverview" = "Dissenter Website Shields låter dig styra när annonser och spårare blockeras för varje webbplats som du besöker.";
 
 /* Time Saved Days */
 "ShieldsTimeStatsDays" = "d";

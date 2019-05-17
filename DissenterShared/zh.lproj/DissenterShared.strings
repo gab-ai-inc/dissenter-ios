@@ -377,6 +377,9 @@
 /* Grand camera access */
 "GrantCameraAccess" = "启用摄像头";
 
+/* Show Dissenter Help page from the Support section in the settings. */
+"Help" = "救命";
+
 /* No comment provided by engineer. */
 "Home" = "家庭";
 
@@ -509,22 +512,10 @@
 "Private" = "隐私";
 
 /* No comment provided by engineer. */
-"PrivateBrowsing" = "私人浏览";
+"PrivateBrowsing" = "启用隐私浏览";
 
 /* Setting to keep app in private mode */
 "PrivateBrowsingOnly" = "仅限私人浏览";
-
-/* Private tab detail text */
-"PrivateTabDetails" = "使用私密 Tabs 只会更改 Dissenter 对您设备的操作，不会更改其他应用对您设备的操作。
-
-当您访问网站时，网站会随时知晓您的 IP 地址。由此地址，他们通常可以大致猜测您的位置 - 通常是您所在的城市。有时，对于位置的猜测可能更加具体。网站也会知晓您明确告诉他们的所有内容，例如您的搜索条件。如果您登录某个网站，他们就会知晓您是该帐户的所有者。当您关闭私密 Tabs 时，您仍然会被迫退出，因为 Dissenter 会删除辅助您随时登录的 cookie。
-
-为您连网（您的 ISP）的任何人都可以看到您所有的网络活动。通常是您的移动运营商。如果您连接到 WiFi 网络，则是该网络的所有者，如果您在使用 VPN，则是运行该 VPN 的人。您的 ISP 可以在您访问时查看您访问的网站。如果这些网站使用 HTTPS，它们只能对您在这些网站上所进行的操作进行合理的猜测。但是，如果某个网站仅使用 HTTP，那么您的 ISP 可以查看所有内容：您的搜索条件，您所阅读的页面以及您关注的链接。
-
-如果雇主管理您的设备，他们也可能会跟踪您的设备。使用私密 Tabs 可能不会阻止他们知晓您访问过哪些网站。有权访问您设备的其他人也可能安装了监控您活动的软件，而私密 Tabs 也无法保护您不受此影响。";
-
-/* Private tab information link */
-"PrivateTabLink" = "了解更多有关私人标签的内容。";
 
 /* Default engine for private search. */
 "PrivateTabSearch" = "私人标签";
@@ -686,10 +677,7 @@
 "ShareLinkActionTitle" = "分享链接";
 
 /* shields overview message */
-"ShieldsOverview" = "利用网站屏幕，您在访问每个网站时可以控制是否拦截广告和跟踪程序。如果您希望查看某个特定网站的广告，则可以在此处启用这些广告。";
-
-/* shields overview footer message */
-"ShieldsOverviewFooter" = "注意：某些网站可能要求脚本正确工作，所以默认情况下会关闭此拦截。";
+"ShieldsOverview" = "Dissenter Website Shields允许您控制何时访问您访问的每个网站的广告和跟踪器。";
 
 /* Time Saved Days */
 "ShieldsTimeStatsDays" = "天";

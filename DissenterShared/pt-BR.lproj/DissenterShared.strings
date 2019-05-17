@@ -377,6 +377,9 @@ impressão digital";
 /* Grand camera access */
 "GrantCameraAccess" = "Ativar câmera";
 
+/* Show Dissenter Help page from the Support section in the settings. */
+"Help" = "Socorro";
+
 /* No comment provided by engineer. */
 "Home" = "Página inicial";
 
@@ -509,22 +512,10 @@ com o DuckDuckGo";
 "Private" = "Privado";
 
 /* No comment provided by engineer. */
-"PrivateBrowsing" = "Navegação privada";
+"PrivateBrowsing" = "A navegação privada está ativada";
 
 /* Setting to keep app in private mode */
 "PrivateBrowsingOnly" = "Somente navegação privada";
-
-/* Private tab detail text */
-"PrivateTabDetails" = "O uso das Abas privadas só muda o que o Dissenter faz no seu dispositivo. O comportamento das outras partes envolvidas não é alterado.
-
-Os sites sempre detectam seu endereço IP quando você os acessa. Com base nisso, normalmente é possível ter uma ideia geral de onde você está, como sua cidade. Às vezes, essa estimativa de localização pode ser bem mais específica. Os sites também têm acesso a todas as informações que você fornece a eles (por exemplo, termos de pesquisa). Se você fizer login em um site, ele saberá que você é o proprietário dessa conta. Sua sessão será encerrada quando você fechar as Abas privadas, pois o Dissenter excluirá o cookie que mantém você conectado à conta.
-
-O responsável pela sua conexão com a internet (seu provedor de serviços de internet), que em muitos casos é sua operadora, pode ver toda a sua atividade na rede. Se você está conectado a uma rede Wi-Fi, o provedor é o proprietário dessa rede. Se você está usando uma VPN, o proprietário é quem a mantém em funcionamento. Seu provedor pode ver os sites que você acessa no momento em que isso acontece. Se esses sites usam HTTPS, ele não tem como saber exatamente o que você faz neles. No entanto, se um site só utiliza HTTP, seu provedor pode ver tudo: seus termos de pesquisa, quais páginas você acessa e em quais links você clica.
-
-Se a empresa na qual você trabalha gerencia seu dispositivo, é possível que ela monitore o que você faz com ele. O uso das Abas privadas provavelmente não a impedirá de saber os sites que você acessou. É possível que outra pessoa que tenha acesso ao seu dispositivo tenha instalado um software para monitorar sua atividade; nesse caso, as Abas privadas não poderão proteger você.";
-
-/* Private tab information link */
-"PrivateTabLink" = "Saiba mais sobre abas privadas.";
 
 /* Default engine for private search. */
 "PrivateTabSearch" = "Aba privada";
@@ -686,10 +677,7 @@ Se a empresa na qual você trabalha gerencia seu dispositivo, é possível que e
 "ShareLinkActionTitle" = "Compartilhar link";
 
 /* shields overview message */
-"ShieldsOverview" = "As Proteções de site permitem que você controle quando anúncios e rastreadores são bloqueados em cada site que você acessa. Se preferir ver anúncios em um site específico, você poderá ativá-los aqui.";
-
-/* shields overview footer message */
-"ShieldsOverviewFooter" = "Observação: como é possível que alguns sites exijam scripts para funcionar corretamente, esta proteção está desativada por padrão.";
+"ShieldsOverview" = "Dissenter Website Shields permite que você controle quando os anúncios e rastreadores são bloqueados para cada site que você visita.";
 
 /* Time Saved Days */
 "ShieldsTimeStatsDays" = "d";
