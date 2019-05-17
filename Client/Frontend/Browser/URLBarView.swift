@@ -39,7 +39,7 @@ protocol URLBarDelegate: class {
     // Returns either (search query, true) or (url, false).
     func urlBarDisplayTextForURL(_ url: URL?) -> (String?, Bool)
     func urlBarDidBeginDragInteraction(_ urlBar: URLBarView)
-    func urlBarDidTapDissenterShieldsButton(_ urlBar: URLBarView)
+//    func urlBarDidTapDissenterShieldsButton(_ urlBar: URLBarView)
     func urlBarDidTapMenuButton(_ urlBar: URLBarView)
     func urlBarDidLongPressReloadButton(_ urlBar: URLBarView, from button: UIButton)
 }
@@ -139,16 +139,6 @@ class URLBarView: UIView {
         $0.addTarget(self, action: #selector(didClickMenu), for: .touchUpInside)
         $0.accessibilityIdentifier = "urlBar-menuButton"
     }
-    
-    lazy var shieldsButton: ToolbarButton = {
-        let button = ToolbarButton()
-        button.setImage(UIImage(imageLiteralResourceName: "shields-menu-icon"), for: .normal)
-        button.addTarget(self, action: #selector(didClickDissenterShieldsButton), for: .touchUpInside)
-        button.imageView?.contentMode = .center
-        button.accessibilityLabel = Strings.Dissenter_Panel
-        button.accessibilityIdentifier = "urlBar-shieldsButton"
-        return button
-    }()
 
     var backButton: ToolbarButton = {
         let backButton = ToolbarButton()
@@ -165,21 +155,7 @@ class URLBarView: UIView {
         
         set(newURL) {
             locationView.url = newURL
-            refreshShieldsStatus()
         }
-    }
-    
-    /// Update the shields icon based on whether or not shields are enabled for this site
-    func refreshShieldsStatus() {
-        // Default on
-        var shieldIcon = "shields-menu-icon"
-        if let currentURL = currentURL {
-            let domain = Domain.getOrCreate(forUrl: currentURL)
-            if domain.shield_allOff == 1 {
-                shieldIcon = "shields-off-menu-icon"
-            }
-        }
-        shieldsButton.setImage(UIImage(imageLiteralResourceName: shieldIcon), for: .normal)
     }
     
     var contentIsSecure: Bool {
@@ -205,7 +181,7 @@ class URLBarView: UIView {
         locationContainer.addSubview(locationView)
     
         [scrollToTopButton, line, tabsButton, progressBar, cancelButton/*, showQRScannerButton*/].forEach { addSubview($0) }
-        [forwardButton, backButton, menuButton, shareButton, shieldsButton, locationContainer].forEach { addSubview($0) }
+        [forwardButton, backButton, menuButton, shareButton, locationContainer].forEach { addSubview($0) }
         
         helper = TabToolbarHelper(toolbar: self)
         setupConstraints()
@@ -313,23 +289,21 @@ class URLBarView: UIView {
                 make.centerY.equalTo(self)
                 make.size.equalTo(URLBarViewUX.ButtonHeight)
             }
-            shieldsButton.snp.remakeConstraints { make in
-                if self.toolbarIsShowing {
-                    make.trailing.equalTo(self.shareButton.snp.leading)
-                } else {
-                    make.trailing.equalTo(self)
-                }
-                make.centerY.equalTo(self)
-                make.size.equalTo(URLBarViewUX.ButtonHeight)
-            }
+
             locationContainer.snp.remakeConstraints { make in
                 if self.toolbarIsShowing {
                     // When there's toolbar items on the left, add some padding so it looks better
                     make.leading.equalTo(self.menuButton.snp.trailing).offset(URLBarViewUX.LocationLeftPadding)
-                    make.trailing.equalTo(self.shieldsButton.snp.leading).offset(-URLBarViewUX.LocationLeftPadding)
                 } else {
                     make.leading.equalTo(self.menuButton.snp.trailing)
-                    make.trailing.equalTo(self.shieldsButton.snp.leading)
+                }
+                
+                let deviceIdiom = UIScreen.main.traitCollection.userInterfaceIdiom
+                switch (deviceIdiom) {
+                    case .pad:
+                        make.trailing.equalTo(self.shareButton.snp.leading).offset(-URLBarViewUX.LocationLeftPadding)
+                    default:
+                        make.trailing.equalTo(self.tabsButton.snp.trailing)
                 }
 
                 make.height.equalTo(URLBarViewUX.LocationHeight)
@@ -500,7 +474,7 @@ class URLBarView: UIView {
         forwardButton.alpha = inOverlayMode ? 0 : 1
         backButton.alpha = inOverlayMode ? 0 : 1
         shareButton.alpha = inOverlayMode ? 0 : 1
-        shieldsButton.alpha = inOverlayMode ? 0 : 1
+//        shieldsButton.alpha = inOverlayMode ? 0 : 1
         locationView.contentView.alpha = inOverlayMode ? 0 : 1
 
         if inOverlayMode {
@@ -562,9 +536,9 @@ class URLBarView: UIView {
         delegate?.urlBarDidTapMenuButton(self)
     }
     
-    @objc func didClickDissenterShieldsButton() {
-        delegate?.urlBarDidTapDissenterShieldsButton(self)
-    }
+//    @objc func didClickDissenterShieldsButton() {
+//        delegate?.urlBarDidTapDissenterShieldsButton(self)
+//    }
 }
 
 extension URLBarView: TabToolbarProtocol {
