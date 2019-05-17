@@ -942,14 +942,9 @@ fileprivate class EmptyPrivateTabsView: UIView {
     let descriptionLabel = UILabel().then {
         $0.textColor = EmptyPrivateTabsViewUX.DescriptionColor
         $0.font = EmptyPrivateTabsViewUX.DescriptionFont
+        $0.textAlignment = .center
         $0.text = Strings.Private_Tab_Body
         $0.numberOfLines = 0
-    }
-
-    let iconImageView = UIImageView(image: #imageLiteral(resourceName: "private_glasses")).then {
-        $0.contentMode = .center
-        $0.setContentHuggingPriority(.required, for: .vertical)
-        $0.setContentCompressionResistancePriority(.defaultHigh, for: .vertical)
     }
 
     override init(frame: CGRect) {
@@ -957,11 +952,10 @@ fileprivate class EmptyPrivateTabsView: UIView {
 
         addSubview(scrollView)
         scrollView.addSubview(stackView)
-        stackView.addArrangedSubview(iconImageView)
         stackView.addArrangedSubview(titleLabel)
         stackView.addArrangedSubview(descriptionLabel)
     
-        stackView.setCustomSpacing(EmptyPrivateTabsViewUX.StackViewSpacing * 2.0, after: iconImageView)
+//        stackView.setCustomSpacing(EmptyPrivateTabsViewUX.StackViewSpacing * 2.0, after: iconImageView)
         
         scrollView.snp.makeConstraints {
             $0.edges.equalTo(self.snp.edges)
@@ -1109,7 +1103,7 @@ class TrayToolbar: UIView {
 
     fileprivate func applyTheme(_ theme: Theme) {
         UIApplication.shared.windows.first?.backgroundColor = TabTrayControllerUX.BackgroundColor.colorFor(theme)
-        addTabButton.tintColor = UIColor.TabTray.ToolbarButtonTint.colorFor(theme) // Needs to be changed
+        addTabButton.tintColor = UIColor.TabTray.ToolbarButtonTint.colorFor(theme)
         doneButton.tintColor = UIColor.TabTray.ToolbarButtonTint.colorFor(theme)
         backgroundColor = TabTrayControllerUX.BackgroundColor.colorFor(theme)
         privateModeButton.applyTheme(theme)
