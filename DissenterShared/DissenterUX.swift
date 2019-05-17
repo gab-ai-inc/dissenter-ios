@@ -3,6 +3,7 @@
 public struct DissenterUX {    
     public static let DissenterPrivacyURL = URL(string: "https://dissenter.com/about/privacy-policy")!
     public static let DissenterTermsOfUseURL = URL(string: "https://dissenter.com/about/terms-of-use")!
+    public static let DissenterSupportURL = URL(string: "https://dissenter.com/help/support")!
     public static let PrefKeyOptInDialogWasSeen = "OptInDialogWasSeen"
     public static let PrefKeyUserAllowsTelemetry = "userallowstelemetry"
     
