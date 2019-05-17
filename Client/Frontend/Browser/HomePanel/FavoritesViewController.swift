@@ -138,6 +138,7 @@ class FavoritesViewController: UIViewController, Themeable {
     func applyTheme(_ theme: Theme) {
         let isPrivate = theme == .private
         view.backgroundColor = isPrivate ? UX.HomePanel.BackgroundColorPBM : UX.HomePanel.BackgroundColor
+//        view.backgroundColor = UX.HomePanel.BackgroundColor
     }
     
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {

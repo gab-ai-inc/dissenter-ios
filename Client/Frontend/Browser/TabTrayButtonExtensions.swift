@@ -10,7 +10,7 @@ class PrivateModeButton: InsetButton, Themeable {
     
     override var isSelected: Bool {
         didSet {
-            backgroundColor = isSelected ? UIColor.Photon.Purple60 : .clear
+            backgroundColor = isSelected ? UIColor.Photon.Green60 : .clear
         }
     }
     

@@ -34,8 +34,8 @@ extension UIColor {
     struct Defaults {
         static let MobileGreyF = UIColor(rgb: 0x636369)
         static let iOSHighlightBlue = UIColor(rgb: 0xccdded) // This color should exactly match the ios text highlight
-        static let Purple60A30 = UIColor(rgba: 0x8000d74c)
-        static let MobilePrivatePurple = UIColor(rgb: 0xcf68ff)
+        static let Green60A30 = UIColor(rgba: 0x9afeab4c)
+        static let MobilePrivateGreen = UIColor(rgb: 0xb3feb3)
         static let PaleBlue = UIColor(rgb: 0xB0D5FB)
         static let LightBeige = UIColor(rgb: 0xf0e6dc)
     }
@@ -57,8 +57,8 @@ extension UIColor {
     struct TextField {
         static let Background = BrowserColor(normal: .white, pbm: Defaults.MobileGreyF)
         static let TextAndTint = BrowserColor(normal: Photon.Grey80, pbm: .white)
-        static let Highlight = BrowserColor(normal: Defaults.iOSHighlightBlue, pbm: Defaults.Purple60A30)
-        static let ReaderModeButtonSelected = BrowserColor(normal: Photon.Blue40, pbm: Defaults.MobilePrivatePurple)
+        static let Highlight = BrowserColor(normal: Defaults.iOSHighlightBlue, pbm: Defaults.Green60A30)
+        static let ReaderModeButtonSelected = BrowserColor(normal: Photon.Blue40, pbm: Defaults.MobilePrivateGreen)
         static let ReaderModeButtonUnselected = BrowserColor(normal: Photon.Grey50, pbm: Photon.Grey40)
         static let PageOptionsSelected = ReaderModeButtonSelected
         static let PageOptionsUnselected = UIColor.Browser.Tint
@@ -67,13 +67,13 @@ extension UIColor {
 
     // The back/forward/refresh/menu button (bottom toolbar)
     struct ToolbarButton {
-        static let SelectedTint = BrowserColor(normal: Photon.Blue40, pbm: Photon.Purple50)
+        static let SelectedTint = BrowserColor(normal: Photon.Blue40, pbm: Photon.Green50)
         static let DisabledTint = BrowserColor(normal: Photon.Grey30, pbm: Photon.Grey50)
     }
 
     struct LoadingBar {
-        static let Start = BrowserColor(normal: Photon.Blue50A30, pbm: Photon.Purple50)
-        static let End = BrowserColor(normal: Photon.Blue50, pbm: Photon.Magenta50)
+        static let Start = BrowserColor(normal: Photon.Blue50A30, pbm: Defaults.Green60A30)
+        static let End = BrowserColor(normal: Photon.Blue50, pbm: Photon.Green50)
     }
 
     struct TabTray {
@@ -104,8 +104,8 @@ public struct UIConstants {
     static let AppBackgroundColor = UIColor.Photon.Grey10
     static let SystemBlueColor = UIColor.Photon.Blue40
     static let PrivateModeAssistantToolbarBackgroundColor = UIColor.Photon.Grey50
-    static let PrivateModeTextHighlightColor = UIColor.Photon.Purple60
-    static let PrivateModePurple = UIColor.Defaults.MobilePrivatePurple
+    static let PrivateModeTextHighlightColor = UIColor.Photon.Green60
+    static let PrivateModeGreen = UIColor.Defaults.MobilePrivateGreen
 
     // Static fonts
     static let DefaultChromeSize: CGFloat = 16
