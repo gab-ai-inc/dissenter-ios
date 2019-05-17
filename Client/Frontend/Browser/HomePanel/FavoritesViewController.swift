@@ -46,23 +46,6 @@ class FavoritesViewController: UIViewController, Themeable {
     }()
     private let dataSource: FavoritesDataSource
     
-    private let ddgLogo = UIImageView(image: #imageLiteral(resourceName: "duckduckgo"))
-    
-    private let ddgLabel = UILabel().then {
-        $0.numberOfLines = 0
-        $0.textColor = DissenterUX.GreyD
-        $0.font = UIFont.systemFont(ofSize: 14, weight: UIFont.Weight.regular)
-        $0.text = Strings.DDG_promotion
-    }
-    
-    private lazy var ddgButton = UIControl().then {
-        $0.addTarget(self, action: #selector(showDDGCallout), for: .touchUpInside)
-    }
-    
-    @objc private func showDDGCallout() {
-        delegate?.didTapDuckDuckGoCallout()
-    }
-    
     // MARK: - Init/lifecycle
     
     private let profile: Profile
@@ -108,17 +91,7 @@ class FavoritesViewController: UIViewController, Themeable {
         collection.dataSource = dataSource
         dataSource.collectionView = collection
         
-        collection.addSubview(ddgButton)
-        
-        ddgButton.addSubview(ddgLogo)
-        ddgButton.addSubview(ddgLabel)
-        
         makeConstraints()
-        
-        collectionContentSizeObservation = collection.observe(\.contentSize, options: [.new, .initial]) { [weak self] _, _ in
-            self?.updateDuckDuckGoButtonLayout()
-        }
-        updateDuckDuckGoVisibility()
     }
     
     private var collectionContentSizeObservation: NSKeyValueObservation?
@@ -128,16 +101,6 @@ class FavoritesViewController: UIViewController, Themeable {
         
         // This makes collection view layout to recalculate its cell size.
         collection.collectionViewLayout.invalidateLayout()
-    }
-    
-    private func updateDuckDuckGoButtonLayout() {
-        let size = ddgButton.systemLayoutSizeFitting(UIView.layoutFittingExpandedSize)
-        ddgButton.frame = CGRect(
-            x: ceil((collection.bounds.width - size.width) / 2.0),
-            y: collection.contentSize.height + UI.searchEngineCalloutPadding,
-            width: size.width,
-            height: size.height
-        )
     }
     
     /// Handles long press gesture for UICollectionView cells reorder.
@@ -165,23 +128,11 @@ class FavoritesViewController: UIViewController, Themeable {
             make.left.right.equalTo(self.view.safeAreaLayoutGuide)
             make.top.bottom.equalTo(self.view)
         }
-        
-        ddgLogo.snp.makeConstraints { make in
-            make.top.left.bottom.equalTo(0)
-            make.size.equalTo(38)
-        }
-        
-        ddgLabel.snp.makeConstraints { make in
-            make.top.right.bottom.equalTo(0)
-            make.left.equalTo(self.ddgLogo.snp.right).offset(5)
-            make.width.equalTo(180)
-            make.centerY.equalTo(self.ddgLogo)
-        }
     }
     
     // MARK: - Private browsing modde
     @objc func privateBrowsingModeChanged() {
-        updateDuckDuckGoVisibility()
+        //
     }
     
     func applyTheme(_ theme: Theme) {
@@ -203,13 +154,6 @@ class FavoritesViewController: UIViewController, Themeable {
         let isPrivateBrowsing = PrivateBrowsingManager.shared.isPrivateBrowsing
         let shouldShowPromo = SearchEngines.shouldShowDuckDuckGoPromo
         return isPrivateBrowsing && !isSearchEngineSet && shouldShowPromo
-    }
-    
-    func updateDuckDuckGoVisibility() {
-        let isVisible = shouldShowDuckDuckGoCallout()
-        let heightOfCallout = ddgButton.systemLayoutSizeFitting(UIView.layoutFittingExpandedSize).height + (UI.searchEngineCalloutPadding * 2.0)
-        collection.contentInset.bottom = isVisible ? heightOfCallout : 0
-        ddgButton.isHidden = !isVisible
     }
 }
 

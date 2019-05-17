@@ -543,7 +543,6 @@ class BrowserViewController: UIViewController {
         
         updateTabCountUsingTabManager(tabManager)
         clipboardBarDisplayHandler?.checkIfShouldDisplayBar()
-        favoritesViewController?.updateDuckDuckGoVisibility()
     }
     
     fileprivate lazy var checkCrashRestoration: () -> Void = {
@@ -598,12 +597,13 @@ class BrowserViewController: UIViewController {
             show(toast: toast, afterWaiting: ButtonToastUX.ToastDelay)
         }
         showQueuedAlertIfAvailable()
-        
-        if PrivateBrowsingManager.shared.isPrivateBrowsing {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                self.presentDuckDuckGoCallout()
-            }
-        }
+
+//        disable initial alerts
+//        if PrivateBrowsingManager.shared.isPrivateBrowsing {
+//            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+//                self.presentDuckDuckGoCallout()
+//            }
+//        }
     }
 
     // THe logic for shouldShowWhatsNewTab is as follows: If we do not have the LatestAppVersionProfileKey in
@@ -1332,8 +1332,6 @@ class BrowserViewController: UIViewController {
             Preferences.Popups.duckDuckGoPrivateSearch.value = true
             self?.profile.searchEngines.setDefaultEngine(OpenSearchEngine.EngineNames.duckDuckGo, forType: .privateMode)
             
-            self?.favoritesViewController?.updateDuckDuckGoVisibility()
-            
             return .flyUp
         }
         duckDuckGoPopup = popup
@@ -1374,11 +1372,12 @@ extension BrowserViewController: SettingsDelegate {
         settingsViewController.dismiss(animated: true, completion: {
             // iPad doesn't receive a viewDidAppear because it displays settings as a floating modal window instead
             // of a fullscreen overlay.
-            if UIDevice.isIpad && PrivateBrowsingManager.shared.isPrivateBrowsing {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                    self.presentDuckDuckGoCallout()
-                }
-            }
+//            disable initial alerts
+//            if UIDevice.isIpad && PrivateBrowsingManager.shared.isPrivateBrowsing {
+//                DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+//                    self.presentDuckDuckGoCallout()
+//                }
+//            }
         })
     }
 }
@@ -2001,11 +2000,12 @@ extension BrowserViewController: TabManagerDelegate {
             updateTabCountUsingTabManager(tabManager)
         }
         
-        if PrivateBrowsingManager.shared.isPrivateBrowsing && presentedViewController == nil {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
-                self.presentDuckDuckGoCallout()
-            }
-        }
+//        disable initial alerts
+//        if PrivateBrowsingManager.shared.isPrivateBrowsing && presentedViewController == nil {
+//            DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+//                self.presentDuckDuckGoCallout()
+//            }
+//        }
 
         removeAllBars()
         if let bars = selected?.bars {
@@ -2900,8 +2900,10 @@ extension BrowserViewController: TopSitesDelegate {
         processAddressBar(text: input, visitType: .bookmark)
     }
     
+    
     func didTapDuckDuckGoCallout() {
-        presentDuckDuckGoCallout(force: true)
+//        disable initial alerts
+//        presentDuckDuckGoCallout(force: true)
     }
 }
 
